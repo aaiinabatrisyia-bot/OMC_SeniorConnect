@@ -1,8 +1,8 @@
 namespace OMC_Group16
 {
-    public partial class Form1 : Form
+    public partial class FrmWelcome : Form
     {
-        public Form1()
+        public FrmWelcome()
         {
             InitializeComponent();
         }
