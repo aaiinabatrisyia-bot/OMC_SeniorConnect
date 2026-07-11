@@ -22,9 +22,11 @@ namespace OMC_Group16
 
         private void FrmHome_MouseEnter(object sender, EventArgs e)
         {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.AliceBlue;
+            // Safely handle cases where the event sender is not a Panel
+            if (sender is System.Windows.Forms.Panel card)
+            {
+                card.BackColor = Color.AliceBlue;
+            }
         }
 
         private void pnlGuide_MouseEnter(object sender, EventArgs e)
@@ -118,6 +120,11 @@ namespace OMC_Group16
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnlGuide_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
