@@ -17,7 +17,7 @@ namespace OMC_Group16
 
         private void btnReminder_Click(object sender, EventArgs e)
         {
-            FrmReminders reminder = new FrmReminders();
+            FrmAddReminder reminder = new FrmAddReminder();
             reminder.Show();
         }
 

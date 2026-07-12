@@ -37,9 +37,9 @@
             // 
             btnReminder.Location = new Point(59, 36);
             btnReminder.Name = "btnReminder";
-            btnReminder.Size = new Size(94, 29);
+            btnReminder.Size = new Size(117, 29);
             btnReminder.TabIndex = 0;
-            btnReminder.Text = "Reminder";
+            btnReminder.Text = "Add Reminder";
             btnReminder.UseVisualStyleBackColor = true;
             btnReminder.Click += btnReminder_Click;
             // 
@@ -47,7 +47,7 @@
             // 
             btnEmergency.Location = new Point(59, 85);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(94, 29);
+            btnEmergency.Size = new Size(117, 29);
             btnEmergency.TabIndex = 1;
             btnEmergency.Text = "Emergency Contacts";
             btnEmergency.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             // 
             btnLogout.Location = new Point(59, 139);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(94, 29);
+            btnLogout.Size = new Size(117, 29);
             btnLogout.TabIndex = 2;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
