@@ -14,5 +14,24 @@ namespace OMC_Group16
         {
             InitializeComponent();
         }
+
+        private void btnReminder_Click(object sender, EventArgs e)
+        {
+            FrmReminders reminder = new FrmReminders();
+            reminder.Show();
+        }
+
+        private void btnEmergency_Click(object sender, EventArgs e)
+        {
+            FrmEmergency emergency = new FrmEmergency();
+            emergency.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmWelcome welcome = new FrmWelcome();
+            welcome.Show();
+
+        }
     }
 }

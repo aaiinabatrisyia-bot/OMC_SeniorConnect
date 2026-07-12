@@ -16,8 +16,8 @@ namespace OMC_Group16
 
         private void btnCaregiver_Click(object sender, EventArgs e)
         {
-            FrmCaregiverLogin login = new FrmCaregiverLogin();
-            login.Show();
+            FrmCaregiverLogin loginForm = new FrmCaregiverLogin();
+            loginForm.Show();
             this.Hide();
         }
 

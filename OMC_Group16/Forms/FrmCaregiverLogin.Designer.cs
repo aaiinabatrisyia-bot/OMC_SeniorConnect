@@ -28,12 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmCaregiverLogin";
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            btnLogin = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // txtUsername
+            // 
+            txtUsername.Font = new Font("Constantia", 16.2F);
+            txtUsername.Location = new Point(349, 100);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(125, 40);
+            txtUsername.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Font = new Font("Constantia", 16.2F);
+            txtPassword.Location = new Point(362, 176);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(125, 40);
+            txtPassword.TabIndex = 1;
+            // 
+            // btnLogin
+            // 
+            btnLogin.AutoSize = true;
+            btnLogin.BackColor = Color.FromArgb(192, 255, 192);
+            btnLogin.Font = new Font("Constantia", 16.2F);
+            btnLogin.Location = new Point(276, 237);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(134, 45);
+            btnLogin.TabIndex = 2;
+            btnLogin.Text = "Log In";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Constantia", 16.2F);
+            label1.Location = new Point(207, 105);
+            label1.Name = "label1";
+            label1.Size = new Size(136, 35);
+            label1.TabIndex = 3;
+            label1.Text = "Username";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Constantia", 16.2F);
+            label2.Location = new Point(207, 176);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 35);
+            label2.TabIndex = 4;
+            label2.Text = "Password";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Cooper Black", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(246, 51);
+            label3.Name = "label3";
+            label3.Size = new Size(241, 32);
+            label3.TabIndex = 5;
+            label3.Text = "Caregiver Login";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.SeniorConnect;
+            pictureBox1.Location = new Point(-14, 8);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(172, 132);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
+            // FrmCaregiverLogin
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnLogin);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Name = "FrmCaregiverLogin";
+            Text = "FrmCaregiverLogin";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtUsername;
+        private TextBox txtPassword;
+        private Button btnLogin;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private PictureBox pictureBox1;
     }
 }

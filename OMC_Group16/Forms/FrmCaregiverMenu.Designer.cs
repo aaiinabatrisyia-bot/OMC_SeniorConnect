@@ -28,12 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmCaregiverMenu";
+            btnReminder = new Button();
+            btnEmergency = new Button();
+            btnLogout = new Button();
+            SuspendLayout();
+            // 
+            // btnReminder
+            // 
+            btnReminder.Location = new Point(59, 36);
+            btnReminder.Name = "btnReminder";
+            btnReminder.Size = new Size(94, 29);
+            btnReminder.TabIndex = 0;
+            btnReminder.Text = "Reminder";
+            btnReminder.UseVisualStyleBackColor = true;
+            btnReminder.Click += btnReminder_Click;
+            // 
+            // btnEmergency
+            // 
+            btnEmergency.Location = new Point(59, 85);
+            btnEmergency.Name = "btnEmergency";
+            btnEmergency.Size = new Size(94, 29);
+            btnEmergency.TabIndex = 1;
+            btnEmergency.Text = "Emergency Contacts";
+            btnEmergency.UseVisualStyleBackColor = true;
+            btnEmergency.Click += btnEmergency_Click;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(59, 139);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(94, 29);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // FrmCaregiverMenu
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
+            Controls.Add(btnEmergency);
+            Controls.Add(btnReminder);
+            Name = "FrmCaregiverMenu";
+            Text = "FrmCaregiverMenu";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnReminder;
+        private Button btnEmergency;
+        private Button btnLogout;
     }
 }
