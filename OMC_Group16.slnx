@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="OMC_Group16/OMC_Group16.csproj" />
+  <Folder Name="/Solution Items/">
+    <Project Path="OMC_Group16/OMC_Group16.csproj" />
+  </Folder>
+  <Project Path="../../../../../source/repos/OMC_SeniorConnect/OMC_Group16/OMC_Group16.csproj" />
 </Solution>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OMC_Group16": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}
