@@ -57,7 +57,13 @@ namespace OMC_Group16
         {
             FrmCreateAccount createAccountForm = new FrmCreateAccount();
             createAccountForm.Show();
-            this.Hide(); 
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FrmWelcome welcomeForm = new FrmWelcome();
+            welcomeForm.Show();
         }
     }
 }

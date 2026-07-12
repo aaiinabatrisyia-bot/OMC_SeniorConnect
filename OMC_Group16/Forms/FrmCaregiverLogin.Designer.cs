@@ -37,6 +37,7 @@
             pictureBox1 = new PictureBox();
             label4 = new Label();
             btnCreateAccount = new Button();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -129,11 +130,22 @@
             btnCreateAccount.UseVisualStyleBackColor = true;
             btnCreateAccount.Click += btnCreateAccount_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(316, 366);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(94, 29);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // FrmCaregiverLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(btnCreateAccount);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
@@ -161,5 +173,6 @@
         private PictureBox pictureBox1;
         private Label label4;
         private Button btnCreateAccount;
+        private Button btnBack;
     }
 }
