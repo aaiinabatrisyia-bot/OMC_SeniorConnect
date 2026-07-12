@@ -35,6 +35,8 @@
             label2 = new Label();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
+            btnCreateAccount = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Constantia", 16.2F);
-            txtPassword.Location = new Point(362, 176);
+            txtPassword.Location = new Point(349, 176);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(125, 40);
             txtPassword.TabIndex = 1;
@@ -108,11 +110,32 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(285, 296);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Don't Have an Account?";
+            // 
+            // btnCreateAccount
+            // 
+            btnCreateAccount.Location = new Point(298, 331);
+            btnCreateAccount.Name = "btnCreateAccount";
+            btnCreateAccount.Size = new Size(120, 29);
+            btnCreateAccount.TabIndex = 8;
+            btnCreateAccount.Text = "Create Account";
+            btnCreateAccount.UseVisualStyleBackColor = true;
+            btnCreateAccount.Click += btnCreateAccount_Click;
+            // 
             // FrmCaregiverLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCreateAccount);
+            Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -136,5 +159,7 @@
         private Label label2;
         private Label label3;
         private PictureBox pictureBox1;
+        private Label label4;
+        private Button btnCreateAccount;
     }
 }

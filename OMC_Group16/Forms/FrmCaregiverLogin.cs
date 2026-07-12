@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace OMC_Group16
 {
+    using OMC_Group16.Forms;
     using System.Data.SqlClient;
     public partial class FrmCaregiverLogin : Form
     {
@@ -20,7 +21,6 @@ namespace OMC_Group16
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
@@ -51,6 +51,13 @@ namespace OMC_Group16
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
                 return count > 0;
             }
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            FrmCreateAccount createAccountForm = new FrmCreateAccount();
+            createAccountForm.Show();
+            this.Hide(); 
         }
     }
 }
