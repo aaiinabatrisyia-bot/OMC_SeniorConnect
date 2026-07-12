@@ -62,9 +62,16 @@ namespace OMC_Group16
             MessageBox.Show($"Calling Emergency Contact {contact}...", "Emergency", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void InitializeComponent()
+        {
+
+        }
+
         private void btnNearbyClinic_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Finding nearby clinic..", "Emergency", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private Panel panel1;
     }
 }
