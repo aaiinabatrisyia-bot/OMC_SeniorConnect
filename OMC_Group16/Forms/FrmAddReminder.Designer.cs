@@ -34,8 +34,8 @@
             dtpReminderDate = new DateTimePicker();
             label3 = new Label();
             txtReminderDescription = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnSave = new Button();
+            btnCancel = new Button();
             SuspendLayout();
             // 
             // label1
@@ -88,32 +88,32 @@
             txtReminderDescription.Size = new Size(250, 101);
             txtReminderDescription.TabIndex = 5;
             // 
-            // button1
+            // btnSave
             // 
-            button1.Location = new Point(181, 317);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 6;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSave.Location = new Point(201, 317);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(94, 29);
+            btnSave.TabIndex = 6;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += button1_Click;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.Location = new Point(305, 317);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 7;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
+            btnCancel.Location = new Point(357, 317);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(94, 29);
+            btnCancel.TabIndex = 7;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // FrmAddReminder
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
             Controls.Add(txtReminderDescription);
             Controls.Add(label3);
             Controls.Add(dtpReminderDate);
@@ -134,7 +134,7 @@
         private DateTimePicker dtpReminderDate;
         private Label label3;
         private TextBox txtReminderDescription;
-        private Button button1;
-        private Button button2;
+        private Button btnSave;
+        private Button btnCancel;
     }
 }
