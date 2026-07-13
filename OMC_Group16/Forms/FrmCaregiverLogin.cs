@@ -65,5 +65,10 @@ namespace OMC_Group16
             FrmWelcome welcomeForm = new FrmWelcome();
             welcomeForm.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

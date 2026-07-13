@@ -32,13 +32,16 @@
             btnEmergency = new Button();
             btnLogout = new Button();
             btnBack = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnReminder
             // 
-            btnReminder.Location = new Point(59, 36);
+            btnReminder.Location = new Point(97, 58);
+            btnReminder.Margin = new Padding(3, 2, 3, 2);
             btnReminder.Name = "btnReminder";
-            btnReminder.Size = new Size(117, 29);
+            btnReminder.Size = new Size(213, 26);
             btnReminder.TabIndex = 0;
             btnReminder.Text = "Add Reminder";
             btnReminder.UseVisualStyleBackColor = true;
@@ -46,9 +49,10 @@
             // 
             // btnEmergency
             // 
-            btnEmergency.Location = new Point(59, 85);
+            btnEmergency.Location = new Point(97, 129);
+            btnEmergency.Margin = new Padding(3, 2, 3, 2);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(117, 29);
+            btnEmergency.Size = new Size(213, 26);
             btnEmergency.TabIndex = 1;
             btnEmergency.Text = "Emergency Contacts";
             btnEmergency.UseVisualStyleBackColor = true;
@@ -56,9 +60,10 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(59, 139);
+            btnLogout.Location = new Point(97, 208);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(117, 29);
+            btnLogout.Size = new Size(213, 26);
             btnLogout.TabIndex = 2;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
@@ -66,25 +71,38 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(59, 196);
+            btnBack.Location = new Point(97, 283);
+            btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(94, 29);
+            btnBack.Size = new Size(193, 26);
             btnBack.TabIndex = 3;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += button1_Click;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnBack);
+            panel1.Controls.Add(btnLogout);
+            panel1.Controls.Add(btnEmergency);
+            panel1.Controls.Add(btnReminder);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(441, 624);
+            panel1.TabIndex = 4;
+            // 
             // FrmCaregiverMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnBack);
-            Controls.Add(btnLogout);
-            Controls.Add(btnEmergency);
-            Controls.Add(btnReminder);
+            ClientSize = new Size(441, 624);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCaregiverMenu";
             Text = "FrmCaregiverMenu";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -94,5 +112,6 @@
         private Button btnEmergency;
         private Button btnLogout;
         private Button btnBack;
+        private Panel panel1;
     }
 }
