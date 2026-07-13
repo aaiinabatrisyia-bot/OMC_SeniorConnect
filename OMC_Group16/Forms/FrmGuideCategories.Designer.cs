@@ -38,30 +38,33 @@
             btnNextGuide = new Button();
             btnBack = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btnVoiceAssist = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.Location = new Point(624, 86);
+            label1.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(604, 86);
             label1.Name = "label1";
-            label1.Size = new Size(426, 108);
+            label1.Size = new Size(482, 132);
             label1.TabIndex = 0;
             label1.Text = "Guide Categories";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnBank
             // 
+            btnBank.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBank.Location = new Point(3, 3);
             btnBank.Name = "btnBank";
             btnBank.Size = new Size(557, 194);
             btnBank.TabIndex = 1;
             btnBank.Text = "Online Banking";
             btnBank.UseVisualStyleBackColor = true;
-          //  btnBank.Click += btnBank_Click;
             // 
             // btnHealth
             // 
+            btnHealth.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnHealth.Location = new Point(566, 3);
             btnHealth.Name = "btnHealth";
             btnHealth.Size = new Size(557, 194);
@@ -71,6 +74,7 @@
             // 
             // btnEWallet
             // 
+            btnEWallet.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEWallet.Location = new Point(1129, 3);
             btnEWallet.Name = "btnEWallet";
             btnEWallet.Size = new Size(548, 194);
@@ -80,6 +84,7 @@
             // 
             // btnMessage
             // 
+            btnMessage.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMessage.Location = new Point(566, 203);
             btnMessage.Name = "btnMessage";
             btnMessage.Size = new Size(557, 194);
@@ -89,6 +94,7 @@
             // 
             // btnGov
             // 
+            btnGov.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGov.Location = new Point(3, 203);
             btnGov.Name = "btnGov";
             btnGov.Size = new Size(557, 194);
@@ -98,6 +104,7 @@
             // 
             // btnTransport
             // 
+            btnTransport.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTransport.Location = new Point(1129, 203);
             btnTransport.Name = "btnTransport";
             btnTransport.Size = new Size(548, 194);
@@ -108,18 +115,20 @@
             // btnNextGuide
             // 
             btnNextGuide.Enabled = false;
+            btnNextGuide.Font = new Font("Segoe UI", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnNextGuide.Location = new Point(1419, 839);
             btnNextGuide.Name = "btnNextGuide";
-            btnNextGuide.Size = new Size(205, 46);
+            btnNextGuide.Size = new Size(205, 62);
             btnNextGuide.TabIndex = 7;
             btnNextGuide.Text = "Next Guide -->";
             btnNextGuide.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
+            btnBack.Font = new Font("Calibri", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnBack.Location = new Point(62, 839);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(150, 46);
+            btnBack.Size = new Size(174, 62);
             btnBack.TabIndex = 8;
             btnBack.Text = "<-- Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -145,11 +154,22 @@
             tableLayoutPanel1.Size = new Size(1680, 400);
             tableLayoutPanel1.TabIndex = 9;
             // 
+            // btnVoiceAssist
+            // 
+            btnVoiceAssist.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVoiceAssist.Location = new Point(39, 40);
+            btnVoiceAssist.Name = "btnVoiceAssist";
+            btnVoiceAssist.Size = new Size(361, 101);
+            btnVoiceAssist.TabIndex = 10;
+            btnVoiceAssist.Text = "🔊 Turn Voice ON";
+            btnVoiceAssist.UseVisualStyleBackColor = true;
+            // 
             // FrmGuideCategories
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1673, 1011);
+            Controls.Add(btnVoiceAssist);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBack);
             Controls.Add(btnNextGuide);
@@ -173,5 +193,6 @@
         private Button btnNextGuide;
         private Button btnBack;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button btnVoiceAssist;
     }
 }
