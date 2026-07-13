@@ -35,6 +35,9 @@
             label2 = new Label();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
+            btnCreateAccount = new Button();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -108,11 +111,43 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(285, 296);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Don't Have an Account?";
+            // 
+            // btnCreateAccount
+            // 
+            btnCreateAccount.Location = new Point(298, 331);
+            btnCreateAccount.Name = "btnCreateAccount";
+            btnCreateAccount.Size = new Size(120, 29);
+            btnCreateAccount.TabIndex = 8;
+            btnCreateAccount.Text = "Create Account";
+            btnCreateAccount.UseVisualStyleBackColor = true;
+            btnCreateAccount.Click += btnCreateAccount_Click;
+            // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(316, 366);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(94, 29);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // FrmCaregiverLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
+            Controls.Add(btnCreateAccount);
+            Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -136,5 +171,8 @@
         private Label label2;
         private Label label3;
         private PictureBox pictureBox1;
+        private Label label4;
+        private Button btnCreateAccount;
+        private Button btnBack;
     }
 }

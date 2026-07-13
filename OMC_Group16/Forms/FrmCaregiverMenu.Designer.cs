@@ -31,6 +31,7 @@
             btnReminder = new Button();
             btnEmergency = new Button();
             btnLogout = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // btnReminder
@@ -63,11 +64,22 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(59, 196);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(94, 29);
+            btnBack.TabIndex = 3;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += button1_Click;
+            // 
             // FrmCaregiverMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(btnLogout);
             Controls.Add(btnEmergency);
             Controls.Add(btnReminder);
@@ -81,5 +93,6 @@
         private Button btnReminder;
         private Button btnEmergency;
         private Button btnLogout;
+        private Button btnBack;
     }
 }

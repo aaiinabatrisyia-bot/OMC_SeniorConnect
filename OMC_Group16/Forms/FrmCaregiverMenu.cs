@@ -33,5 +33,11 @@ namespace OMC_Group16
             welcome.Show();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCaregiverLogin login = new FrmCaregiverLogin();
+            login.Show();
+        }
     }
 }

@@ -3,4 +3,5 @@
     <Project Path="OMC_Group16/OMC_Group16.csproj" />
   </Folder>
   <Project Path="../../../../../source/repos/OMC_SeniorConnect/OMC_Group16/OMC_Group16.csproj" />
+  <Project Path="FrmEmergency/FrmEmergency.csproj" Id="949f98d0-0619-49ab-961d-b60fd419b143" />
 </Solution>
