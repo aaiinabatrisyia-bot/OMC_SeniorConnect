@@ -46,59 +46,65 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Constantia", 16.2F);
-            txtUsername.Location = new Point(175, 191);
+            txtUsername.Location = new Point(117, 191);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(253, 40);
+            txtUsername.Size = new Size(350, 40);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Constantia", 16.2F);
-            txtPassword.Location = new Point(175, 325);
+            txtPassword.Location = new Point(117, 325);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(253, 40);
+            txtPassword.Size = new Size(350, 40);
             txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
             btnLogin.AutoSize = true;
-            btnLogin.BackColor = Color.FromArgb(192, 255, 192);
+            btnLogin.BackColor = Color.Green;
             btnLogin.Font = new Font("Constantia", 16.2F);
-            btnLogin.Location = new Point(195, 428);
+            btnLogin.ForeColor = SystemColors.ButtonFace;
+            btnLogin.Location = new Point(191, 411);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(134, 60);
             btnLogin.TabIndex = 2;
-            btnLogin.Text = "Log In";
+            btnLogin.Text = "LOG IN";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Constantia", 16.2F);
-            label1.Location = new Point(12, 191);
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(4, 202);
             label1.Name = "label1";
-            label1.Size = new Size(149, 35);
+            label1.Size = new Size(107, 23);
             label1.TabIndex = 3;
-            label1.Text = "Username :";
+            label1.Text = "USERNAME:";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Constantia", 16.2F);
-            label2.Location = new Point(12, 325);
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(4, 336);
             label2.Name = "label2";
-            label2.Size = new Size(142, 35);
+            label2.Size = new Size(110, 23);
             label2.TabIndex = 4;
-            label2.Text = "Password :";
+            label2.Text = "PASSWORD:";
             // 
             // label3
             // 
+            label3.BackColor = Color.DarkOliveGreen;
+            label3.Dock = DockStyle.Top;
             label3.Font = new Font("Cooper Black", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(61, 20);
+            label3.ForeColor = Color.DarkKhaki;
+            label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(405, 43);
+            label3.Size = new Size(522, 63);
             label3.TabIndex = 5;
             label3.Text = "CAREGIVER LOGIN";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -107,7 +113,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(175, 556);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(175, 567);
             label4.Name = "label4";
             label4.Size = new Size(168, 20);
             label4.TabIndex = 7;
@@ -115,28 +122,33 @@
             // 
             // btnCreateAccount
             // 
+            btnCreateAccount.BackColor = Color.Gold;
             btnCreateAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCreateAccount.Location = new Point(113, 579);
+            btnCreateAccount.ForeColor = SystemColors.ButtonFace;
+            btnCreateAccount.Location = new Point(113, 611);
             btnCreateAccount.Name = "btnCreateAccount";
             btnCreateAccount.Size = new Size(290, 80);
             btnCreateAccount.TabIndex = 8;
             btnCreateAccount.Text = "CREATE ACCOUNT";
-            btnCreateAccount.UseVisualStyleBackColor = true;
+            btnCreateAccount.UseVisualStyleBackColor = false;
             btnCreateAccount.Click += btnCreateAccount_Click;
             // 
             // btnBack
             // 
+            btnBack.BackColor = Color.Salmon;
             btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(113, 665);
+            btnBack.ForeColor = SystemColors.ButtonFace;
+            btnBack.Location = new Point(113, 719);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(290, 79);
             btnBack.TabIndex = 9;
             btnBack.Text = "BACK";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnCreateAccount);

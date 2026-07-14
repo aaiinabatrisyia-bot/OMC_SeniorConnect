@@ -33,55 +33,66 @@
             btnLogout = new Button();
             btnBack = new Button();
             panel1 = new Panel();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnReminder
             // 
+            btnReminder.BackColor = Color.OrangeRed;
             btnReminder.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReminder.Location = new Point(111, 77);
+            btnReminder.ForeColor = SystemColors.ButtonFace;
+            btnReminder.Location = new Point(77, 203);
             btnReminder.Name = "btnReminder";
-            btnReminder.Size = new Size(243, 35);
+            btnReminder.Size = new Size(342, 35);
             btnReminder.TabIndex = 0;
             btnReminder.Text = "ADD REMINDER";
-            btnReminder.UseVisualStyleBackColor = true;
+            btnReminder.UseVisualStyleBackColor = false;
             btnReminder.Click += btnReminder_Click;
             // 
             // btnEmergency
             // 
+            btnEmergency.BackColor = Color.Goldenrod;
             btnEmergency.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEmergency.Location = new Point(111, 172);
+            btnEmergency.ForeColor = SystemColors.ButtonFace;
+            btnEmergency.Location = new Point(77, 257);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(243, 35);
+            btnEmergency.Size = new Size(342, 35);
             btnEmergency.TabIndex = 1;
             btnEmergency.Text = "EMERGENCY CONTACT";
-            btnEmergency.UseVisualStyleBackColor = true;
+            btnEmergency.UseVisualStyleBackColor = false;
             btnEmergency.Click += btnEmergency_Click;
             // 
             // btnLogout
             // 
+            btnLogout.BackColor = Color.Green;
             btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(111, 277);
+            btnLogout.ForeColor = SystemColors.ButtonFace;
+            btnLogout.Location = new Point(77, 315);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(243, 35);
+            btnLogout.Size = new Size(342, 35);
             btnLogout.TabIndex = 2;
             btnLogout.Text = "LOGOUT";
-            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
             // btnBack
             // 
+            btnBack.BackColor = Color.Green;
             btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(111, 377);
+            btnBack.ForeColor = SystemColors.ButtonFace;
+            btnBack.Location = new Point(77, 373);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(221, 35);
+            btnBack.Size = new Size(342, 35);
             btnBack.TabIndex = 3;
             btnBack.Text = "BACK";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += button1_Click;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnEmergency);
@@ -92,6 +103,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.DarkOliveGreen;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkKhaki;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(504, 73);
+            label1.TabIndex = 4;
+            label1.Text = "CAREGIVER MENU";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmCaregiverMenu
             // 
@@ -113,5 +137,6 @@
         private Button btnLogout;
         private Button btnBack;
         private Panel panel1;
+        private Label label1;
     }
 }
