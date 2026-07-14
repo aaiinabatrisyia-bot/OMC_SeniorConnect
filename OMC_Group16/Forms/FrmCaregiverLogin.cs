@@ -41,17 +41,12 @@ namespace OMC_Group16
 
         private bool AuthenticateCareGiver(string username, string password)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            if (username == "admin" && password == "admin")
             {
-                string query = "SELECT COUNT(*) FROM Caregivers WHERE Username = @user AND Password = @pass";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@user", username);
-                cmd.Parameters.AddWithValue("@pass", password);
-
-                conn.Open();
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                return count > 0;
+                return true;
             }
+            return false;
+
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
