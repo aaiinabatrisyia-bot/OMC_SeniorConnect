@@ -257,12 +257,13 @@
             // 
             // label1
             // 
+            label1.Dock = DockStyle.Top;
             label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 0, 192);
-            label1.Location = new Point(19, 19);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(396, 54);
+            label1.Size = new Size(439, 54);
             label1.TabIndex = 0;
             label1.Text = "EMERGENCY";
             label1.TextAlign = ContentAlignment.MiddleCenter;

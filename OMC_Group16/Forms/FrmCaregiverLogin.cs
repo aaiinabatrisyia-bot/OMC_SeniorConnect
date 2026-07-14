@@ -71,5 +71,10 @@ namespace OMC_Group16
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

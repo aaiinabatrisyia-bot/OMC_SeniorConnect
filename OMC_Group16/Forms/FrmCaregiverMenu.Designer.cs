@@ -38,45 +38,45 @@
             // 
             // btnReminder
             // 
-            btnReminder.Location = new Point(97, 58);
-            btnReminder.Margin = new Padding(3, 2, 3, 2);
+            btnReminder.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReminder.Location = new Point(111, 77);
             btnReminder.Name = "btnReminder";
-            btnReminder.Size = new Size(213, 26);
+            btnReminder.Size = new Size(243, 35);
             btnReminder.TabIndex = 0;
-            btnReminder.Text = "Add Reminder";
+            btnReminder.Text = "ADD REMINDER";
             btnReminder.UseVisualStyleBackColor = true;
             btnReminder.Click += btnReminder_Click;
             // 
             // btnEmergency
             // 
-            btnEmergency.Location = new Point(97, 129);
-            btnEmergency.Margin = new Padding(3, 2, 3, 2);
+            btnEmergency.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEmergency.Location = new Point(111, 172);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(213, 26);
+            btnEmergency.Size = new Size(243, 35);
             btnEmergency.TabIndex = 1;
-            btnEmergency.Text = "Emergency Contacts";
+            btnEmergency.Text = "EMERGENCY CONTACT";
             btnEmergency.UseVisualStyleBackColor = true;
             btnEmergency.Click += btnEmergency_Click;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(97, 208);
-            btnLogout.Margin = new Padding(3, 2, 3, 2);
+            btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(111, 277);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(213, 26);
+            btnLogout.Size = new Size(243, 35);
             btnLogout.TabIndex = 2;
-            btnLogout.Text = "Logout";
+            btnLogout.Text = "LOGOUT";
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(97, 283);
-            btnBack.Margin = new Padding(3, 2, 3, 2);
+            btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(111, 377);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(193, 26);
+            btnBack.Size = new Size(221, 35);
             btnBack.TabIndex = 3;
-            btnBack.Text = "Back";
+            btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += button1_Click;
             // 
@@ -88,18 +88,18 @@
             panel1.Controls.Add(btnReminder);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(441, 624);
+            panel1.Size = new Size(504, 832);
             panel1.TabIndex = 4;
             // 
             // FrmCaregiverMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(441, 624);
+            ClientSize = new Size(504, 832);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCaregiverMenu";
             Text = "FrmCaregiverMenu";
             panel1.ResumeLayout(false);
