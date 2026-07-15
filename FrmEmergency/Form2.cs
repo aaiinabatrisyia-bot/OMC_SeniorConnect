@@ -19,10 +19,7 @@ namespace FrmEmergency
 
         private void InitializeDatabase()
         {
-            try
-            {
-
-            }
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
