@@ -37,14 +37,15 @@
             btnSave = new Button();
             btnCancel = new Button();
             btnVoiceAssistant = new Button();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.MidnightBlue;
-            label1.Location = new Point(28, 73);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(27, 116);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(58, 23);
@@ -53,7 +54,7 @@
             // 
             // txtTitle
             // 
-            txtTitle.Location = new Point(106, 70);
+            txtTitle.Location = new Point(105, 113);
             txtTitle.Margin = new Padding(4, 3, 4, 3);
             txtTitle.Multiline = true;
             txtTitle.Name = "txtTitle";
@@ -64,8 +65,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.MidnightBlue;
-            label2.Location = new Point(27, 120);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(26, 163);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(58, 23);
@@ -74,7 +75,7 @@
             // 
             // dtpReminderDate
             // 
-            dtpReminderDate.Location = new Point(106, 129);
+            dtpReminderDate.Location = new Point(105, 172);
             dtpReminderDate.Margin = new Padding(4, 3, 4, 3);
             dtpReminderDate.Name = "dtpReminderDate";
             dtpReminderDate.Size = new Size(312, 30);
@@ -84,8 +85,8 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.MidnightBlue;
-            label3.Location = new Point(27, 177);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(26, 220);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(125, 23);
@@ -94,7 +95,7 @@
             // 
             // txtReminderDescription
             // 
-            txtReminderDescription.Location = new Point(67, 214);
+            txtReminderDescription.Location = new Point(66, 257);
             txtReminderDescription.Margin = new Padding(4, 3, 4, 3);
             txtReminderDescription.Multiline = true;
             txtReminderDescription.Name = "txtReminderDescription";
@@ -103,41 +104,61 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(27, 382);
+            btnSave.BackColor = Color.Green;
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(26, 425);
             btnSave.Margin = new Padding(4, 3, 4, 3);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(126, 33);
             btnSave.TabIndex = 6;
             btnSave.Text = "SAVE";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += button1_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(254, 382);
+            btnCancel.BackColor = Color.Crimson;
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(278, 425);
             btnCancel.Margin = new Padding(4, 3, 4, 3);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(139, 33);
             btnCancel.TabIndex = 7;
             btnCancel.Text = "CANCEL";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnVoiceAssistant
             // 
-            btnVoiceAssistant.Location = new Point(106, 450);
+            btnVoiceAssistant.BackColor = Color.Yellow;
+            btnVoiceAssistant.ForeColor = Color.White;
+            btnVoiceAssistant.Location = new Point(105, 493);
             btnVoiceAssistant.Margin = new Padding(4, 3, 4, 3);
             btnVoiceAssistant.Name = "btnVoiceAssistant";
             btnVoiceAssistant.Size = new Size(220, 33);
             btnVoiceAssistant.TabIndex = 8;
             btnVoiceAssistant.Text = "VOICE ASSISTANT";
-            btnVoiceAssistant.UseVisualStyleBackColor = true;
+            btnVoiceAssistant.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.DarkOliveGreen;
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkKhaki;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(439, 61);
+            label4.TabIndex = 9;
+            label4.Text = "ADD REMINDER";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmAddReminder
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.OldLace;
+            BackColor = Color.MidnightBlue;
             ClientSize = new Size(439, 616);
+            Controls.Add(label4);
             Controls.Add(btnVoiceAssistant);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
@@ -167,5 +188,6 @@
         private Button btnSave;
         private Button btnCancel;
         private Button btnVoiceAssistant;
+        private Label label4;
     }
 }

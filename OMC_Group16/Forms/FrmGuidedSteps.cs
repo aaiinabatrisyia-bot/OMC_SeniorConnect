@@ -14,5 +14,14 @@ namespace OMC_Group16.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmGuidedSteps_Load(object sender, EventArgs e)
+        {
+
+
+
+
+
+        }
     }
 }
