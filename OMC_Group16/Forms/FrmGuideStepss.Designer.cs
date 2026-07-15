@@ -40,84 +40,106 @@
             // 
             // lblCategoryTitle
             // 
-            lblCategoryTitle.AutoSize = true;
-            lblCategoryTitle.Font = new Font("Calibri", 25.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCategoryTitle.Location = new Point(73, 63);
+            lblCategoryTitle.BackColor = Color.DarkOliveGreen;
+            lblCategoryTitle.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCategoryTitle.ForeColor = Color.DarkKhaki;
+            lblCategoryTitle.Location = new Point(1, 0);
             lblCategoryTitle.Name = "lblCategoryTitle";
-            lblCategoryTitle.Size = new Size(659, 85);
+            lblCategoryTitle.Size = new Size(737, 265);
             lblCategoryTitle.TabIndex = 0;
             lblCategoryTitle.Text = "Online Banking Guide";
+            lblCategoryTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblStepDescription
             // 
-            lblStepDescription.Font = new Font("Calibri", 19.85F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStepDescription.Location = new Point(38, 248);
+            lblStepDescription.Font = new Font("Calibri", 10.85F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStepDescription.Location = new Point(1, 268);
             lblStepDescription.Name = "lblStepDescription";
-            lblStepDescription.Size = new Size(1475, 192);
+            lblStepDescription.Size = new Size(737, 201);
             lblStepDescription.TabIndex = 1;
             lblStepDescription.Text = "Step 1: Open your banking app and type your username.";
             // 
             // btnPrevious
             // 
-            btnPrevious.Location = new Point(83, 643);
+            btnPrevious.BackColor = Color.OliveDrab;
+            btnPrevious.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPrevious.ForeColor = Color.Khaki;
+            btnPrevious.Location = new Point(12, 664);
             btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(238, 97);
+            btnPrevious.Size = new Size(187, 55);
             btnPrevious.TabIndex = 2;
             btnPrevious.Text = "<-- Previous Step";
-            btnPrevious.UseVisualStyleBackColor = true;
+            btnPrevious.UseVisualStyleBackColor = false;
+            btnPrevious.Click += btnPrevious_Click_1;
             // 
             // btnBackToCategories
             // 
             btnBackToCategories.BackColor = SystemColors.ActiveCaption;
             btnBackToCategories.Font = new Font("Calibri", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBackToCategories.Location = new Point(641, 643);
+            btnBackToCategories.Location = new Point(241, 666);
             btnBackToCategories.Name = "btnBackToCategories";
-            btnBackToCategories.Size = new Size(278, 97);
+            btnBackToCategories.Size = new Size(237, 55);
             btnBackToCategories.TabIndex = 3;
             btnBackToCategories.Text = "Back To Categories";
             btnBackToCategories.UseVisualStyleBackColor = false;
+            btnBackToCategories.Click += btnBackToCategories_Click_1;
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(1253, 643);
+            btnNext.BackColor = Color.OliveDrab;
+            btnNext.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNext.ForeColor = Color.Khaki;
+            btnNext.Location = new Point(532, 664);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(218, 97);
+            btnNext.Size = new Size(190, 55);
             btnNext.TabIndex = 4;
             btnNext.Text = "Next Step -->";
-            btnNext.UseVisualStyleBackColor = true;
+            btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click_1;
             // 
             // btnVoiceToggleSteps
             // 
-            btnVoiceToggleSteps.Location = new Point(1304, 27);
+            btnVoiceToggleSteps.BackColor = Color.FromArgb(127, 166, 122);
+            btnVoiceToggleSteps.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVoiceToggleSteps.ForeColor = SystemColors.ButtonHighlight;
+            btnVoiceToggleSteps.Location = new Point(12, 12);
             btnVoiceToggleSteps.Name = "btnVoiceToggleSteps";
-            btnVoiceToggleSteps.Size = new Size(224, 90);
+            btnVoiceToggleSteps.Size = new Size(152, 89);
             btnVoiceToggleSteps.TabIndex = 5;
-            btnVoiceToggleSteps.Text = "🔊 Voice is ON";
-            btnVoiceToggleSteps.UseVisualStyleBackColor = true;
+            btnVoiceToggleSteps.Text = "🔊 Turn Voice ON";
+            btnVoiceToggleSteps.UseVisualStyleBackColor = false;
+            btnVoiceToggleSteps.Click += btnVoiceToggleSteps_Click_1;
             // 
             // btnZoomIn
             // 
-            btnZoomIn.Location = new Point(1304, 461);
+            btnZoomIn.BackColor = Color.FromArgb(127, 166, 122);
+            btnZoomIn.ForeColor = SystemColors.ButtonHighlight;
+            btnZoomIn.Location = new Point(600, 486);
             btnZoomIn.Name = "btnZoomIn";
-            btnZoomIn.Size = new Size(73, 60);
+            btnZoomIn.Size = new Size(54, 46);
             btnZoomIn.TabIndex = 6;
             btnZoomIn.Text = "A+";
-            btnZoomIn.UseVisualStyleBackColor = true;
+            btnZoomIn.UseVisualStyleBackColor = false;
+            btnZoomIn.Click += btnZoomIn_Click_1;
             // 
             // btnZoomOut
             // 
-            btnZoomOut.Location = new Point(1400, 461);
+            btnZoomOut.BackColor = Color.FromArgb(127, 166, 122);
+            btnZoomOut.ForeColor = SystemColors.ButtonHighlight;
+            btnZoomOut.Location = new Point(674, 486);
             btnZoomOut.Name = "btnZoomOut";
-            btnZoomOut.Size = new Size(71, 60);
+            btnZoomOut.Size = new Size(48, 46);
             btnZoomOut.TabIndex = 7;
             btnZoomOut.Text = "A-";
-            btnZoomOut.UseVisualStyleBackColor = true;
+            btnZoomOut.UseVisualStyleBackColor = false;
+            btnZoomOut.Click += btnZoomOut_Click_1;
             // 
             // FrmGuideStepss
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1557, 829);
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(741, 979);
             Controls.Add(btnZoomOut);
             Controls.Add(btnZoomIn);
             Controls.Add(btnVoiceToggleSteps);
@@ -126,11 +148,12 @@
             Controls.Add(btnPrevious);
             Controls.Add(lblStepDescription);
             Controls.Add(lblCategoryTitle);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmGuideStepss";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmGuideStepss";
-            this.Load += new System.EventHandler(this.FrmGuideStepss_Load);
+            Load += FrmGuideStepss_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

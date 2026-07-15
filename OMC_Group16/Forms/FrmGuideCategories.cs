@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-// Imported speech synthesis framework for SeniorConnect Voice Assist
 using System.Speech.Synthesis;
 
 namespace OMC_Group16.Forms
@@ -24,7 +23,7 @@ namespace OMC_Group16.Forms
 
         private void FrmGuideCategories_Load(object sender, EventArgs e)
         {
-            // Initial greeting prompt if toggled active
+
             SpeakText("Please select a guide category.");
         }
 
@@ -35,13 +34,13 @@ namespace OMC_Group16.Forms
         {
             if (isVoiceEnabled && !string.IsNullOrEmpty(text))
             {
-                // Cancel any ongoing speech so it doesn't overlap overlapping audio lines
+
                 voiceEngine.SpeakAsyncCancelAll();
                 voiceEngine.SpeakAsync(text);
             }
         }
 
-        // --- Voice Control Toggle Button ---
+
 
         private void btnVoiceAssist_Click(object sender, EventArgs e)
         {
@@ -101,9 +100,7 @@ namespace OMC_Group16.Forms
             OpenGuideSteps("Transport");
         }
 
-        /// <summary>
-        /// Handles passing the selected category data to the next form
-        /// </summary>
+
         private void OpenGuideSteps(string categoryName)
         {
             // Standard WinForms logic to switch windows and pass data
@@ -112,7 +109,6 @@ namespace OMC_Group16.Forms
             this.Hide();
         }
 
-        // --- Bottom Navigation Buttons ---
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -147,6 +143,82 @@ namespace OMC_Group16.Forms
             btnMessage.MouseEnter += (s, e) => SpeakText("Messages");
             btnTransport.MouseEnter += (s, e) => SpeakText("Transport");
             btnBack.MouseEnter += (s, e) => SpeakText("Back button");
+            btnNextGuide.MouseEnter += (s, e) => SpeakText("Next Guide button");
+        }
+
+        private void btnGov_Click(object sender, EventArgs e)
+        {
+            SpeakText("Opening Scam Alert Guide.");
+            OpenGuideSteps("Scam Alert");
+        }
+
+        private void btnVoiceAssist_Click_1(object sender, EventArgs e)
+        {
+            isVoiceEnabled = !isVoiceEnabled;
+
+            if (isVoiceEnabled)
+            {
+                btnVoiceAssist.Text = "🔇 Mute Voice";
+                btnVoiceAssist.BackColor = Color.LightGreen;
+                // Speak immediately to confirm system activation
+                voiceEngine.SpeakAsyncCancelAll();
+                voiceEngine.SpeakAsync("Voice assistance activated.");
+            }
+            else
+            {
+                btnVoiceAssist.Text = "🔊 Turn Voice ON";
+                btnVoiceAssist.BackColor = SystemColors.Control;
+                voiceEngine.SpeakAsyncCancelAll();
+            }
+        }
+
+        private void btnBank_Click(object sender, EventArgs e)
+        {
+            SpeakText("Opening Online Banking Guide.");
+            OpenGuideSteps("Online Banking");
+        }
+
+        private void btnEWallet_Click_1(object sender, EventArgs e)
+        {
+            SpeakText("Opening E-Wallet Guide.");
+            OpenGuideSteps("E-Wallet");
+        }
+
+        private void btnHealth_Click(object sender, EventArgs e)
+        {
+            SpeakText("Opening Healthcare Guide.");
+            OpenGuideSteps("Healthcare");
+        }
+
+        private void btnMessage_Click(object sender, EventArgs e)
+        {
+            SpeakText("Opening Messages Guide.");
+            OpenGuideSteps("Messages");
+        }
+
+        private void btnTransport_Click_1(object sender, EventArgs e)
+        {
+            SpeakText("Opening Transport Guide.");
+            OpenGuideSteps("Transport");
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            SpeakText("Going back to main home menu.");
+
+            Form mainMenu = Application.OpenForms["FrmMainMenu"] ?? Application.OpenForms["FrmHome"];
+            if (mainMenu != null)
+            {
+                mainMenu.Show();
+            }
+            this.Close();
+        }
+
+        private void btnNextGuide_Click_1(object sender, EventArgs e)
+        {
+            string message = "Please click on one of the categories above to proceed.";
+            SpeakText(message);
+            MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
