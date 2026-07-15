@@ -36,8 +36,8 @@
             label3 = new Label();
             btnRegister = new Button();
             panel1 = new Panel();
-            label4 = new Label();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -127,6 +127,17 @@
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.user;
+            pictureBox1.Location = new Point(205, 111);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(73, 85);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            // 
             // label4
             // 
             label4.BackColor = Color.DarkOliveGreen;
@@ -139,17 +150,6 @@
             label4.TabIndex = 7;
             label4.Text = "CREATE ACCOUNT";
             label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(208, 99);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(73, 85);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
             // 
             // FrmCreateAccount
             // 
