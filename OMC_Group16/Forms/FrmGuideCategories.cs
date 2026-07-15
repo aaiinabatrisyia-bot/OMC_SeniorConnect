@@ -217,14 +217,6 @@ namespace OMC_Group16.Forms
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
