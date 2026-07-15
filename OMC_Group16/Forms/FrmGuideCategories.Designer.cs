@@ -46,9 +46,10 @@
             // 
             label1.BackColor = Color.DarkOliveGreen;
             label1.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(604, 86);
+            label1.Location = new Point(-1, -1);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(482, 132);
+            label1.Size = new Size(895, 282);
             label1.TabIndex = 0;
             label1.Text = "Guide Categories";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -57,9 +58,10 @@
             // btnBank
             // 
             btnBank.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBank.Location = new Point(3, 3);
+            btnBank.Location = new Point(6, 6);
+            btnBank.Margin = new Padding(6);
             btnBank.Name = "btnBank";
-            btnBank.Size = new Size(557, 194);
+            btnBank.Size = new Size(281, 273);
             btnBank.TabIndex = 1;
             btnBank.Text = "Online Banking";
             btnBank.UseVisualStyleBackColor = true;
@@ -89,9 +91,10 @@
             // btnMessage
             // 
             btnMessage.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMessage.Location = new Point(566, 203);
+            btnMessage.Location = new Point(299, 291);
+            btnMessage.Margin = new Padding(6);
             btnMessage.Name = "btnMessage";
-            btnMessage.Size = new Size(557, 194);
+            btnMessage.Size = new Size(281, 273);
             btnMessage.TabIndex = 4;
             btnMessage.Text = "Messages";
             btnMessage.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@
             // btnGov
             // 
             btnGov.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGov.Location = new Point(3, 203);
+            btnGov.Location = new Point(6, 291);
+            btnGov.Margin = new Padding(6);
             btnGov.Name = "btnGov";
-            btnGov.Size = new Size(557, 194);
+            btnGov.Size = new Size(281, 273);
             btnGov.TabIndex = 5;
             btnGov.Text = "Scam Alert";
             btnGov.UseVisualStyleBackColor = false;
@@ -124,9 +128,10 @@
             btnNextGuide.BackColor = Color.OliveDrab;
             btnNextGuide.Enabled = false;
             btnNextGuide.Font = new Font("Segoe UI", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnNextGuide.Location = new Point(1419, 839);
+            btnNextGuide.Location = new Point(690, 1248);
+            btnNextGuide.Margin = new Padding(6);
             btnNextGuide.Name = "btnNextGuide";
-            btnNextGuide.Size = new Size(110, 29);
+            btnNextGuide.Size = new Size(204, 62);
             btnNextGuide.TabIndex = 7;
             btnNextGuide.Text = "Next Guide -->";
             btnNextGuide.UseVisualStyleBackColor = false;
@@ -136,9 +141,10 @@
             // 
             btnBack.BackColor = Color.OliveDrab;
             btnBack.Font = new Font("Calibri", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(62, 839);
+            btnBack.Location = new Point(34, 1248);
+            btnBack.Margin = new Padding(6);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(94, 29);
+            btnBack.Size = new Size(175, 62);
             btnBack.TabIndex = 8;
             btnBack.Text = "<-- Back";
             btnBack.UseVisualStyleBackColor = false;
@@ -149,39 +155,42 @@
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 554F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 1029F));
             tableLayoutPanel1.Controls.Add(btnBank, 0, 0);
             tableLayoutPanel1.Controls.Add(btnGov, 0, 1);
             tableLayoutPanel1.Controls.Add(btnMessage, 1, 1);
-            tableLayoutPanel1.Location = new Point(-4, 305);
-            tableLayoutPanel1.Margin = new Padding(20);
+            tableLayoutPanel1.Location = new Point(-7, 542);
+            tableLayoutPanel1.Margin = new Padding(37, 43, 37, 43);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1680, 400);
+            tableLayoutPanel1.Size = new Size(1615, 570);
             tableLayoutPanel1.TabIndex = 9;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // btnVoiceAssist
             // 
             btnVoiceAssist.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnVoiceAssist.Location = new Point(39, 40);
+            btnVoiceAssist.Location = new Point(15, 15);
+            btnVoiceAssist.Margin = new Padding(6);
             btnVoiceAssist.Name = "btnVoiceAssist";
-            btnVoiceAssist.Size = new Size(361, 101);
+            btnVoiceAssist.Size = new Size(194, 108);
             btnVoiceAssist.TabIndex = 10;
             btnVoiceAssist.Text = "🔊 Turn Voice ON";
             btnVoiceAssist.UseVisualStyleBackColor = true;
             // 
             // FrmGuideCategories
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1673, 1011);
+            ClientSize = new Size(1518, 1805);
             Controls.Add(btnVoiceAssist);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBack);
             Controls.Add(btnNextGuide);
             Controls.Add(label1);
+            Margin = new Padding(6);
             Name = "FrmGuideCategories";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmGuideCategories";

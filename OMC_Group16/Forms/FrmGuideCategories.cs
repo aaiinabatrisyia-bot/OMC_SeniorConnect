@@ -62,13 +62,8 @@ namespace OMC_Group16.Forms
             }
         }
 
-        // --- Category Button Click Events ---
 
-        private void btnOnlineBanking_Click(object sender, EventArgs e)
-        {
-            SpeakText("Opening Online Banking Guide.");
-            OpenGuideSteps("Online Banking");
-        }
+
 
         private void btnHealthcare_Click(object sender, EventArgs e)
         {
@@ -221,12 +216,13 @@ namespace OMC_Group16.Forms
             MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnBank_Click(object sender, EventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
