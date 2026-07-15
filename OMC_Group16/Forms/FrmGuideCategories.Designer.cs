@@ -53,7 +53,6 @@
             label1.TabIndex = 0;
             label1.Text = "Guide Categories";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // btnBank
             // 
@@ -167,7 +166,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(1615, 570);
             tableLayoutPanel1.TabIndex = 9;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // btnVoiceAssist
             // 
@@ -179,6 +177,7 @@
             btnVoiceAssist.TabIndex = 10;
             btnVoiceAssist.Text = "🔊 Turn Voice ON";
             btnVoiceAssist.UseVisualStyleBackColor = true;
+           
             // 
             // FrmGuideCategories
             // 

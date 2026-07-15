@@ -64,7 +64,7 @@
             btnPrevious.BackColor = Color.OliveDrab;
             btnPrevious.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPrevious.ForeColor = Color.Khaki;
-            btnPrevious.Location = new Point(20, 1062);
+            btnPrevious.Location = new Point(20, 897);
             btnPrevious.Name = "btnPrevious";
             btnPrevious.Size = new Size(304, 88);
             btnPrevious.TabIndex = 2;

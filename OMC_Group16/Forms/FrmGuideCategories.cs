@@ -216,7 +216,6 @@ namespace OMC_Group16.Forms
             MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
         
     }
 }
