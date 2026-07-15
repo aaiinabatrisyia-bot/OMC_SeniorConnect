@@ -10,6 +10,7 @@ namespace OMC_Group16.Forms
 {
     public partial class FrmPaymentSuccess : Form
     {
+
         public FrmPaymentSuccess()
         {
             InitializeComponent();
@@ -22,6 +23,21 @@ namespace OMC_Group16.Forms
             frm.Show();
 
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.BackColor = Color.Transparent;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.Transparent;
         }
     }
 }

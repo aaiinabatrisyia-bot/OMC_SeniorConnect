@@ -76,6 +76,7 @@
             lblGuide.Size = new Size(199, 26);
             lblGuide.TabIndex = 1;
             lblGuide.Text = "Step-by-Step Guide";
+            lblGuide.Click += pnlGuide_Click;
             // 
             // picGuide
             // 
@@ -201,7 +202,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.WhiteSmoke;
+            panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(pnlVoice);
             panel1.Controls.Add(pnlReminder);
             panel1.Controls.Add(btnExit);

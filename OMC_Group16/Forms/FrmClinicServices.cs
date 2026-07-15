@@ -24,9 +24,16 @@ namespace OMC_Group16.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FrmHome frm = new FrmHome();
+            FrmCaregiverMenu frm = new FrmCaregiverMenu();
+
             frm.Show();
+
             this.Hide();
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

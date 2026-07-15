@@ -33,55 +33,72 @@
             btnLogout = new Button();
             btnBack = new Button();
             panel1 = new Panel();
+            label1 = new Label();
+            btnBookAppointment = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnReminder
             // 
-            btnReminder.Location = new Point(97, 58);
+            btnReminder.BackColor = Color.OrangeRed;
+            btnReminder.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReminder.ForeColor = SystemColors.ButtonFace;
+            btnReminder.Location = new Point(67, 152);
             btnReminder.Margin = new Padding(3, 2, 3, 2);
             btnReminder.Name = "btnReminder";
-            btnReminder.Size = new Size(213, 26);
+            btnReminder.Size = new Size(299, 26);
             btnReminder.TabIndex = 0;
-            btnReminder.Text = "Add Reminder";
-            btnReminder.UseVisualStyleBackColor = true;
+            btnReminder.Text = "ADD REMINDER";
+            btnReminder.UseVisualStyleBackColor = false;
             btnReminder.Click += btnReminder_Click;
             // 
             // btnEmergency
             // 
-            btnEmergency.Location = new Point(97, 129);
+            btnEmergency.BackColor = Color.Goldenrod;
+            btnEmergency.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEmergency.ForeColor = SystemColors.ButtonFace;
+            btnEmergency.Location = new Point(67, 193);
             btnEmergency.Margin = new Padding(3, 2, 3, 2);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(213, 26);
+            btnEmergency.Size = new Size(299, 26);
             btnEmergency.TabIndex = 1;
-            btnEmergency.Text = "Emergency Contacts";
-            btnEmergency.UseVisualStyleBackColor = true;
+            btnEmergency.Text = "EMERGENCY CONTACT";
+            btnEmergency.UseVisualStyleBackColor = false;
             btnEmergency.Click += btnEmergency_Click;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(97, 208);
+            btnLogout.BackColor = Color.Green;
+            btnLogout.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ButtonFace;
+            btnLogout.Location = new Point(67, 276);
             btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(213, 26);
+            btnLogout.Size = new Size(299, 26);
             btnLogout.TabIndex = 2;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Text = "LOGOUT";
+            btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(97, 283);
+            btnBack.BackColor = Color.Green;
+            btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = SystemColors.ButtonFace;
+            btnBack.Location = new Point(67, 320);
             btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(193, 26);
+            btnBack.Size = new Size(299, 26);
             btnBack.TabIndex = 3;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += button1_Click;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(btnBookAppointment);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnEmergency);
@@ -91,6 +108,33 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(441, 624);
             panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.DarkOliveGreen;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkKhaki;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(441, 55);
+            label1.TabIndex = 4;
+            label1.Text = "CAREGIVER MENU";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnBookAppointment
+            // 
+            btnBookAppointment.BackColor = Color.DarkMagenta;
+            btnBookAppointment.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBookAppointment.ForeColor = SystemColors.ButtonFace;
+            btnBookAppointment.Location = new Point(67, 234);
+            btnBookAppointment.Margin = new Padding(3, 2, 3, 2);
+            btnBookAppointment.Name = "btnBookAppointment";
+            btnBookAppointment.Size = new Size(299, 26);
+            btnBookAppointment.TabIndex = 5;
+            btnBookAppointment.Text = "BOOK APPOINTMENT";
+            btnBookAppointment.UseVisualStyleBackColor = false;
+            btnBookAppointment.Click += btnBookAppointment_Click;
             // 
             // FrmCaregiverMenu
             // 
@@ -113,5 +157,7 @@
         private Button btnLogout;
         private Button btnBack;
         private Panel panel1;
+        private Label label1;
+        private Button btnBookAppointment;
     }
 }
