@@ -91,7 +91,7 @@
             label6.ForeColor = Color.Ivory;
             label6.Location = new Point(20, 525);
             label6.Name = "label6";
-            label6.Size = new Size(82, 32);
+            label6.Size = new Size(120, 46);
             label6.TabIndex = 21;
             label6.Text = "Nearby Clinic\r\n";
             // 
@@ -150,6 +150,7 @@
             txtEmergencyContact.Name = "txtEmergencyContact";
             txtEmergencyContact.Size = new Size(314, 23);
             txtEmergencyContact.TabIndex = 16;
+            txtEmergencyContact.TextChanged += txtEmergencyContact_TextChanged;
             // 
             // txtPhoneNumber
             // 
@@ -178,7 +179,7 @@
             label5.Name = "label5";
             label5.Size = new Size(66, 20);
             label5.TabIndex = 13;
-            label5.Text = "Address";
+            label5.Text = "ADDRESS:";
             // 
             // label4
             // 
@@ -211,11 +212,11 @@
             label2.Name = "label2";
             label2.Size = new Size(51, 20);
             label2.TabIndex = 10;
-            label2.Text = "Name";
+            label2.Text = "NAME:";
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DarkOliveGreen;
+            panel2.BackColor = Color.MistyRose;
             panel2.Controls.Add(label1);
             panel2.Location = new Point(0, 3);
             panel2.Name = "panel2";
@@ -224,14 +225,17 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Top;
+            label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkKhaki;
             label1.Location = new Point(115, 6);
             label1.Name = "label1";
-            label1.Size = new Size(210, 45);
+            label1.Size = new Size(439, 54);
             label1.TabIndex = 0;
             label1.Text = "EMERGENCY";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // panel1
             // 
@@ -260,7 +264,7 @@
             // 
             // FrmEmergency
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
             ClientSize = new Size(457, 663);

@@ -34,87 +34,87 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            pictureBox1 = new PictureBox();
             label4 = new Label();
             btnCreateAccount = new Button();
             btnBack = new Button();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtUsername
             // 
             txtUsername.Font = new Font("Constantia", 16.2F);
-            txtUsername.Location = new Point(349, 100);
+            txtUsername.Location = new Point(117, 191);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(125, 40);
+            txtUsername.Size = new Size(350, 40);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Constantia", 16.2F);
-            txtPassword.Location = new Point(362, 176);
+            txtPassword.Location = new Point(117, 325);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(125, 40);
+            txtPassword.Size = new Size(350, 40);
             txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
             btnLogin.AutoSize = true;
-            btnLogin.BackColor = Color.FromArgb(192, 255, 192);
+            btnLogin.BackColor = Color.Green;
             btnLogin.Font = new Font("Constantia", 16.2F);
-            btnLogin.Location = new Point(276, 237);
+            btnLogin.ForeColor = SystemColors.ButtonFace;
+            btnLogin.Location = new Point(191, 411);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(134, 45);
+            btnLogin.Size = new Size(134, 60);
             btnLogin.TabIndex = 2;
-            btnLogin.Text = "Log In";
+            btnLogin.Text = "LOG IN";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Constantia", 16.2F);
-            label1.Location = new Point(207, 105);
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(4, 202);
             label1.Name = "label1";
-            label1.Size = new Size(136, 35);
+            label1.Size = new Size(107, 23);
             label1.TabIndex = 3;
-            label1.Text = "Username";
+            label1.Text = "USERNAME:";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Constantia", 16.2F);
-            label2.Location = new Point(207, 176);
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(4, 336);
             label2.Name = "label2";
-            label2.Size = new Size(128, 35);
+            label2.Size = new Size(110, 23);
             label2.TabIndex = 4;
-            label2.Text = "Password";
+            label2.Text = "PASSWORD:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
+            label3.BackColor = Color.DarkOliveGreen;
+            label3.Dock = DockStyle.Top;
             label3.Font = new Font("Cooper Black", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(246, 51);
+            label3.ForeColor = Color.DarkKhaki;
+            label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(241, 32);
+            label3.Size = new Size(522, 63);
             label3.TabIndex = 5;
-            label3.Text = "Caregiver Login";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.SeniorConnect;
-            pictureBox1.Location = new Point(-14, 8);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(172, 132);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            label3.Text = "CAREGIVER LOGIN";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Click += label3_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(285, 296);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(175, 567);
             label4.Name = "label4";
             label4.Size = new Size(168, 20);
             label4.TabIndex = 7;
@@ -122,44 +122,74 @@
             // 
             // btnCreateAccount
             // 
-            btnCreateAccount.Location = new Point(298, 331);
+            btnCreateAccount.BackColor = Color.Gold;
+            btnCreateAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCreateAccount.ForeColor = SystemColors.ButtonFace;
+            btnCreateAccount.Location = new Point(113, 611);
             btnCreateAccount.Name = "btnCreateAccount";
-            btnCreateAccount.Size = new Size(120, 29);
+            btnCreateAccount.Size = new Size(290, 80);
             btnCreateAccount.TabIndex = 8;
-            btnCreateAccount.Text = "Create Account";
-            btnCreateAccount.UseVisualStyleBackColor = true;
+            btnCreateAccount.Text = "CREATE ACCOUNT";
+            btnCreateAccount.UseVisualStyleBackColor = false;
             btnCreateAccount.Click += btnCreateAccount_Click;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(316, 366);
+            btnBack.BackColor = Color.Salmon;
+            btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = SystemColors.ButtonFace;
+            btnBack.Location = new Point(113, 719);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(94, 29);
+            btnBack.Size = new Size(290, 79);
             btnBack.TabIndex = 9;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnBack);
+            panel1.Controls.Add(btnCreateAccount);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btnLogin);
+            panel1.Controls.Add(txtPassword);
+            panel1.Controls.Add(txtUsername);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(522, 884);
+            panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.user;
+            pictureBox1.Location = new Point(223, 67);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(73, 85);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // FrmCaregiverLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnBack);
-            Controls.Add(btnCreateAccount);
-            Controls.Add(label4);
-            Controls.Add(pictureBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(btnLogin);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
+            ClientSize = new Size(522, 884);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCaregiverLogin";
             Text = "FrmCaregiverLogin";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -170,9 +200,10 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private PictureBox pictureBox1;
         private Label label4;
         private Button btnCreateAccount;
         private Button btnBack;
+        private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

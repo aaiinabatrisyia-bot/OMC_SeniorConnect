@@ -126,5 +126,10 @@ namespace OMC_Group16
         {
 
         }
+
+        private void pnlReminder_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
