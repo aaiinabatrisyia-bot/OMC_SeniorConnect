@@ -62,14 +62,12 @@
             pnlGuide.BorderStyle = BorderStyle.FixedSingle;
             pnlGuide.Controls.Add(lblGuide);
             pnlGuide.Controls.Add(picGuide);
-            pnlGuide.Location = new Point(8, 53);
+            pnlGuide.Location = new Point(12, 114);
             pnlGuide.Name = "pnlGuide";
             pnlGuide.Size = new Size(207, 214);
             pnlGuide.TabIndex = 0;
             pnlGuide.Click += pnlGuide_Click;
             pnlGuide.Paint += pnlGuide_Paint;
-            pnlGuide.MouseEnter += pnlGuide_MouseEnter;
-            pnlGuide.MouseLeave += pnlGuide_MouseLeave;
             // 
             // lblGuide
             // 
@@ -97,14 +95,12 @@
             pnlReminder.BorderStyle = BorderStyle.FixedSingle;
             pnlReminder.Controls.Add(lblReminder);
             pnlReminder.Controls.Add(picReminder);
-            pnlReminder.Location = new Point(234, 53);
+            pnlReminder.Location = new Point(238, 114);
             pnlReminder.Name = "pnlReminder";
             pnlReminder.Size = new Size(207, 214);
             pnlReminder.TabIndex = 1;
             pnlReminder.Click += pnlReminder_Click;
             pnlReminder.Paint += pnlReminder_Paint;
-            pnlReminder.MouseEnter += pnlReminder_MouseEnter;
-            pnlReminder.MouseLeave += pnlReminder_MouseLeave;
             // 
             // lblReminder
             // 
@@ -131,13 +127,11 @@
             pnlEmergency.BorderStyle = BorderStyle.FixedSingle;
             pnlEmergency.Controls.Add(lblEmergency);
             pnlEmergency.Controls.Add(picEmergency);
-            pnlEmergency.Location = new Point(8, 284);
+            pnlEmergency.Location = new Point(12, 345);
             pnlEmergency.Name = "pnlEmergency";
             pnlEmergency.Size = new Size(207, 214);
             pnlEmergency.TabIndex = 2;
             pnlEmergency.Click += pnlEmergency_Click;
-            pnlEmergency.MouseEnter += pnlEmergency_MouseEnter;
-            pnlEmergency.MouseLeave += pnlEmergency_MouseLeave;
             // 
             // lblEmergency
             // 
@@ -165,13 +159,11 @@
             pnlVoice.BorderStyle = BorderStyle.FixedSingle;
             pnlVoice.Controls.Add(lblVoice);
             pnlVoice.Controls.Add(picVoice);
-            pnlVoice.Location = new Point(234, 284);
+            pnlVoice.Location = new Point(238, 345);
             pnlVoice.Name = "pnlVoice";
             pnlVoice.Size = new Size(207, 214);
             pnlVoice.TabIndex = 3;
             pnlVoice.Click += pnlVoice_Click;
-            pnlVoice.MouseEnter += pnlVoice_MouseEnter;
-            pnlVoice.MouseLeave += pnlVoice_MouseLeave;
             // 
             // lblVoice
             // 
@@ -182,6 +174,7 @@
             lblVoice.TabIndex = 4;
             lblVoice.Text = "Voice Assistant";
             lblVoice.TextAlign = ContentAlignment.MiddleCenter;
+            lblVoice.Click += pnlVoice_Click;
             // 
             // picVoice
             // 
@@ -197,7 +190,7 @@
             // 
             btnExit.BackColor = Color.Brown;
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Location = new Point(170, 549);
+            btnExit.Location = new Point(166, 577);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(114, 50);
             btnExit.TabIndex = 4;
@@ -208,12 +201,12 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(pnlVoice);
             panel1.Controls.Add(pnlReminder);
             panel1.Controls.Add(btnExit);
             panel1.Controls.Add(pnlEmergency);
             panel1.Controls.Add(pnlGuide);
+            panel1.Controls.Add(pictureBox1);
             panel1.Font = new Font("Constantia", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panel1.ForeColor = SystemColors.ButtonHighlight;
             panel1.Location = new Point(0, 1);
@@ -224,12 +217,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(164, 11);
+            pictureBox1.Location = new Point(139, 11);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(179, 94);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // FrmHome
             // 
@@ -246,13 +240,16 @@
             Load += FrmHome_Load;
             MouseEnter += FrmHome_MouseEnter;
             pnlGuide.ResumeLayout(false);
+            pnlGuide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picGuide).EndInit();
             pnlReminder.ResumeLayout(false);
             pnlReminder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picReminder).EndInit();
             pnlEmergency.ResumeLayout(false);
+            pnlEmergency.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picEmergency).EndInit();
             pnlVoice.ResumeLayout(false);
+            pnlVoice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picVoice).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
