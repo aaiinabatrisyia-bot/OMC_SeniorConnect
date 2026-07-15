@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using OMC_Group16.Forms;
 
 namespace OMC_Group16
 {
@@ -87,7 +88,7 @@ namespace OMC_Group16
 
         private void pnlGuide_Click(object sender, EventArgs e)
         {
-            FrmGuideMenu guide = new FrmGuideMenu();
+            FrmGuideCategories guide = new FrmGuideCategories();
 
             guide.Show();
 

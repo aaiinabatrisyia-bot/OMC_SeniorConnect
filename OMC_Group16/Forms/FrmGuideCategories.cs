@@ -148,5 +148,15 @@ namespace OMC_Group16.Forms
             btnTransport.MouseEnter += (s, e) => SpeakText("Transport");
             btnBack.MouseEnter += (s, e) => SpeakText("Back button");
         }
+
+        private void btnBank_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
