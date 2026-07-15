@@ -33,7 +33,7 @@
             txtSearch = new TextBox();
             btnSearch = new Button();
             btnRefresh = new Button();
-            label4 = new Label();
+            lblTotalCount = new Label();
             btnTodayReminders = new Button();
             btnEmergency = new Button();
             btnBack = new Button();
@@ -46,6 +46,8 @@
             panel2 = new Panel();
             label1 = new Label();
             panel1 = new Panel();
+            lblEmergencyCount = new Label();
+            lblPendingCount = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvReminders).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -93,7 +95,6 @@
             btnSearch.TabIndex = 3;
             btnSearch.Text = "SEARCH";
             btnSearch.UseVisualStyleBackColor = false;
-            btnSearch.Click += button1_Click;
             // 
             // btnRefresh
             // 
@@ -106,18 +107,19 @@
             btnRefresh.TabIndex = 4;
             btnRefresh.Text = "REFRESH";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // label4
+            // lblTotalCount
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Ivory;
-            label4.Location = new Point(40, 475);
-            label4.Name = "label4";
-            label4.Size = new Size(376, 18);
-            label4.TabIndex = 5;
-            label4.Text = "Total: 0      | Pending: 0      | Emergency: 0";
-            label4.Click += label4_Click;
+            lblTotalCount.AutoSize = true;
+            lblTotalCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalCount.ForeColor = Color.Ivory;
+            lblTotalCount.Location = new Point(19, 475);
+            lblTotalCount.Name = "lblTotalCount";
+            lblTotalCount.Size = new Size(72, 18);
+            lblTotalCount.TabIndex = 5;
+            lblTotalCount.Text = "Total: 0";
+            lblTotalCount.Click += label4_Click;
             // 
             // btnTodayReminders
             // 
@@ -130,6 +132,7 @@
             btnTodayReminders.TabIndex = 6;
             btnTodayReminders.Text = "TODAY";
             btnTodayReminders.UseVisualStyleBackColor = false;
+            btnTodayReminders.Click += btnTodayReminders_Click;
             // 
             // btnEmergency
             // 
@@ -142,6 +145,7 @@
             btnEmergency.TabIndex = 7;
             btnEmergency.Text = "EMERGENCY";
             btnEmergency.UseVisualStyleBackColor = false;
+            btnEmergency.Click += btnEmergency_Click;
             // 
             // btnBack
             // 
@@ -154,6 +158,7 @@
             btnBack.TabIndex = 8;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // dgvReminders
             // 
@@ -227,6 +232,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblEmergencyCount);
+            panel1.Controls.Add(lblPendingCount);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnEmergency);
@@ -234,7 +241,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(label4);
+            panel1.Controls.Add(lblTotalCount);
             panel1.Controls.Add(dgvReminders);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnRefresh);
@@ -243,6 +250,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(457, 663);
             panel1.TabIndex = 9;
+            // 
+            // lblEmergencyCount
+            // 
+            lblEmergencyCount.AutoSize = true;
+            lblEmergencyCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmergencyCount.ForeColor = Color.Ivory;
+            lblEmergencyCount.Location = new Point(316, 475);
+            lblEmergencyCount.Name = "lblEmergencyCount";
+            lblEmergencyCount.Size = new Size(120, 18);
+            lblEmergencyCount.TabIndex = 10;
+            lblEmergencyCount.Text = "| Emergency: 0";
+            // 
+            // lblPendingCount
+            // 
+            lblPendingCount.AutoSize = true;
+            lblPendingCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPendingCount.ForeColor = Color.Ivory;
+            lblPendingCount.Location = new Point(154, 475);
+            lblPendingCount.Name = "lblPendingCount";
+            lblPendingCount.Size = new Size(104, 18);
+            lblPendingCount.TabIndex = 9;
+            lblPendingCount.Text = "| Pending: 0";
             // 
             // FrmReminders
             // 
@@ -273,7 +302,7 @@
         private Button btnBack;
         private Button btnEmergency;
         private Button btnTodayReminders;
-        private Label label4;
+        private Label lblTotalCount;
         private DataGridView dgvReminders;
         private DataGridViewTextBoxColumn colReminderID;
         private DataGridViewTextBoxColumn colDate;
@@ -283,5 +312,7 @@
         private Panel panel2;
         private Label label1;
         private Panel panel1;
+        private Label lblEmergencyCount;
+        private Label lblPendingCount;
     }
 }
