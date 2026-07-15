@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             pnlGuide = new Panel();
             lblGuide = new Label();
             picGuide = new PictureBox();
@@ -42,6 +43,7 @@
             picVoice = new PictureBox();
             btnExit = new Button();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             pnlGuide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picGuide).BeginInit();
             pnlReminder.SuspendLayout();
@@ -51,6 +53,7 @@
             pnlVoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picVoice).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlGuide
@@ -144,6 +147,7 @@
             lblEmergency.Size = new Size(211, 26);
             lblEmergency.TabIndex = 3;
             lblEmergency.Text = "Emergency Contacts";
+            lblEmergency.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // picEmergency
             // 
@@ -177,6 +181,7 @@
             lblVoice.Size = new Size(160, 26);
             lblVoice.TabIndex = 4;
             lblVoice.Text = "Voice Assistant";
+            lblVoice.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // picVoice
             // 
@@ -203,6 +208,7 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(pnlVoice);
             panel1.Controls.Add(pnlReminder);
             panel1.Controls.Add(btnExit);
@@ -214,6 +220,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(457, 663);
             panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(164, 11);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(179, 94);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // FrmHome
             // 
@@ -230,18 +246,16 @@
             Load += FrmHome_Load;
             MouseEnter += FrmHome_MouseEnter;
             pnlGuide.ResumeLayout(false);
-            pnlGuide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picGuide).EndInit();
             pnlReminder.ResumeLayout(false);
             pnlReminder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picReminder).EndInit();
             pnlEmergency.ResumeLayout(false);
-            pnlEmergency.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picEmergency).EndInit();
             pnlVoice.ResumeLayout(false);
-            pnlVoice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picVoice).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -261,5 +275,6 @@
         private Label lblEmergency;
         private Label lblVoice;
         private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

@@ -35,17 +35,15 @@
             label3 = new Label();
             btnReturn = new Button();
             panel1 = new Panel();
-            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(62, 101);
+            pictureBox1.Location = new Point(150, 127);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(184, 155);
@@ -109,7 +107,6 @@
             panel1.BackColor = Color.MidnightBlue;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label3);
@@ -121,14 +118,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 6;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(279, 101);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(155, 145);
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
             // 
             // FrmPaymentSuccess
             // 
@@ -143,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -155,6 +143,5 @@
         private Label label3;
         private Button btnReturn;
         private Panel panel1;
-        private PictureBox pictureBox2;
     }
 }

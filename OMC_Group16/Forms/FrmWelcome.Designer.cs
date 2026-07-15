@@ -40,24 +40,26 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.MidnightBlue;
             pictureBox1.Image = Properties.Resources.SeniorConnect;
-            pictureBox1.Location = new Point(149, 53);
+            pictureBox1.Location = new Point(149, 62);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(218, 228);
+            pictureBox1.Size = new Size(218, 219);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // lblSubtitle
             // 
-            lblSubtitle.AutoSize = true;
-            lblSubtitle.Font = new Font("Mongolian Baiti", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblSubtitle.Location = new Point(57, 335);
+            lblSubtitle.Font = new Font("Mongolian Baiti", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblSubtitle.ForeColor = Color.Lime;
+            lblSubtitle.Location = new Point(42, 303);
             lblSubtitle.Name = "lblSubtitle";
-            lblSubtitle.Size = new Size(429, 25);
+            lblSubtitle.Size = new Size(429, 65);
             lblSubtitle.TabIndex = 1;
             lblSubtitle.Text = "Connecting Seniors To Digital Services";
+            lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSenior
             // 
@@ -66,10 +68,10 @@
             btnSenior.FlatStyle = FlatStyle.Flat;
             btnSenior.Font = new Font("Constantia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSenior.ForeColor = Color.MidnightBlue;
-            btnSenior.Location = new Point(42, 402);
+            btnSenior.Location = new Point(82, 404);
             btnSenior.Margin = new Padding(3, 4, 3, 4);
             btnSenior.Name = "btnSenior";
-            btnSenior.Size = new Size(429, 80);
+            btnSenior.Size = new Size(343, 80);
             btnSenior.TabIndex = 2;
             btnSenior.Text = "👴🏻👵🏻 CONTINUE AS SENIOR";
             btnSenior.UseVisualStyleBackColor = false;
@@ -109,7 +111,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(btnVoice);
             panel1.Controls.Add(btnCaregiver);
             panel1.Controls.Add(btnSenior);
@@ -136,7 +138,6 @@
             Text = "SeniorConnect";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
