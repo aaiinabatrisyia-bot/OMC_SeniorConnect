@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMC_Group16.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,15 @@ namespace OMC_Group16
         {
             FrmCaregiverLogin login = new FrmCaregiverLogin();
             login.Show();
+        }
+
+        private void btnBookAppointment_Click(object sender, EventArgs e)
+        {
+            FrmClinicServices frm = new FrmClinicServices();
+
+            frm.Show();
+
+            this.Hide();
         }
     }
 }
