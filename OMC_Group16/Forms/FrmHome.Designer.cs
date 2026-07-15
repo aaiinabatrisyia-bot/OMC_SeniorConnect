@@ -202,7 +202,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(pnlVoice);
             panel1.Controls.Add(pnlReminder);
             panel1.Controls.Add(btnExit);

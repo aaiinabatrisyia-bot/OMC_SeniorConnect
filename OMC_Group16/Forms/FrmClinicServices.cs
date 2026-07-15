@@ -30,5 +30,10 @@ namespace OMC_Group16.Forms
 
             this.Hide();
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
