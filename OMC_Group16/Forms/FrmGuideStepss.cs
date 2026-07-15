@@ -243,5 +243,7 @@ namespace OMC_Group16.Forms
                 SpeakText("Text size decreased");
             }
         }
+
+        
     }
 }

@@ -38,6 +38,9 @@
             btnNextGuide = new Button();
             btnBack = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btnEWallet1 = new Button();
+            btnTransport1 = new Button();
+            btnHealth1 = new Button();
             btnVoiceAssist = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -46,24 +49,27 @@
             // 
             label1.BackColor = Color.DarkOliveGreen;
             label1.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkKhaki;
             label1.Location = new Point(-1, -1);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(895, 282);
+            label1.Size = new Size(768, 297);
             label1.TabIndex = 0;
             label1.Text = "Guide Categories";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnBank
             // 
-            btnBank.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBank.BackColor = Color.FromArgb(57, 166, 163);
+            btnBank.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBank.Location = new Point(6, 6);
             btnBank.Margin = new Padding(6);
             btnBank.Name = "btnBank";
-            btnBank.Size = new Size(281, 273);
+            btnBank.Size = new Size(253, 213);
             btnBank.TabIndex = 1;
             btnBank.Text = "Online Banking";
-            btnBank.UseVisualStyleBackColor = true;
+            btnBank.UseVisualStyleBackColor = false;
+            btnBank.Click += btnBank_Click_1;
             // 
             // btnHealth
             // 
@@ -74,7 +80,6 @@
             btnHealth.TabIndex = 2;
             btnHealth.Text = "Healthcare";
             btnHealth.UseVisualStyleBackColor = false;
-            btnHealth.Click += btnHealth_Click;
             // 
             // btnEWallet
             // 
@@ -85,15 +90,15 @@
             btnEWallet.TabIndex = 3;
             btnEWallet.Text = "E-Wallet";
             btnEWallet.UseVisualStyleBackColor = false;
-            btnEWallet.Click += btnEWallet_Click_1;
             // 
             // btnMessage
             // 
-            btnMessage.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMessage.Location = new Point(299, 291);
+            btnMessage.BackColor = Color.FromArgb(232, 156, 51);
+            btnMessage.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMessage.Location = new Point(271, 231);
             btnMessage.Margin = new Padding(6);
             btnMessage.Name = "btnMessage";
-            btnMessage.Size = new Size(281, 273);
+            btnMessage.Size = new Size(253, 213);
             btnMessage.TabIndex = 4;
             btnMessage.Text = "Messages";
             btnMessage.UseVisualStyleBackColor = false;
@@ -101,11 +106,12 @@
             // 
             // btnGov
             // 
-            btnGov.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGov.Location = new Point(6, 291);
+            btnGov.BackColor = Color.FromArgb(226, 74, 50);
+            btnGov.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGov.Location = new Point(6, 231);
             btnGov.Margin = new Padding(6);
             btnGov.Name = "btnGov";
-            btnGov.Size = new Size(281, 273);
+            btnGov.Size = new Size(253, 213);
             btnGov.TabIndex = 5;
             btnGov.Text = "Scam Alert";
             btnGov.UseVisualStyleBackColor = false;
@@ -120,14 +126,14 @@
             btnTransport.TabIndex = 6;
             btnTransport.Text = "Transport";
             btnTransport.UseVisualStyleBackColor = false;
-            btnTransport.Click += btnTransport_Click_1;
             // 
             // btnNextGuide
             // 
             btnNextGuide.BackColor = Color.OliveDrab;
             btnNextGuide.Enabled = false;
             btnNextGuide.Font = new Font("Segoe UI", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnNextGuide.Location = new Point(690, 1248);
+            btnNextGuide.ForeColor = Color.Khaki;
+            btnNextGuide.Location = new Point(553, 871);
             btnNextGuide.Margin = new Padding(6);
             btnNextGuide.Name = "btnNextGuide";
             btnNextGuide.Size = new Size(204, 62);
@@ -140,7 +146,8 @@
             // 
             btnBack.BackColor = Color.OliveDrab;
             btnBack.Font = new Font("Calibri", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(34, 1248);
+            btnBack.ForeColor = Color.Khaki;
+            btnBack.Location = new Point(15, 873);
             btnBack.Margin = new Padding(6);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(175, 62);
@@ -155,40 +162,83 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 1029F));
+            tableLayoutPanel1.Controls.Add(btnEWallet1, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnTransport1, 2, 1);
+            tableLayoutPanel1.Controls.Add(btnHealth1, 2, 0);
             tableLayoutPanel1.Controls.Add(btnBank, 0, 0);
             tableLayoutPanel1.Controls.Add(btnGov, 0, 1);
             tableLayoutPanel1.Controls.Add(btnMessage, 1, 1);
-            tableLayoutPanel1.Location = new Point(-7, 542);
+            tableLayoutPanel1.Location = new Point(-1, 293);
             tableLayoutPanel1.Margin = new Padding(37, 43, 37, 43);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1615, 570);
+            tableLayoutPanel1.Size = new Size(1560, 450);
             tableLayoutPanel1.TabIndex = 9;
+            // 
+            // btnEWallet1
+            // 
+            btnEWallet1.BackColor = Color.FromArgb(57, 166, 163);
+            btnEWallet1.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEWallet1.Location = new Point(268, 3);
+            btnEWallet1.Name = "btnEWallet1";
+            btnEWallet1.Size = new Size(259, 219);
+            btnEWallet1.TabIndex = 11;
+            btnEWallet1.Text = "E-Wallet";
+            btnEWallet1.UseVisualStyleBackColor = false;
+            btnEWallet1.Click += btnEWallet1_Click;
+            // 
+            // btnTransport1
+            // 
+            btnTransport1.BackColor = Color.FromArgb(232, 156, 51);
+            btnTransport1.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransport1.Location = new Point(533, 228);
+            btnTransport1.Name = "btnTransport1";
+            btnTransport1.Size = new Size(237, 219);
+            btnTransport1.TabIndex = 12;
+            btnTransport1.Text = "Transport";
+            btnTransport1.UseVisualStyleBackColor = false;
+            btnTransport1.Click += btnTransport1_Click;
+            // 
+            // btnHealth1
+            // 
+            btnHealth1.BackColor = Color.FromArgb(226, 74, 50);
+            btnHealth1.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnHealth1.Location = new Point(533, 3);
+            btnHealth1.Name = "btnHealth1";
+            btnHealth1.Size = new Size(237, 219);
+            btnHealth1.TabIndex = 13;
+            btnHealth1.Text = "Healthcare";
+            btnHealth1.UseVisualStyleBackColor = false;
+            btnHealth1.Click += btnHealth1_Click;
             // 
             // btnVoiceAssist
             // 
-            btnVoiceAssist.Font = new Font("Segoe UI", 13.875F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVoiceAssist.BackColor = Color.FromArgb(127, 166, 122);
+            btnVoiceAssist.Font = new Font("Segoe UI", 10.875F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVoiceAssist.ForeColor = Color.White;
             btnVoiceAssist.Location = new Point(15, 15);
             btnVoiceAssist.Margin = new Padding(6);
             btnVoiceAssist.Name = "btnVoiceAssist";
-            btnVoiceAssist.Size = new Size(194, 108);
+            btnVoiceAssist.Size = new Size(158, 88);
             btnVoiceAssist.TabIndex = 10;
             btnVoiceAssist.Text = "🔊 Turn Voice ON";
-            btnVoiceAssist.UseVisualStyleBackColor = true;
-           
+            btnVoiceAssist.UseVisualStyleBackColor = false;
+            btnVoiceAssist.Click += btnVoiceAssist_Click_2;
             // 
             // FrmGuideCategories
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1518, 1805);
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(772, 1042);
             Controls.Add(btnVoiceAssist);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBack);
             Controls.Add(btnNextGuide);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(6);
             Name = "FrmGuideCategories";
             StartPosition = FormStartPosition.CenterScreen;
@@ -211,5 +261,8 @@
         private Button btnBack;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnVoiceAssist;
+        private Button btnEWallet1;
+        private Button btnTransport1;
+        private Button btnHealth1;
     }
 }
