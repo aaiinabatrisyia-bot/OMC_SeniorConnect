@@ -39,20 +39,22 @@
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.DarkKhaki;
-            lblTitle.Location = new Point(146, 26);
+            lblTitle.Location = new Point(137, 23);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(200, 31);
+            lblTitle.Size = new Size(246, 38);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "QUALITAS CLINIC";
             lblTitle.Click += lblTitle_Click;
@@ -84,7 +86,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(146, 429);
+            label1.Location = new Point(184, 464);
             label1.Name = "label1";
             label1.Size = new Size(226, 25);
             label1.TabIndex = 3;
@@ -92,31 +94,34 @@
             // 
             // btnBook
             // 
+            btnBook.BackColor = Color.PaleGreen;
             btnBook.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBook.Location = new Point(68, 503);
+            btnBook.Location = new Point(38, 546);
             btnBook.Margin = new Padding(3, 4, 3, 4);
             btnBook.Name = "btnBook";
-            btnBook.Size = new Size(227, 31);
+            btnBook.Size = new Size(227, 46);
             btnBook.TabIndex = 4;
             btnBook.Text = "BOOK APPOINTMENT";
-            btnBook.UseVisualStyleBackColor = true;
+            btnBook.UseVisualStyleBackColor = false;
             btnBook.Click += btnBook_Click;
             // 
             // btnBack
             // 
+            btnBack.BackColor = Color.Khaki;
             btnBack.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(322, 503);
+            btnBack.Location = new Point(282, 546);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(97, 31);
+            btnBack.Size = new Size(164, 47);
             btnBack.TabIndex = 5;
             btnBack.Text = "BACK";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(panel2);
@@ -138,7 +143,7 @@
             panel2.Controls.Add(lblTitle);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(504, 77);
+            panel2.Size = new Size(504, 80);
             panel2.TabIndex = 2;
             // 
             // pictureBox1
@@ -161,6 +166,16 @@
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(70, 432);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(108, 75);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
+            // 
             // FrmClinicServices
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -177,6 +192,7 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -192,5 +208,6 @@
         private Panel panel2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
     }
 }
