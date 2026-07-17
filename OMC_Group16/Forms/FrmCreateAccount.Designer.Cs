@@ -36,14 +36,14 @@
             label3 = new Label();
             btnRegister = new Button();
             panel1 = new Panel();
+            txtCaregiverName = new TextBox();
+            label7 = new Label();
+            cmbRelationship = new ComboBox();
+            label6 = new Label();
+            txtPhoneNumber = new TextBox();
+            label5 = new Label();
             pictureBox1 = new PictureBox();
             label4 = new Label();
-            label5 = new Label();
-            txtPhoneNumber = new TextBox();
-            label6 = new Label();
-            cmbRelationship = new ComboBox();
-            label7 = new Label();
-            txtCaregiverName = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -139,6 +139,62 @@
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 7;
             // 
+            // txtCaregiverName
+            // 
+            txtCaregiverName.Location = new Point(230, 259);
+            txtCaregiverName.Name = "txtCaregiverName";
+            txtCaregiverName.Size = new Size(259, 27);
+            txtCaregiverName.TabIndex = 17;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label7.ForeColor = SystemColors.ButtonFace;
+            label7.Location = new Point(22, 259);
+            label7.Name = "label7";
+            label7.Size = new Size(65, 23);
+            label7.TabIndex = 16;
+            label7.Text = "NAME:";
+            // 
+            // cmbRelationship
+            // 
+            cmbRelationship.FormattingEnabled = true;
+            cmbRelationship.Items.AddRange(new object[] { "Son", "Daughter", "Spouse", "Brother", "Sister", "Grandchild", "Relative", "Friend", "Neighbour", "Guardian", "Other" });
+            cmbRelationship.Location = new Point(230, 339);
+            cmbRelationship.Name = "cmbRelationship";
+            cmbRelationship.Size = new Size(259, 28);
+            cmbRelationship.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label6.ForeColor = SystemColors.ButtonFace;
+            label6.Location = new Point(25, 344);
+            label6.Name = "label6";
+            label6.Size = new Size(134, 23);
+            label6.TabIndex = 14;
+            label6.Text = "RELATIONSHIP:";
+            // 
+            // txtPhoneNumber
+            // 
+            txtPhoneNumber.Location = new Point(230, 301);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(259, 27);
+            txtPhoneNumber.TabIndex = 13;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label5.ForeColor = SystemColors.ButtonFace;
+            label5.Location = new Point(22, 305);
+            label5.Name = "label5";
+            label5.Size = new Size(150, 23);
+            label5.TabIndex = 12;
+            label5.Text = "PHONE NUMBER:";
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
@@ -162,62 +218,6 @@
             label4.TabIndex = 7;
             label4.Text = "CREATE ACCOUNT";
             label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(22, 305);
-            label5.Name = "label5";
-            label5.Size = new Size(150, 23);
-            label5.TabIndex = 12;
-            label5.Text = "PHONE NUMBER:";
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.Location = new Point(230, 301);
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(259, 27);
-            txtPhoneNumber.TabIndex = 13;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(25, 344);
-            label6.Name = "label6";
-            label6.Size = new Size(134, 23);
-            label6.TabIndex = 14;
-            label6.Text = "RELATIONSHIP:";
-            // 
-            // cmbRelationship
-            // 
-            cmbRelationship.FormattingEnabled = true;
-            cmbRelationship.Items.AddRange(new object[] { "Son", "", "Daughter", "Spouse", "", "Brother", "", "Sister", "", "Grandchild", "", "Relative", "", "Friend", "", "Neighbour", "", "Guardian", "", "Other" });
-            cmbRelationship.Location = new Point(230, 339);
-            cmbRelationship.Name = "cmbRelationship";
-            cmbRelationship.Size = new Size(259, 28);
-            cmbRelationship.TabIndex = 15;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(22, 259);
-            label7.Name = "label7";
-            label7.Size = new Size(65, 23);
-            label7.TabIndex = 16;
-            label7.Text = "NAME:";
-            // 
-            // txtCaregiverName
-            // 
-            txtCaregiverName.Location = new Point(230, 259);
-            txtCaregiverName.Name = "txtCaregiverName";
-            txtCaregiverName.Size = new Size(259, 27);
-            txtCaregiverName.TabIndex = 17;
             // 
             // FrmCreateAccount
             // 
