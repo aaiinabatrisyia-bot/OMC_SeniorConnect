@@ -36,7 +36,7 @@ namespace OMC_Group16.Forms
 
             SqlConnection con = new SqlConnection(connectionString);
 
-            string query = @"INSERT INTO Patients
+            string query = @"INSERT INTO Seniors
                     (FullName, PhoneNumber, Address, Gender)
                     VALUES
                     (@name, @phone, @address, @gender)";

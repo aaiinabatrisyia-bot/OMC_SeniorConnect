@@ -15,6 +15,15 @@ namespace OMC_Group16.Forms
         @"Data Source = (localdb)\MSSQLLocalDB;
         Initial Catalog = OMC_SeniorConnectDB; 
         Integrated Security = True;";
+
+        private int caregiverID;
+
+        public FrmBookAppointment(int id)
+        {
+            InitializeComponent();
+            caregiverID = id;
+            
+        }
         public FrmBookAppointment()
         {
             InitializeComponent();
@@ -25,6 +34,7 @@ namespace OMC_Group16.Forms
             lblCaregiverName.Text = FrmCaregiverLogin.CaregiverName;
 
             LoadElderly();
+            
         }
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -88,25 +98,28 @@ namespace OMC_Group16.Forms
         }
         private void LoadElderly()
         {
-            SqlConnection con = new SqlConnection(connectionString);
-            string query = @"SELECT Patient ID,PatientName FROM Patients WHERE CaregiverID =@CaregiverID";
-            SqlCommand cmd = new SqlCommand(query, con);
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = @"
+             SELECT DISTINCT p.PatientID, p.Name AS FullName
+             FROM Patients p
+             INNER JOIN Appointments a
+             ON p.PatientID = a.PatientID
+             WHERE a.CaregiverID = @CaregiverID";
 
-            cmd.Parameters.AddWithValue("@CaregiverID",
-                FrmCaregiverLogin.CaregiverID);
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@CaregiverID", FrmCaregiverLogin.CaregiverID);
 
-            con.Open();
+                con.Open();
 
-            SqlDataReader reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
 
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-
-            cmbElderly.DataSource = dt;
-            cmbElderly.DisplayMember = "PatientName";
-            cmbElderly.ValueMember = "PatientID";
-
-            con.Close();
+                cmbElderly.DataSource = dt;
+                cmbElderly.DisplayMember = "FullName";
+                cmbElderly.ValueMember = "PatientID";
+            }
         }
+        
     }
 }
