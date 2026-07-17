@@ -36,15 +36,15 @@
             btnBook = new Button();
             btnBack = new Button();
             panel1 = new Panel();
+            pictureBox3 = new PictureBox();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -63,9 +63,9 @@
             // 
             lblClinic.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClinic.ForeColor = Color.White;
-            lblClinic.Location = new Point(55, 96);
+            lblClinic.Location = new Point(54, 126);
             lblClinic.Name = "lblClinic";
-            lblClinic.Size = new Size(402, 40);
+            lblClinic.Size = new Size(403, 51);
             lblClinic.TabIndex = 1;
             lblClinic.Text = "BRANCH:  BANDAR BUKIT RAJA,KLANG";
             lblClinic.TextAlign = ContentAlignment.MiddleCenter;
@@ -75,7 +75,7 @@
             lblRating.AutoSize = true;
             lblRating.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblRating.ForeColor = Color.Yellow;
-            lblRating.Location = new Point(332, 325);
+            lblRating.Location = new Point(317, 399);
             lblRating.Name = "lblRating";
             lblRating.Size = new Size(160, 25);
             lblRating.TabIndex = 2;
@@ -86,7 +86,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(184, 464);
+            label1.Location = new Point(193, 532);
             label1.Name = "label1";
             label1.Size = new Size(226, 25);
             label1.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             btnBook.BackColor = Color.PaleGreen;
             btnBook.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBook.Location = new Point(38, 546);
+            btnBook.Location = new Point(28, 630);
             btnBook.Margin = new Padding(3, 4, 3, 4);
             btnBook.Name = "btnBook";
             btnBook.Size = new Size(227, 46);
@@ -109,7 +109,7 @@
             // 
             btnBack.BackColor = Color.Khaki;
             btnBack.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(282, 546);
+            btnBack.Location = new Point(293, 630);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(164, 47);
@@ -137,6 +137,16 @@
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 6;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(65, 503);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(108, 75);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.DarkOliveGreen;
@@ -149,7 +159,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 151);
+            pictureBox1.Location = new Point(28, 227);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(283, 219);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -159,22 +169,12 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(322, 190);
+            pictureBox2.Location = new Point(317, 261);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(170, 119);
+            pictureBox2.Size = new Size(160, 111);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(70, 432);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(108, 75);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 8;
-            pictureBox3.TabStop = false;
             // 
             // FrmClinicServices
             // 
@@ -188,11 +188,11 @@
             Text = "FrmClinicServices";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 

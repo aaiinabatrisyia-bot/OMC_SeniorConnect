@@ -26,6 +26,7 @@ namespace OMC_Group16
         {
             FrmEmergency emergency = new FrmEmergency();
             emergency.Show();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

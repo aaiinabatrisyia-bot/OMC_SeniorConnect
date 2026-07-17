@@ -68,7 +68,7 @@
             btnSenior.FlatStyle = FlatStyle.Flat;
             btnSenior.Font = new Font("Constantia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSenior.ForeColor = Color.MidnightBlue;
-            btnSenior.Location = new Point(82, 404);
+            btnSenior.Location = new Point(82, 457);
             btnSenior.Margin = new Padding(3, 4, 3, 4);
             btnSenior.Name = "btnSenior";
             btnSenior.Size = new Size(343, 80);
@@ -84,7 +84,7 @@
             btnCaregiver.FlatStyle = FlatStyle.Flat;
             btnCaregiver.Font = new Font("Constantia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCaregiver.ForeColor = Color.MidnightBlue;
-            btnCaregiver.Location = new Point(82, 527);
+            btnCaregiver.Location = new Point(82, 580);
             btnCaregiver.Margin = new Padding(3, 4, 3, 4);
             btnCaregiver.Name = "btnCaregiver";
             btnCaregiver.Size = new Size(343, 80);
@@ -100,7 +100,7 @@
             btnVoice.FlatStyle = FlatStyle.Flat;
             btnVoice.Font = new Font("Constantia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVoice.ForeColor = Color.MidnightBlue;
-            btnVoice.Location = new Point(82, 651);
+            btnVoice.Location = new Point(82, 705);
             btnVoice.Margin = new Padding(3, 4, 3, 4);
             btnVoice.Name = "btnVoice";
             btnVoice.Size = new Size(343, 80);
