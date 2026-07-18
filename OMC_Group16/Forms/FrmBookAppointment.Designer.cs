@@ -54,9 +54,9 @@
             lblClinic.AutoSize = true;
             lblClinic.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClinic.ForeColor = Color.Lime;
-            lblClinic.Location = new Point(110, 94);
+            lblClinic.Location = new Point(126, 125);
             lblClinic.Name = "lblClinic";
-            lblClinic.Size = new Size(77, 20);
+            lblClinic.Size = new Size(96, 25);
             lblClinic.TabIndex = 0;
             lblClinic.Text = "QUALITAS";
             // 
@@ -65,9 +65,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(28, 94);
+            label1.Location = new Point(32, 125);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(76, 25);
             label1.TabIndex = 1;
             label1.Text = "CLINIC :";
             // 
@@ -76,9 +76,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(28, 177);
+            label2.Location = new Point(32, 236);
             label2.Name = "label2";
-            label2.Size = new Size(69, 20);
+            label2.Size = new Size(83, 25);
             label2.TabIndex = 2;
             label2.Text = "SERVICE:";
             // 
@@ -86,9 +86,10 @@
             // 
             cboService.FormattingEnabled = true;
             cboService.Items.AddRange(new object[] { "General Check-up", "Blood Pressure Check", "Diabetes Consultation" });
-            cboService.Location = new Point(110, 175);
+            cboService.Location = new Point(126, 233);
+            cboService.Margin = new Padding(3, 4, 3, 4);
             cboService.Name = "cboService";
-            cboService.Size = new Size(121, 23);
+            cboService.Size = new Size(138, 28);
             cboService.TabIndex = 3;
             cboService.SelectedIndexChanged += cboService_SelectedIndexChanged;
             // 
@@ -97,17 +98,18 @@
             lblDate.AutoSize = true;
             lblDate.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDate.ForeColor = Color.White;
-            lblDate.Location = new Point(41, 220);
+            lblDate.Location = new Point(47, 293);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(49, 20);
+            lblDate.Size = new Size(59, 25);
             lblDate.TabIndex = 4;
             lblDate.Text = "DATE:";
             // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(110, 220);
+            dtpDate.Location = new Point(126, 293);
+            dtpDate.Margin = new Padding(3, 4, 3, 4);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(200, 23);
+            dtpDate.Size = new Size(228, 27);
             dtpDate.TabIndex = 5;
             // 
             // label3
@@ -115,27 +117,29 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(41, 278);
+            label3.Location = new Point(47, 371);
             label3.Name = "label3";
-            label3.Size = new Size(47, 20);
+            label3.Size = new Size(57, 25);
             label3.TabIndex = 6;
             label3.Text = "TIME:";
             // 
             // cboTime
             // 
             cboTime.FormattingEnabled = true;
-            cboTime.Location = new Point(119, 276);
+            cboTime.Location = new Point(136, 368);
+            cboTime.Margin = new Padding(3, 4, 3, 4);
             cboTime.Name = "cboTime";
-            cboTime.Size = new Size(121, 23);
+            cboTime.Size = new Size(138, 28);
             cboTime.TabIndex = 7;
             // 
             // btnProceed
             // 
             btnProceed.BackColor = Color.FromArgb(128, 255, 128);
             btnProceed.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProceed.Location = new Point(202, 423);
+            btnProceed.Location = new Point(231, 564);
+            btnProceed.Margin = new Padding(3, 4, 3, 4);
             btnProceed.Name = "btnProceed";
-            btnProceed.Size = new Size(138, 36);
+            btnProceed.Size = new Size(158, 48);
             btnProceed.TabIndex = 9;
             btnProceed.Text = "PROCEED";
             btnProceed.UseVisualStyleBackColor = false;
@@ -146,9 +150,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(38, 323);
+            label4.Location = new Point(43, 431);
             label4.Name = "label4";
-            label4.Size = new Size(52, 20);
+            label4.Size = new Size(63, 25);
             label4.TabIndex = 10;
             label4.Text = "PRICE:";
             // 
@@ -156,9 +160,10 @@
             // 
             btnBack.BackColor = Color.FromArgb(255, 128, 128);
             btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(59, 423);
+            btnBack.Location = new Point(67, 564);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(101, 36);
+            btnBack.Size = new Size(115, 48);
             btnBack.TabIndex = 11;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = false;
@@ -186,37 +191,35 @@
             panel1.Controls.Add(dtpDate);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(441, 624);
+            panel1.Size = new Size(504, 832);
             panel1.TabIndex = 12;
             panel1.Paint += panel1_Paint;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(116, 328);
-            txtPrice.Margin = new Padding(3, 2, 3, 2);
+            txtPrice.Location = new Point(133, 437);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(110, 23);
+            txtPrice.Size = new Size(125, 27);
             txtPrice.TabIndex = 18;
             txtPrice.TextChanged += txtPrice_TextChanged;
             // 
             // lblCaregiverName
             // 
-            lblCaregiverName.AutoSize = true;
             lblCaregiverName.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCaregiverName.ForeColor = Color.White;
-            lblCaregiverName.Location = new Point(122, 119);
+            lblCaregiverName.Location = new Point(129, 159);
             lblCaregiverName.Name = "lblCaregiverName";
-            lblCaregiverName.Size = new Size(0, 20);
+            lblCaregiverName.Size = new Size(145, 33);
             lblCaregiverName.TabIndex = 17;
             // 
             // cmbElderly
             // 
             cmbElderly.FormattingEnabled = true;
-            cmbElderly.Location = new Point(108, 146);
-            cmbElderly.Margin = new Padding(3, 2, 3, 2);
+            cmbElderly.Location = new Point(123, 195);
             cmbElderly.Name = "cmbElderly";
-            cmbElderly.Size = new Size(124, 23);
+            cmbElderly.Size = new Size(141, 28);
             cmbElderly.TabIndex = 16;
             cmbElderly.SelectedIndexChanged += cmbElderly_SelectedIndexChanged;
             // 
@@ -225,9 +228,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(26, 146);
+            label7.Location = new Point(30, 195);
             label7.Name = "label7";
-            label7.Size = new Size(71, 20);
+            label7.Size = new Size(85, 25);
             label7.TabIndex = 15;
             label7.Text = "ELDERLY:";
             // 
@@ -236,9 +239,9 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(22, 119);
+            label6.Location = new Point(25, 159);
             label6.Name = "label6";
-            label6.Size = new Size(90, 20);
+            label6.Size = new Size(109, 25);
             label6.TabIndex = 13;
             label6.Text = "CAREGIVER:";
             // 
@@ -250,18 +253,19 @@
             label5.ForeColor = Color.DarkKhaki;
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
-            label5.Size = new Size(441, 68);
+            label5.Size = new Size(504, 91);
             label5.TabIndex = 12;
             label5.Text = "BOOK APPOINTMENT";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmBookAppointment
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(441, 624);
+            ClientSize = new Size(504, 832);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmBookAppointment";
             Text = "FrmBookAppointment";
             panel1.ResumeLayout(false);

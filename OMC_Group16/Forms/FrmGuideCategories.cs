@@ -60,8 +60,9 @@ namespace OMC_Group16.Forms
 
         private void btnGov_Click(object sender, EventArgs e)
         {
-            SpeakText("Opening Scam Alert Guide.");
-            OpenGuideSteps("Scam Alert");
+            FrmScamAlert alert = new FrmScamAlert();
+            alert.Show();
+         
         }
 
         private void btnMessage_Click(object sender, EventArgs e)
