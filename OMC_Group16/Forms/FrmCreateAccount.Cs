@@ -11,6 +11,10 @@ namespace OMC_Group16.Forms
 {
     public partial class FrmCreateAccount : Form
     {
+        SqlConnection con = new SqlConnection(
+        @"Data Source=(localdb)\MSSQLLocalDB;
+         Initial Catalog=OMC_SeniorConnectDB;
+         Integrated Security=True");
         public FrmCreateAccount()
         {
             InitializeComponent();
@@ -24,19 +28,28 @@ namespace OMC_Group16.Forms
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection("Your_Connection_String_Here"))
+           using (SqlConnection conn = new SqlConnection(
+             @"Data Source=(localdb)\MSSQLLocalDB;
+             Initial Catalog=OMC_SeniorConnectDB;
+             Integrated Security=True"))
             {
-                string query = "INSERT INTO Caregivers (Username, Password) VALUES (@user, @pass)";
+                string query = "INSERT INTO Caregivers (CaregiverName,PhoneNumber3,Relationship,Username,Password) VALUES (@name,@phone,@relation,@user,@password)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
+                //cmd.Parameters.AddWithValue("@id",1);
+                cmd.Parameters.AddWithValue("@name", txtCaregiverName.Text.Trim());
+                cmd.Parameters.AddWithValue("@phone", txtPhoneNumber.Text.Trim());
+                cmd.Parameters.AddWithValue("@relation", cmbRelationship.Text);
                 cmd.Parameters.AddWithValue("@user", txtUsername.Text.Trim());
-                cmd.Parameters.AddWithValue("@pass", txtPassword.Text.Trim()); 
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
 
                 try
                 {
                     conn.Open();
                     cmd.ExecuteNonQuery();
+
                     MessageBox.Show("Account created successfully! You can now log in.");
+
                     FrmCaregiverLogin login = new FrmCaregiverLogin();
                     login.Show();
                     this.Close();

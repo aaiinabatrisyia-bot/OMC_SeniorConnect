@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-// Imported speech synthesis framework for step narrative support
 using System.Speech.Synthesis;
 
 namespace OMC_Group16.Forms
@@ -16,9 +15,9 @@ namespace OMC_Group16.Forms
         private string[] tutorialSteps;
         private int currentStepIndex = 0;
 
-        // Initialize Speech Engine and Font Management Variable
+
         private SpeechSynthesizer voiceEngine = new SpeechSynthesizer();
-        private bool isVoiceEnabled = true; // Default to true or match previous form choice
+        private bool isVoiceEnabled = true;
         private float currentFontSize = 20.0f;
 
         public FrmGuideStepss(string category)
@@ -29,25 +28,21 @@ namespace OMC_Group16.Forms
 
         private void FrmGuideStepss_Load(object sender, EventArgs e)
         {
-            // Set the header text dynamically based on selection
             lblCategoryTitle.Text = currentCategory + " Guide";
 
             LoadTutorialData();
             ShowCurrentStep();
         }
 
-        /// <summary>
-        /// Displays the step text on screen and reads it aloud if voice engine is active
-        /// </summary>
         private void ShowCurrentStep()
         {
             if (tutorialSteps != null && currentStepIndex >= 0 && currentStepIndex < tutorialSteps.Length)
             {
-                // 1. Update the visual UI text container
-                string stepText = tutorialSteps[currentStepIndex];
-                lblStepDescription.Text = stepText; // Ensure this matches your big text label name
 
-                // 2. Announce the step out loud via TTS
+                string stepText = tutorialSteps[currentStepIndex];
+                lblStepDescription.Text = stepText;
+
+
                 SpeakText($"Step {currentStepIndex + 1}. {stepText}");
             }
         }
@@ -56,12 +51,10 @@ namespace OMC_Group16.Forms
         {
             if (isVoiceEnabled && !string.IsNullOrEmpty(text))
             {
-                voiceEngine.SpeakAsyncCancelAll(); // Stop previous lines immediately
+                voiceEngine.SpeakAsyncCancelAll();
                 voiceEngine.SpeakAsync(text);
             }
         }
-
-        // --- Core Navigation with Audio Feedback ---
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -94,7 +87,7 @@ namespace OMC_Group16.Forms
         {
             voiceEngine.SpeakAsyncCancelAll();
 
-            // Show the categories selector window again cleanly
+
             Form categoriesForm = Application.OpenForms["FrmGuideCategories"];
             if (categoriesForm != null)
             {
@@ -103,7 +96,6 @@ namespace OMC_Group16.Forms
             this.Close();
         }
 
-        // --- Voice Mute/Unmute Toggle ---
 
         private void btnVoiceToggleSteps_Click(object sender, EventArgs e)
         {
@@ -121,8 +113,6 @@ namespace OMC_Group16.Forms
                 voiceEngine.SpeakAsyncCancelAll();
             }
         }
-
-        // --- Text-Size Adjustment (Accessibility Zoom) ---
 
         private void btnZoomIn_Click(object sender, EventArgs e)
         {
@@ -144,7 +134,7 @@ namespace OMC_Group16.Forms
             }
         }
 
-        // --- Hardcoded Mock Data Storage ---
+
         private void LoadTutorialData()
         {
             if (currentCategory == "Online Banking")
@@ -169,7 +159,6 @@ namespace OMC_Group16.Forms
             }
             else
             {
-                // Fallback default array if other sections are opened during group testing
                 tutorialSteps = new string[]
                 {
                     "Look at the interface instructions carefully.",
@@ -177,5 +166,84 @@ namespace OMC_Group16.Forms
                 };
             }
         }
+
+        private void btnNext_Click_1(object sender, EventArgs e)
+        {
+            if (currentStepIndex < tutorialSteps.Length - 1)
+            {
+                currentStepIndex++;
+                ShowCurrentStep();
+            }
+            else
+            {
+                SpeakText("You have reached the final step of this guide.");
+                MessageBox.Show("You have reached the end of the tutorial!", "Guide Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnVoiceToggleSteps_Click_1(object sender, EventArgs e)
+        {
+            isVoiceEnabled = !isVoiceEnabled;
+            if (isVoiceEnabled)
+            {
+                btnVoiceToggleSteps.Text = "重 Voice is ON";
+                btnVoiceToggleSteps.BackColor = Color.LightGreen;
+                SpeakText("Voice narration resumed.");
+            }
+            else
+            {
+                btnVoiceToggleSteps.Text = "🔇 Voice is MUTED";
+                btnVoiceToggleSteps.BackColor = SystemColors.Control;
+                voiceEngine.SpeakAsyncCancelAll();
+            }
+        }
+
+        private void btnPrevious_Click_1(object sender, EventArgs e)
+        {
+            if (currentStepIndex > 0)
+            {
+                currentStepIndex--;
+                ShowCurrentStep();
+            }
+            else
+            {
+                SpeakText("This is the first step.");
+            }
+        }
+
+        private void btnBackToCategories_Click_1(object sender, EventArgs e)
+        {
+            voiceEngine.SpeakAsyncCancelAll();
+
+
+            Form categoriesForm = Application.OpenForms["FrmGuideCategories"];
+            if (categoriesForm != null)
+            {
+                categoriesForm.Show();
+            }
+            this.Close();
+        }
+
+        private void btnZoomIn_Click_1(object sender, EventArgs e)
+        {
+            if (currentFontSize < 36.0f) // Cap size to prevent breaking the layout bounding box
+            {
+                currentFontSize += 2.0f;
+                lblStepDescription.Font = new Font(lblStepDescription.Font.FontFamily, currentFontSize, lblStepDescription.Font.Style);
+                SpeakText("Text size increased");
+            }
+        }
+
+        private void btnZoomOut_Click_1(object sender, EventArgs e)
+        {
+            if (currentFontSize > 14.0f)
+            {
+                currentFontSize -= 2.0f;
+                lblStepDescription.Font = new Font(lblStepDescription.Font.FontFamily, currentFontSize, lblStepDescription.Font.Style);
+                SpeakText("Text size decreased");
+            }
+        }
+
+        
     }
 }

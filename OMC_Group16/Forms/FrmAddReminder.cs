@@ -54,6 +54,11 @@ namespace OMC_Group16
         {
             this.Close();
         }
+
+        private void btnVoiceAssistant_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

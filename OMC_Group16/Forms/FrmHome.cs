@@ -5,11 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using OMC_Group16.Forms;
+using System.Speech.Synthesis;
 
 namespace OMC_Group16
 {
     public partial class FrmHome : Form
     {
+        private readonly SpeechSynthesizer voiceEngine = new SpeechSynthesizer();
+
+        private bool isVoicePlaying = false;
+
         public FrmHome()
         {
             InitializeComponent();
@@ -29,65 +35,9 @@ namespace OMC_Group16
             }
         }
 
-        private void pnlGuide_MouseEnter(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.AliceBlue;
-        }
-
-        private void pnlGuide_MouseLeave(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.WhiteSmoke;
-        }
-
-        private void pnlReminder_MouseEnter(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.AliceBlue;
-        }
-
-        private void pnlReminder_MouseLeave(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.WhiteSmoke;
-        }
-
-        private void pnlEmergency_MouseEnter(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.AliceBlue;
-        }
-
-        private void pnlEmergency_MouseLeave(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.WhiteSmoke;
-        }
-
-        private void pnlVoice_MouseEnter(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.AliceBlue;
-        }
-
-        private void pnlVoice_MouseLeave(object sender, EventArgs e)
-        {
-            Panel card = (Panel)sender;
-
-            card.BackColor = Color.WhiteSmoke;
-        }
-
         private void pnlGuide_Click(object sender, EventArgs e)
         {
-            FrmGuideMenu guide = new FrmGuideMenu();
+            FrmGuideCategories guide = new FrmGuideCategories();
 
             guide.Show();
 
@@ -114,7 +64,14 @@ namespace OMC_Group16
 
         private void pnlVoice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Voice Assistant");
+            voiceEngine.SpeakAsyncCancelAll();
+
+            voiceEngine.SpeakAsync(
+                "Welcome to the SeniorConnect home menu. " +
+                "Select Step by Step Guide for digital guidance. " +
+                "Select Reminders to view your daily reminders. " +
+                "Select Emergency Contacts for urgent assistance."
+            );
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -130,6 +87,36 @@ namespace OMC_Group16
         private void pnlReminder_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlVoice_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isVoicePlaying)
+            {
+                voiceEngine.SpeakAsyncCancelAll();
+
+                voiceEngine.SpeakAsync(
+                    "Welcome to the SeniorConnect home menu. " +
+                    "Select Step by Step Guide for digital guidance. " +
+                    "Select Reminders to view your daily reminders. " +
+                    "Select Emergency Contacts for urgent assistance."
+                );
+
+                lblVoice.Text = "Stop Voice";
+                isVoicePlaying = true;
+            }
+            else
+            {
+                voiceEngine.SpeakAsyncCancelAll();
+
+                lblVoice.Text = "Voice Assistant";
+                isVoicePlaying = false;
+            }
         }
     }
 }

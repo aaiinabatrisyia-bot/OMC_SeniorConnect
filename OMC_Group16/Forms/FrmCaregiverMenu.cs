@@ -26,6 +26,7 @@ namespace OMC_Group16
         {
             FrmEmergency emergency = new FrmEmergency();
             emergency.Show();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -46,6 +47,16 @@ namespace OMC_Group16
             FrmClinicServices frm = new FrmClinicServices();
 
             frm.Show();
+
+            this.Hide();
+        }
+
+        private void btnSeniorManagement_Click(object sender, EventArgs e)
+        {
+            FrmSeniorManagement senior = new FrmSeniorManagement();
+
+            senior.Owner = this;
+            senior.Show();
 
             this.Hide();
         }

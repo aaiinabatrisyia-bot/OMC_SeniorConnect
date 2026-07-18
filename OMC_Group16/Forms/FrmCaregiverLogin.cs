@@ -11,9 +11,18 @@ namespace OMC_Group16
 {
     using OMC_Group16.Forms;
     using System.Data.SqlClient;
+    using static System.Runtime.InteropServices.JavaScript.JSType;
+
     public partial class FrmCaregiverLogin : Form
     {
-        string connectionString = "Server=YOUR_SERVER;Database=CaregiverDB;Integrated Security=True;";
+        string connectionString =
+        @"Data Source = (localdb)\MSSQLLocalDB;
+        Initial Catalog = OMC_SeniorConnectDB; 
+        Integrated Security = True;";
+
+        public static int CaregiverID;
+        public static string CaregiverName;
+
         public FrmCaregiverLogin()
         {
             InitializeComponent();
@@ -22,20 +31,43 @@ namespace OMC_Group16
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            SqlConnection con = new SqlConnection(connectionString);
 
-            if (AuthenticateCareGiver(username, password))
+            con.Open();
+
+            string query = "SELECT * FROM Caregivers WHERE Username=@username AND Password=@password";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
             {
-                MessageBox.Show("Login Successful!");
+                CaregiverID = Convert.ToInt32(reader["CaregiverID"]);
+                CaregiverName = reader["CaregiverName"].ToString();
+                MessageBox.Show("Login Successful");
 
                 FrmCaregiverMenu dashboard = new FrmCaregiverMenu();
                 dashboard.Show();
+
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid Password or Username. Please Try Again.");
+                MessageBox.Show("Invalid Username or Password");
             }
+
+            con.Close();
+
+            
+            
+
+
+
+
         }
 
 
