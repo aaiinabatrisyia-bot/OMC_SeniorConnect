@@ -28,12 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormScamAlert";
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.White;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(457, 64);
+            label1.TabIndex = 0;
+            label1.Text = "SCAM ALERT";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // FrmScamAlert
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(457, 663);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FrmScamAlert";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormScamAlert";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label label1;
     }
 }
