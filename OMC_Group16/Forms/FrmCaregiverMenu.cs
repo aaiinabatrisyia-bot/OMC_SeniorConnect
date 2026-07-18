@@ -24,7 +24,7 @@ namespace OMC_Group16
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
-            FrmEmergency emergency = new FrmEmergency();
+          FrmEmergency emergency = new FrmEmergency();
             emergency.Show();
             this.Hide();
         }
