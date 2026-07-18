@@ -37,13 +37,14 @@ namespace OMC_Group16.Forms
             SqlConnection con = new SqlConnection(connectionString);
 
             string query = @"INSERT INTO Seniors
-                    (FullName, PhoneNumber, Address, Gender)
+                    (FullName,Age, PhoneNumber, Address, Gender)
                     VALUES
-                    (@name, @phone, @address, @gender)";
+                    (@name,@age, @phone, @address, @gender)";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
             cmd.Parameters.AddWithValue("@name", txtSeniorName.Text);
+            cmd.Parameters.AddWithValue("@age", int.Parse(txtSeniorAge.Text));
             cmd.Parameters.AddWithValue("@phone", txtPhoneNumber2.Text);
             cmd.Parameters.AddWithValue("@address", txtAddress.Text);
             cmd.Parameters.AddWithValue("@gender", gender);
@@ -53,6 +54,18 @@ namespace OMC_Group16.Forms
             con.Close();
 
             MessageBox.Show("Senior added successfully.");
+        }
+
+        private void FrmSeniorManagement_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FrmCaregiverMenu menu = new FrmCaregiverMenu();
+            menu.Show();
+            this.Close();
         }
     }
 }

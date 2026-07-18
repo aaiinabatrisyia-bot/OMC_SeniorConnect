@@ -36,16 +36,16 @@
             dtpDate = new DateTimePicker();
             label3 = new Label();
             cboTime = new ComboBox();
-            lblPrice = new Label();
             btnProceed = new Button();
             label4 = new Label();
             btnBack = new Button();
             panel1 = new Panel();
             cmbElderly = new ComboBox();
             label7 = new Label();
-            lblCaregiverName = new Label();
             label6 = new Label();
             label5 = new Label();
+            lblCaregiverName = new Label();
+            txtPrice = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -132,15 +132,6 @@
             cboTime.Size = new Size(138, 28);
             cboTime.TabIndex = 7;
             // 
-            // lblPrice
-            // 
-            lblPrice.BackColor = Color.MistyRose;
-            lblPrice.Location = new Point(126, 431);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(228, 91);
-            lblPrice.TabIndex = 8;
-            lblPrice.Click += lblPrice_Click;
-            // 
             // btnProceed
             // 
             btnProceed.BackColor = Color.FromArgb(128, 255, 128);
@@ -181,16 +172,16 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(txtPrice);
+            panel1.Controls.Add(lblCaregiverName);
             panel1.Controls.Add(cmbElderly);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(lblCaregiverName);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(btnProceed);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(lblPrice);
             panel1.Controls.Add(lblClinic);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(cboService);
@@ -225,16 +216,6 @@
             label7.TabIndex = 15;
             label7.Text = "ELDERLY:";
             // 
-            // lblCaregiverName
-            // 
-            lblCaregiverName.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCaregiverName.ForeColor = Color.FromArgb(224, 224, 224);
-            lblCaregiverName.Location = new Point(140, 159);
-            lblCaregiverName.Name = "lblCaregiverName";
-            lblCaregiverName.Size = new Size(141, 25);
-            lblCaregiverName.TabIndex = 14;
-            lblCaregiverName.Click += lblCaregiverName_Click;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -258,6 +239,24 @@
             label5.TabIndex = 12;
             label5.Text = "BOOK APPOINTMENT";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblCaregiverName
+            // 
+            lblCaregiverName.AutoSize = true;
+            lblCaregiverName.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCaregiverName.ForeColor = Color.White;
+            lblCaregiverName.Location = new Point(140, 159);
+            lblCaregiverName.Name = "lblCaregiverName";
+            lblCaregiverName.Size = new Size(0, 25);
+            lblCaregiverName.TabIndex = 17;
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(133, 437);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(125, 27);
+            txtPrice.TabIndex = 18;
+            txtPrice.TextChanged += txtPrice_TextChanged;
             // 
             // FrmBookAppointment
             // 
@@ -284,15 +283,15 @@
         private DateTimePicker dtpDate;
         private Label label3;
         private ComboBox cboTime;
-        private Label lblPrice;
         private Button btnProceed;
         private Label label4;
         private Button btnBack;
         private Panel panel1;
         private Label label5;
-        private Label lblCaregiverName;
         private Label label6;
         private ComboBox cmbElderly;
         private Label label7;
+        private Label lblCaregiverName;
+        private TextBox txtPrice;
     }
 }

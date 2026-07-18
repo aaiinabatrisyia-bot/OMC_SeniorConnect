@@ -50,5 +50,15 @@ namespace OMC_Group16
 
             this.Hide();
         }
+
+        private void btnSeniorManagement_Click(object sender, EventArgs e)
+        {
+            FrmSeniorManagement senior = new FrmSeniorManagement();
+
+            senior.Owner = this;
+            senior.Show();
+
+            this.Hide();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Button button1;
+            Button btnBack;
             label5 = new Label();
             panel1 = new Panel();
             rdoFemale = new RadioButton();
@@ -43,6 +44,7 @@
             label2 = new Label();
             label1 = new Label();
             button1 = new Button();
+            btnBack = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(170, 403);
+            button1.Location = new Point(254, 387);
             button1.Name = "button1";
             button1.Size = new Size(173, 38);
             button1.TabIndex = 8;
@@ -75,6 +77,7 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(btnBack);
             panel1.Controls.Add(rdoFemale);
             panel1.Controls.Add(rdoMale);
             panel1.Controls.Add(label6);
@@ -203,6 +206,19 @@
             label1.TabIndex = 0;
             label1.Text = "SENIOR NAME:";
             // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.PaleTurquoise;
+            btnBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.Black;
+            btnBack.Location = new Point(101, 387);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(134, 38);
+            btnBack.TabIndex = 12;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
+            // 
             // FrmSeniorManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -212,6 +228,7 @@
             Controls.Add(label5);
             Name = "FrmSeniorManagement";
             Text = "FrmSeniorManagement";
+            Load += FrmSeniorManagement_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
