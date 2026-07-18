@@ -1,8 +1,8 @@
 namespace FrmEmergency
 {
-    public partial class FrmEmergency : Form
+    public partial class FrmEmergency2 : Form
     {
-        public FrmEmergency()
+        public FrmEmergency2()
         {
             InitializeComponent();
         }

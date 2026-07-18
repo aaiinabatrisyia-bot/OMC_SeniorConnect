@@ -1,6 +1,6 @@
 ﻿namespace FrmEmergency
 {
-    partial class FrmEmergency
+    partial class FrmEmergency2
     {
         /// <summary>
         ///  Required designer variable.
@@ -260,7 +260,7 @@
             panel1.TabIndex = 25;
             panel1.Paint += panel1_Paint;
             // 
-            // FrmEmergency
+            // FrmEmergency2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -268,7 +268,7 @@
             ClientSize = new Size(522, 884);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrmEmergency";
+            Name = "FrmEmergency2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EMERGENCY";
             panel2.ResumeLayout(false);

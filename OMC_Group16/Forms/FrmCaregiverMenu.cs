@@ -1,4 +1,5 @@
-﻿using OMC_Group16.Forms;
+﻿using FrmEmergency;
+using OMC_Group16.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace OMC_Group16
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
-          FrmEmergency emergency = new FrmEmergency();
+           FrmEmergency2 emergency  = new FrmEmergency2();
             emergency.Show();
             this.Hide();
         }
