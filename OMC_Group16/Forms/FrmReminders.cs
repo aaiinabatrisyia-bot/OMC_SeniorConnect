@@ -10,9 +10,8 @@ namespace OMC_Group16
 {
     public partial class FrmReminders : Form
     {
-        private ReminderService _reminderService;
-        private List<Reminder> _currentReminders;
-        private Reminder _selectedReminders;
+        private string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=OMC_SeniorConnectDB;Integrated Security=True;";
+        private int currentUserId;
 
         public FrmReminders()
         {
