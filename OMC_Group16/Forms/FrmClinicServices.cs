@@ -17,16 +17,8 @@ namespace OMC_Group16.Forms
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FrmBookAppointment frm = new FrmBookAppointment();
-                frm.ShowDialog();
-                //this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            FrmBookAppointment appointment = new FrmBookAppointment();
+            appointment.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

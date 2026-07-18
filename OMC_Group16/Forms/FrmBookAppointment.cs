@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMC_Group16.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,9 @@ namespace OMC_Group16.Forms
         }
         private void FrmBookAppointment_Load(object sender, EventArgs e)
         {
-            lblCaregiverName.Text = FrmCaregiverLogin.CaregiverName;
+            MessageBox.Show("Form Loaded");
+            //MessageBox.Show("Name received" + UserSession.CaregiverName);
+            lblCaregiverName.Text = UserSession.CaregiverName;
             txtPrice.ReadOnly = true;
             dtpDate.MinDate = DateTime.Today;
 

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace OMC_Group16
 {
+    using OMC_Group16.Classes;
     using OMC_Group16.Forms;
     using System.Data.SqlClient;
     using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -46,9 +47,10 @@ namespace OMC_Group16
 
             if (reader.Read())
             {
-                CaregiverID = Convert.ToInt32(reader["CaregiverID"]);
-                CaregiverName = reader["CaregiverName"].ToString();
-                MessageBox.Show("Login Successful");
+                UserSession.CaregiverID = Convert.ToInt32(reader["CaregiverID"]);
+                UserSession.CaregiverName = reader["CaregiverName"].ToString();
+                
+                MessageBox.Show("Saved name :"+UserSession.CaregiverName);
 
                 FrmCaregiverMenu dashboard = new FrmCaregiverMenu();
                 dashboard.Show();
@@ -61,12 +63,6 @@ namespace OMC_Group16
             }
 
             con.Close();
-
-            
-            
-
-
-
 
         }
 
