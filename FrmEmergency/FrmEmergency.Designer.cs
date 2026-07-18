@@ -46,6 +46,7 @@
             panel2 = new Panel();
             label1 = new Label();
             panel1 = new Panel();
+            btnVoiceAssistant = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -55,10 +56,10 @@
             btnExit.BackColor = Color.DarkOliveGreen;
             btnExit.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             btnExit.ForeColor = Color.DarkKhaki;
-            btnExit.Location = new Point(234, 587);
+            btnExit.Location = new Point(247, 598);
             btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(166, 48);
+            btnExit.Size = new Size(166, 37);
             btnExit.TabIndex = 24;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = false;
@@ -69,10 +70,10 @@
             btnClear.BackColor = Color.DarkOliveGreen;
             btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             btnClear.ForeColor = Color.DarkKhaki;
-            btnClear.Location = new Point(54, 587);
+            btnClear.Location = new Point(36, 598);
             btnClear.Margin = new Padding(3, 2, 3, 2);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(166, 48);
+            btnClear.Size = new Size(166, 37);
             btnClear.TabIndex = 23;
             btnClear.Text = "CLEAR";
             btnClear.UseVisualStyleBackColor = false;
@@ -248,6 +249,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnVoiceAssistant);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtName);
             panel1.Controls.Add(label4);
@@ -271,6 +273,19 @@
             panel1.Size = new Size(457, 663);
             panel1.TabIndex = 25;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnVoiceAssistant
+            // 
+            btnVoiceAssistant.BackColor = Color.DarkOliveGreen;
+            btnVoiceAssistant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnVoiceAssistant.ForeColor = Color.DarkKhaki;
+            btnVoiceAssistant.Location = new Point(36, 547);
+            btnVoiceAssistant.Margin = new Padding(3, 2, 3, 2);
+            btnVoiceAssistant.Name = "btnVoiceAssistant";
+            btnVoiceAssistant.Size = new Size(377, 37);
+            btnVoiceAssistant.TabIndex = 25;
+            btnVoiceAssistant.Text = "VOICE ASSISTANT";
+            btnVoiceAssistant.UseVisualStyleBackColor = false;
             // 
             // FrmEmergency
             // 
@@ -309,5 +324,6 @@
         private TextBox txtClinic;
         private Label label6;
         private Panel panel1;
+        private Button btnVoiceAssistant;
     }
 }

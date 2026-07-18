@@ -46,17 +46,19 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Constantia", 16.2F);
-            txtUsername.Location = new Point(117, 191);
+            txtUsername.Location = new Point(102, 143);
+            txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(350, 40);
+            txtUsername.Size = new Size(307, 34);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Constantia", 16.2F);
-            txtPassword.Location = new Point(117, 325);
+            txtPassword.Location = new Point(102, 244);
+            txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(350, 40);
+            txtPassword.Size = new Size(307, 34);
             txtPassword.TabIndex = 1;
             // 
             // btnLogin
@@ -65,9 +67,10 @@
             btnLogin.BackColor = Color.Green;
             btnLogin.Font = new Font("Constantia", 16.2F);
             btnLogin.ForeColor = SystemColors.ButtonFace;
-            btnLogin.Location = new Point(191, 411);
+            btnLogin.Location = new Point(167, 308);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(134, 60);
+            btnLogin.Size = new Size(117, 45);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOG IN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -78,9 +81,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(4, 202);
+            label1.Location = new Point(4, 152);
             label1.Name = "label1";
-            label1.Size = new Size(107, 23);
+            label1.Size = new Size(88, 19);
             label1.TabIndex = 3;
             label1.Text = "USERNAME:";
             label1.Click += label1_Click;
@@ -90,9 +93,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(4, 336);
+            label2.Location = new Point(4, 252);
             label2.Name = "label2";
-            label2.Size = new Size(110, 23);
+            label2.Size = new Size(91, 19);
             label2.TabIndex = 4;
             label2.Text = "PASSWORD:";
             // 
@@ -104,7 +107,7 @@
             label3.ForeColor = Color.DarkKhaki;
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(522, 63);
+            label3.Size = new Size(457, 47);
             label3.TabIndex = 5;
             label3.Text = "CAREGIVER LOGIN";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -114,9 +117,9 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(175, 567);
+            label4.Location = new Point(158, 397);
             label4.Name = "label4";
-            label4.Size = new Size(168, 20);
+            label4.Size = new Size(135, 15);
             label4.TabIndex = 7;
             label4.Text = "Don't Have an Account?";
             // 
@@ -125,9 +128,10 @@
             btnCreateAccount.BackColor = Color.Gold;
             btnCreateAccount.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateAccount.ForeColor = SystemColors.ButtonFace;
-            btnCreateAccount.Location = new Point(113, 611);
+            btnCreateAccount.Location = new Point(99, 435);
+            btnCreateAccount.Margin = new Padding(3, 2, 3, 2);
             btnCreateAccount.Name = "btnCreateAccount";
-            btnCreateAccount.Size = new Size(290, 80);
+            btnCreateAccount.Size = new Size(254, 60);
             btnCreateAccount.TabIndex = 8;
             btnCreateAccount.Text = "CREATE ACCOUNT";
             btnCreateAccount.UseVisualStyleBackColor = false;
@@ -138,9 +142,10 @@
             btnBack.BackColor = Color.Salmon;
             btnBack.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = SystemColors.ButtonFace;
-            btnBack.Location = new Point(113, 719);
+            btnBack.Location = new Point(99, 510);
+            btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(290, 79);
+            btnBack.Size = new Size(254, 59);
             btnBack.TabIndex = 9;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = false;
@@ -161,30 +166,30 @@
             panel1.Controls.Add(txtUsername);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(522, 884);
+            panel1.Size = new Size(457, 591);
             panel1.TabIndex = 10;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(223, 86);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(195, 64);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(73, 85);
+            pictureBox1.Size = new Size(64, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
             // FrmCaregiverLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(522, 884);
+            ClientSize = new Size(457, 591);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCaregiverLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCaregiverLogin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

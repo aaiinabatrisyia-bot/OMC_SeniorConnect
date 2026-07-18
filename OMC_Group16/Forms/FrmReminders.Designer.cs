@@ -48,6 +48,7 @@
             panel1 = new Panel();
             lblEmergencyCount = new Label();
             lblPendingCount = new Label();
+            btnVoiceAssistant = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReminders).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -86,9 +87,9 @@
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.LightCyan;
+            btnSearch.BackColor = Color.DarkOliveGreen;
             btnSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSearch.ForeColor = Color.DarkSlateGray;
+            btnSearch.ForeColor = Color.DarkKhaki;
             btnSearch.Location = new Point(346, 172);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(90, 26);
@@ -98,9 +99,9 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.BackColor = Color.LightCyan;
+            btnRefresh.BackColor = Color.DarkOliveGreen;
             btnRefresh.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.ForeColor = Color.DarkSlateGray;
+            btnRefresh.ForeColor = Color.DarkKhaki;
             btnRefresh.Location = new Point(346, 204);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(90, 28);
@@ -232,6 +233,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnVoiceAssistant);
             panel1.Controls.Add(lblEmergencyCount);
             panel1.Controls.Add(lblPendingCount);
             panel1.Controls.Add(panel2);
@@ -272,6 +274,18 @@
             lblPendingCount.Size = new Size(104, 18);
             lblPendingCount.TabIndex = 9;
             lblPendingCount.Text = "| Pending: 0";
+            // 
+            // btnVoiceAssistant
+            // 
+            btnVoiceAssistant.BackColor = Color.DarkOliveGreen;
+            btnVoiceAssistant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVoiceAssistant.ForeColor = Color.DarkKhaki;
+            btnVoiceAssistant.Location = new Point(154, 97);
+            btnVoiceAssistant.Name = "btnVoiceAssistant";
+            btnVoiceAssistant.Size = new Size(282, 32);
+            btnVoiceAssistant.TabIndex = 11;
+            btnVoiceAssistant.Text = "VOICE ASSISTANT";
+            btnVoiceAssistant.UseVisualStyleBackColor = false;
             // 
             // FrmReminders
             // 
@@ -314,5 +328,6 @@
         private Panel panel1;
         private Label lblEmergencyCount;
         private Label lblPendingCount;
+        private Button btnVoiceAssistant;
     }
 }
