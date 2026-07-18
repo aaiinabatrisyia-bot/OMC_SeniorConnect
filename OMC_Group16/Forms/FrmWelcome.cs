@@ -1,7 +1,15 @@
+using System.Speech.Synthesis;
+
 namespace OMC_Group16
 {
+   
+
     public partial class FrmWelcome : Form
     {
+        private readonly SpeechSynthesizer voiceAssistant =
+       new SpeechSynthesizer();
+        private bool isSpeaking = false;
+
         public FrmWelcome()
         {
             InitializeComponent();
@@ -23,7 +31,26 @@ namespace OMC_Group16
 
         private void btnVoice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Voice Assistant Coming Soon");
+            if (!isSpeaking)
+            {
+                voiceAssistant.SpeakAsyncCancelAll();
+
+                voiceAssistant.SpeakAsync(
+                    "Welcome to Senior Connect. " +
+                    "Select Continue as Senior to access senior services. " +
+                    "Select Caregiver Login to access the caregiver account."
+                );
+
+                btnVoice.Text = "🔇 STOP VOICE";
+                isSpeaking = true;
+            }
+            else
+            {
+                voiceAssistant.SpeakAsyncCancelAll();
+
+                btnVoice.Text = "🎙 VOICE ASSISTANT";
+                isSpeaking = false;
+            }
         }
     }
 }
