@@ -56,10 +56,10 @@
             btnExit.BackColor = Color.DarkOliveGreen;
             btnExit.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             btnExit.ForeColor = Color.DarkKhaki;
-            btnExit.Location = new Point(247, 598);
+            btnExit.Location = new Point(238, 552);
             btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(166, 37);
+            btnExit.Size = new Size(145, 28);
             btnExit.TabIndex = 24;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = false;
@@ -70,10 +70,10 @@
             btnClear.BackColor = Color.DarkOliveGreen;
             btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             btnClear.ForeColor = Color.DarkKhaki;
-            btnClear.Location = new Point(36, 598);
+            btnClear.Location = new Point(53, 552);
             btnClear.Margin = new Padding(3, 2, 3, 2);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(166, 37);
+            btnClear.Size = new Size(145, 28);
             btnClear.TabIndex = 23;
             btnClear.Text = "CLEAR";
             btnClear.UseVisualStyleBackColor = false;
@@ -82,19 +82,20 @@
             // txtClinic
             // 
             txtClinic.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtClinic.Location = new Point(158, 649);
+            txtClinic.Location = new Point(138, 335);
+            txtClinic.Margin = new Padding(3, 2, 3, 2);
             txtClinic.Multiline = true;
             txtClinic.Name = "txtClinic";
-            txtClinic.Size = new Size(314, 53);
+            txtClinic.Size = new Size(275, 41);
             txtClinic.TabIndex = 22;
             // 
             // label6
             // 
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Ivory;
-            label6.Location = new Point(22, 651);
+            label6.Location = new Point(42, 335);
             label6.Name = "label6";
-            label6.Size = new Size(118, 45);
+            label6.Size = new Size(80, 41);
             label6.TabIndex = 21;
             label6.Text = "Nearby Clinic\r\n";
             // 
@@ -103,9 +104,10 @@
             btnNearbyClinic.BackColor = Color.Teal;
             btnNearbyClinic.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnNearbyClinic.ForeColor = Color.LightCyan;
-            btnNearbyClinic.Location = new Point(41, 540);
+            btnNearbyClinic.Location = new Point(36, 482);
+            btnNearbyClinic.Margin = new Padding(3, 2, 3, 2);
             btnNearbyClinic.Name = "btnNearbyClinic";
-            btnNearbyClinic.Size = new Size(431, 48);
+            btnNearbyClinic.Size = new Size(377, 36);
             btnNearbyClinic.TabIndex = 20;
             btnNearbyClinic.Text = "NEARBY CLINIC";
             btnNearbyClinic.UseVisualStyleBackColor = false;
@@ -116,9 +118,10 @@
             btnEmergencyContact.BackColor = Color.DarkOrange;
             btnEmergencyContact.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEmergencyContact.ForeColor = Color.FloralWhite;
-            btnEmergencyContact.Location = new Point(41, 481);
+            btnEmergencyContact.Location = new Point(36, 438);
+            btnEmergencyContact.Margin = new Padding(3, 2, 3, 2);
             btnEmergencyContact.Name = "btnEmergencyContact";
-            btnEmergencyContact.Size = new Size(431, 48);
+            btnEmergencyContact.Size = new Size(377, 36);
             btnEmergencyContact.TabIndex = 19;
             btnEmergencyContact.Text = "EMERGENCY CONTACT";
             btnEmergencyContact.UseVisualStyleBackColor = false;
@@ -129,9 +132,10 @@
             btnAmbulance.BackColor = Color.Red;
             btnAmbulance.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAmbulance.ForeColor = Color.MistyRose;
-            btnAmbulance.Location = new Point(41, 417);
+            btnAmbulance.Location = new Point(36, 390);
+            btnAmbulance.Margin = new Padding(3, 2, 3, 2);
             btnAmbulance.Name = "btnAmbulance";
-            btnAmbulance.Size = new Size(431, 48);
+            btnAmbulance.Size = new Size(377, 36);
             btnAmbulance.TabIndex = 18;
             btnAmbulance.Text = "AMBULANCE";
             btnAmbulance.UseVisualStyleBackColor = false;
@@ -140,35 +144,39 @@
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            txtAddress.Location = new Point(158, 319);
+            txtAddress.Location = new Point(138, 284);
+            txtAddress.Margin = new Padding(3, 2, 3, 2);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(314, 44);
+            txtAddress.Size = new Size(275, 34);
             txtAddress.TabIndex = 17;
             // 
             // txtEmergencyContact
             // 
             txtEmergencyContact.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            txtEmergencyContact.Location = new Point(158, 252);
+            txtEmergencyContact.Location = new Point(138, 234);
+            txtEmergencyContact.Margin = new Padding(3, 2, 3, 2);
             txtEmergencyContact.Name = "txtEmergencyContact";
-            txtEmergencyContact.Size = new Size(314, 27);
+            txtEmergencyContact.Size = new Size(275, 23);
             txtEmergencyContact.TabIndex = 16;
             // 
             // txtPhoneNumber
             // 
             txtPhoneNumber.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            txtPhoneNumber.Location = new Point(158, 192);
+            txtPhoneNumber.Location = new Point(138, 189);
+            txtPhoneNumber.Margin = new Padding(3, 2, 3, 2);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(314, 27);
+            txtPhoneNumber.Size = new Size(275, 23);
             txtPhoneNumber.TabIndex = 15;
             txtPhoneNumber.TextChanged += txtPhoneNumber_TextChanged;
             // 
             // txtName
             // 
             txtName.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            txtName.Location = new Point(158, 141);
+            txtName.Location = new Point(138, 151);
+            txtName.Margin = new Padding(3, 2, 3, 2);
             txtName.Name = "txtName";
-            txtName.Size = new Size(314, 27);
+            txtName.Size = new Size(275, 23);
             txtName.TabIndex = 14;
             txtName.TextChanged += txtName_TextChanged;
             // 
@@ -177,9 +185,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label5.ForeColor = Color.Ivory;
-            label5.Location = new Point(48, 320);
+            label5.Location = new Point(42, 285);
             label5.Name = "label5";
-            label5.Size = new Size(83, 25);
+            label5.Size = new Size(66, 20);
             label5.TabIndex = 13;
             label5.Text = "Address";
             // 
@@ -187,9 +195,9 @@
             // 
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label4.ForeColor = Color.Ivory;
-            label4.Location = new Point(48, 252);
+            label4.Location = new Point(42, 234);
             label4.Name = "label4";
-            label4.Size = new Size(110, 68);
+            label4.Size = new Size(96, 51);
             label4.TabIndex = 12;
             label4.Text = "Emergency Contact";
             label4.Click += label4_Click;
@@ -198,9 +206,9 @@
             // 
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label3.ForeColor = Color.Ivory;
-            label3.Location = new Point(48, 177);
+            label3.Location = new Point(42, 178);
             label3.Name = "label3";
-            label3.Size = new Size(91, 64);
+            label3.Size = new Size(80, 48);
             label3.TabIndex = 11;
             label3.Text = "Phone Number";
             label3.Click += label3_Click;
@@ -210,9 +218,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.ForeColor = Color.Ivory;
-            label2.Location = new Point(48, 145);
+            label2.Location = new Point(42, 154);
             label2.Name = "label2";
-            label2.Size = new Size(64, 25);
+            label2.Size = new Size(51, 20);
             label2.TabIndex = 10;
             label2.Text = "Name";
             // 
@@ -220,9 +228,10 @@
             // 
             panel2.BackColor = Color.DarkOliveGreen;
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(0, 3);
+            panel2.Location = new Point(0, 2);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(522, 88);
+            panel2.Size = new Size(457, 66);
             panel2.TabIndex = 0;
             // 
             // label1
@@ -233,7 +242,7 @@
             label1.ForeColor = Color.DarkKhaki;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(522, 88);
+            label1.Size = new Size(457, 66);
             label1.TabIndex = 0;
             label1.Text = "EMERGENCY";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -259,8 +268,9 @@
             panel1.Controls.Add(btnAmbulance);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(522, 884);
+            panel1.Size = new Size(457, 591);
             panel1.TabIndex = 25;
             panel1.Paint += panel1_Paint;
             // 
@@ -269,22 +279,23 @@
             btnVoiceAssistant.BackColor = Color.DarkOliveGreen;
             btnVoiceAssistant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             btnVoiceAssistant.ForeColor = Color.DarkKhaki;
-            btnVoiceAssistant.Location = new Point(36, 547);
+            btnVoiceAssistant.Location = new Point(65, 87);
             btnVoiceAssistant.Margin = new Padding(3, 2, 3, 2);
             btnVoiceAssistant.Name = "btnVoiceAssistant";
-            btnVoiceAssistant.Size = new Size(377, 37);
+            btnVoiceAssistant.Size = new Size(330, 33);
             btnVoiceAssistant.TabIndex = 25;
             btnVoiceAssistant.Text = "VOICE ASSISTANT";
             btnVoiceAssistant.UseVisualStyleBackColor = false;
             // 
             // FrmEmergency
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(522, 884);
+            ClientSize = new Size(457, 591);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmEmergency";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EMERGENCY";
