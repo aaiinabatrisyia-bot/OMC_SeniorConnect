@@ -45,10 +45,19 @@ namespace OMC_Group16.Forms
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            FrmPayment frm = new FrmPayment();
+            string service = cboService.Text;
+            string date = dtpDate.Value.ToShortDateString();
+            string time = cboTime.Text;
+            string price = lblPrice.Text;
+
+            FrmPayment frm = new FrmPayment(
+                service,
+                date,
+                time,
+                price
+            );
 
             frm.Show();
-
             this.Hide();
         }
     }

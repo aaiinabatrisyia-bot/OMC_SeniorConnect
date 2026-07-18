@@ -14,5 +14,11 @@ namespace OMC_Group16.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmGuidedCategories_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

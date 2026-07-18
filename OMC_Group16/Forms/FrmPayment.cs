@@ -56,28 +56,19 @@ namespace OMC_Group16.Forms
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+         
             if (!rbBank.Checked && !rbCard.Checked)
             {
                 MessageBox.Show("Please select a payment method.");
                 return;
             }
 
-            string paymentMethod = "";
-
-            if (rbBank.Checked)
-                paymentMethod = "Online Banking";
-            else
-                paymentMethod = "Credit / Debit Card";
-
-            FrmPaymentSuccess frm = new FrmPaymentSuccess(
-                lblService.Text,
-                lblDate.Text,
-                lblTime.Text,
-                lblAmount.Text,
-                paymentMethod);
+            FrmPaymentSuccess frm = new FrmPaymentSuccess();
 
             frm.Show();
+
             this.Hide();
-        }
+         }
+        
     }
 }
