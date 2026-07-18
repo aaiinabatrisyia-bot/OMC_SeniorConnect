@@ -14,6 +14,8 @@ namespace OMC_Group16
     {
         private readonly SpeechSynthesizer voiceEngine = new SpeechSynthesizer();
 
+        private bool isVoicePlaying = false;
+
         public FrmHome()
         {
             InitializeComponent();
@@ -90,6 +92,31 @@ namespace OMC_Group16
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnlVoice_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isVoicePlaying)
+            {
+                voiceEngine.SpeakAsyncCancelAll();
+
+                voiceEngine.SpeakAsync(
+                    "Welcome to the SeniorConnect home menu. " +
+                    "Select Step by Step Guide for digital guidance. " +
+                    "Select Reminders to view your daily reminders. " +
+                    "Select Emergency Contacts for urgent assistance."
+                );
+
+                lblVoice.Text = "Stop Voice";
+                isVoicePlaying = true;
+            }
+            else
+            {
+                voiceEngine.SpeakAsyncCancelAll();
+
+                lblVoice.Text = "Voice Assistant";
+                isVoicePlaying = false;
+            }
         }
     }
 }

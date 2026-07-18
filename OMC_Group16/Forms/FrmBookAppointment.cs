@@ -77,8 +77,8 @@ namespace OMC_Group16.Forms
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            if(cmbElderly.SelectedIndex == -1)
-    {
+            if (cmbElderly.SelectedIndex == -1)
+            {
                 MessageBox.Show("Please select an elderly patient.");
                 return;
             }
@@ -161,6 +161,11 @@ namespace OMC_Group16.Forms
         }
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbElderly_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
