@@ -46,6 +46,7 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
+            label8 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(32, 236);
+            label2.Location = new Point(34, 265);
             label2.Name = "label2";
             label2.Size = new Size(83, 25);
             label2.TabIndex = 2;
@@ -86,7 +87,7 @@
             // 
             cboService.FormattingEnabled = true;
             cboService.Items.AddRange(new object[] { "General Check-up", "Blood Pressure Check", "Diabetes Consultation" });
-            cboService.Location = new Point(126, 233);
+            cboService.Location = new Point(123, 262);
             cboService.Margin = new Padding(3, 4, 3, 4);
             cboService.Name = "cboService";
             cboService.Size = new Size(138, 28);
@@ -98,7 +99,7 @@
             lblDate.AutoSize = true;
             lblDate.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDate.ForeColor = Color.White;
-            lblDate.Location = new Point(47, 293);
+            lblDate.Location = new Point(43, 320);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(59, 25);
             lblDate.TabIndex = 4;
@@ -106,7 +107,7 @@
             // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(126, 293);
+            dtpDate.Location = new Point(123, 318);
             dtpDate.Margin = new Padding(3, 4, 3, 4);
             dtpDate.Name = "dtpDate";
             dtpDate.Size = new Size(228, 27);
@@ -126,11 +127,12 @@
             // cboTime
             // 
             cboTime.FormattingEnabled = true;
-            cboTime.Location = new Point(136, 368);
+            cboTime.Location = new Point(123, 372);
             cboTime.Margin = new Padding(3, 4, 3, 4);
             cboTime.Name = "cboTime";
             cboTime.Size = new Size(138, 28);
             cboTime.TabIndex = 7;
+            cboTime.SelectedIndexChanged += cboTime_SelectedIndexChanged;
             // 
             // btnProceed
             // 
@@ -172,6 +174,7 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(txtPrice);
             panel1.Controls.Add(lblCaregiverName);
             panel1.Controls.Add(cmbElderly);
@@ -199,7 +202,7 @@
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(133, 437);
+            txtPrice.Location = new Point(169, 431);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(125, 27);
             txtPrice.TabIndex = 18;
@@ -209,7 +212,7 @@
             // 
             lblCaregiverName.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCaregiverName.ForeColor = Color.White;
-            lblCaregiverName.Location = new Point(129, 159);
+            lblCaregiverName.Location = new Point(129, 172);
             lblCaregiverName.Name = "lblCaregiverName";
             lblCaregiverName.Size = new Size(145, 33);
             lblCaregiverName.TabIndex = 17;
@@ -217,7 +220,7 @@
             // cmbElderly
             // 
             cmbElderly.FormattingEnabled = true;
-            cmbElderly.Location = new Point(123, 195);
+            cmbElderly.Location = new Point(126, 217);
             cmbElderly.Name = "cmbElderly";
             cmbElderly.Size = new Size(141, 28);
             cmbElderly.TabIndex = 16;
@@ -228,7 +231,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(30, 195);
+            label7.Location = new Point(32, 216);
             label7.Name = "label7";
             label7.Size = new Size(85, 25);
             label7.TabIndex = 15;
@@ -239,7 +242,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(25, 159);
+            label6.Location = new Point(14, 172);
             label6.Name = "label6";
             label6.Size = new Size(109, 25);
             label6.TabIndex = 13;
@@ -258,6 +261,17 @@
             label5.Text = "BOOK APPOINTMENT";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(123, 431);
+            label8.Name = "label8";
+            label8.Size = new Size(40, 25);
+            label8.TabIndex = 19;
+            label8.Text = "RM";
+            // 
             // FrmBookAppointment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -268,6 +282,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmBookAppointment";
             Text = "FrmBookAppointment";
+            Load += FrmBookAppointment_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -293,5 +308,6 @@
         private Label label7;
         private Label lblCaregiverName;
         private TextBox txtPrice;
+        private Label label8;
     }
 }
