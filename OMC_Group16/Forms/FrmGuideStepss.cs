@@ -56,46 +56,6 @@ namespace OMC_Group16.Forms
             }
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (currentStepIndex < tutorialSteps.Length - 1)
-            {
-                currentStepIndex++;
-                ShowCurrentStep();
-            }
-            else
-            {
-                SpeakText("You have reached the final step of this guide.");
-                MessageBox.Show("You have reached the end of the tutorial!", "Guide Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            if (currentStepIndex > 0)
-            {
-                currentStepIndex--;
-                ShowCurrentStep();
-            }
-            else
-            {
-                SpeakText("This is the first step.");
-            }
-        }
-
-        private void btnBackToCategories_Click(object sender, EventArgs e)
-        {
-            voiceEngine.SpeakAsyncCancelAll();
-
-
-            Form categoriesForm = Application.OpenForms["FrmGuideCategories"];
-            if (categoriesForm != null)
-            {
-                categoriesForm.Show();
-            }
-            this.Close();
-        }
-
 
         private void btnVoiceToggleSteps_Click(object sender, EventArgs e)
         {
@@ -141,28 +101,68 @@ namespace OMC_Group16.Forms
             {
                 tutorialSteps = new string[]
                 {
-                    "Open your chosen Bank App on your smartphone screen.",
-                    "Enter your secure User ID carefully, then tap Next.",
-                    "Verify your security image matches your account profile.",
-                    "Type your password password securely and tap Login to proceed."
+            "Open your chosen Bank App on your smartphone screen.",
+            "Enter your secure User ID carefully, then tap Next.",
+            "Verify your security image matches your account profile.",
+            "Type your password password securely and tap Login to proceed."
                 };
             }
             else if (currentCategory == "Healthcare")
             {
                 tutorialSteps = new string[]
                 {
-                    "Open the MySejahtera or public health application.",
-                    "Tap on the Appointments section from the main display layout.",
-                    "Select your nearby clinic branch and pick an available morning time slot.",
-                    "Confirm the booking submission details and save the generated screen ticket."
+            "Open the MySejahtera or public health application.",
+            "Tap on the Appointments section from the main display layout.",
+            "Select your nearby clinic branch and pick an available morning time slot.",
+            "Confirm the booking submission details and save the generated screen ticket."
+                };
+            }
+            else if (currentCategory == "E-Wallet")
+            {
+                tutorialSteps = new string[]
+                {
+            "Open your E-Wallet application, such as Touch 'n Go or GrabPay.",
+            "Tap the 'Reload' or 'Top Up' button to add funds.",
+            "Select your preferred payment method and enter the amount.",
+            "Confirm the transaction and wait for the success notification."
+                };
+            }
+            else if (currentCategory == "Scam Alert")
+            {
+                tutorialSteps = new string[]
+                {
+            "Be cautious of calls or messages claiming to be from your bank or a government agency.",
+            "Never share your One-Time Password (OTP), PIN, or full card number with anyone.",
+            "Do not click on suspicious links sent through SMS, WhatsApp, or email.",
+            "If unsure, hang up and call the official hotline of the organization directly to verify."
+                };
+            }
+            else if (currentCategory == "Messages")
+            {
+                tutorialSteps = new string[]
+                {
+            "Open your phone's Messages application.",
+            "Tap the pencil or '+' icon to start a new message.",
+            "Type the recipient's name or phone number.",
+            "Type your message and tap Send."
+                };
+            }
+            else if (currentCategory == "Transport")
+            {
+                tutorialSteps = new string[]
+                {
+            "Open your transport app, such as Grab or Touch 'n Go eWallet.",
+            "Enter your pick-up and destination locations.",
+            "Select your preferred vehicle type and confirm the booking.",
+            "Wait for your driver and check the vehicle plate number before boarding."
                 };
             }
             else
             {
                 tutorialSteps = new string[]
                 {
-                    "Look at the interface instructions carefully.",
-                    "Follow your group framework modules step by step."
+            "Look at the interface instructions carefully.",
+            "Follow your group framework modules step by step."
                 };
             }
         }
@@ -244,6 +244,14 @@ namespace OMC_Group16.Forms
             }
         }
 
-        
+        private void lblCategoryTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStepDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

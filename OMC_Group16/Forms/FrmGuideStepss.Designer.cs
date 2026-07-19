@@ -17,7 +17,7 @@
 
         #region Windows Form Designer generated code
 
-       
+
         private void InitializeComponent()
         {
             lblCategoryTitle = new Label();
@@ -41,6 +41,7 @@
             lblCategoryTitle.TabIndex = 0;
             lblCategoryTitle.Text = "Online Banking Guide";
             lblCategoryTitle.TextAlign = ContentAlignment.MiddleCenter;
+            lblCategoryTitle.Click += lblCategoryTitle_Click;
             // 
             // lblStepDescription
             // 
@@ -49,7 +50,8 @@
             lblStepDescription.Name = "lblStepDescription";
             lblStepDescription.Size = new Size(768, 305);
             lblStepDescription.TabIndex = 1;
-            lblStepDescription.Text = "Step 1: Open your banking app and type your username.";
+            lblStepDescription.Text = "";
+            lblStepDescription.TextChanged += lblStepDescription_TextChanged;
             // 
             // btnPrevious
             // 

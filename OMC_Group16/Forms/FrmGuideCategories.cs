@@ -40,9 +40,8 @@ namespace OMC_Group16.Forms
 
         private void OpenGuideSteps(string categoryName)
         {
-            // Standard WinForms logic to switch windows and pass data
-            // FrmGuideSteps stepsForm = new FrmGuideStepss(categoryName);
-            // stepsForm.Show();
+            FrmGuideStepss stepsForm = new FrmGuideStepss(categoryName);
+            stepsForm.Show();
             this.Hide();
         }
 
@@ -60,9 +59,8 @@ namespace OMC_Group16.Forms
 
         private void btnGov_Click(object sender, EventArgs e)
         {
-            FrmScamAlert alert = new FrmScamAlert();
-            alert.Show();
-         
+            SpeakText("Opening Scam Alert Guide.");
+            OpenGuideSteps("Scam Alert");
         }
 
         private void btnMessage_Click(object sender, EventArgs e)
