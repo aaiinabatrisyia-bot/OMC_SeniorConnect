@@ -11,7 +11,7 @@ namespace OMC_Group16
 {
     public partial class FrmAddReminder : Form
     {
-        string connectionString = "Server=YOUR_SERVER;Database=CaregiverDB;Integrated Security=True;";
+        string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=OMC_SeniorConnectDB;Integrated Security=True;";
         public FrmAddReminder()
         {
             InitializeComponent();

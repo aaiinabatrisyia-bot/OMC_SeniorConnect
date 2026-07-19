@@ -48,13 +48,13 @@ namespace OMC_Group16.Forms
         private void SetupVoiceHoverEvents()
         {
             btnBank.MouseEnter += (s, e) => SpeakText("Online Banking");
-            btnHealth.MouseEnter += (s, e) => SpeakText("Healthcare");
-            btnEWallet.MouseEnter += (s, e) => SpeakText("E Wallet");
-            btnGov.MouseEnter += (s, e) => SpeakText("Government Services");
+            btnHealth1.MouseEnter += (s, e) => SpeakText("Healthcare");
+            btnEWallet1.MouseEnter += (s, e) => SpeakText("E Wallet");
+            btnGov.MouseEnter += (s, e) => SpeakText("Scam Alert");
             btnMessage.MouseEnter += (s, e) => SpeakText("Messages");
-            btnTransport.MouseEnter += (s, e) => SpeakText("Transport");
+            btnTransport1.MouseEnter += (s, e) => SpeakText("Transport");
             btnBack.MouseEnter += (s, e) => SpeakText("Back button");
-            btnNextGuide.MouseEnter += (s, e) => SpeakText("Next Guide button");
+            btnNextGuide.MouseEnter += (s, e) => SpeakText("Select a category to move to the next steps");
         }
 
         private void btnGov_Click(object sender, EventArgs e)
