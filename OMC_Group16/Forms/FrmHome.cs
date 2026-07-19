@@ -119,5 +119,10 @@ namespace OMC_Group16
                 isVoicePlaying = false;
             }
         }
+
+        private void pnlEmergency_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

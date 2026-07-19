@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Speech.Synthesis;
 
 namespace OMC_Group16
@@ -34,31 +36,22 @@ namespace OMC_Group16
 
         private void LoadReminders()
         {
-            try
+            //string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=OMC_SeniorConnectDB;Integrated Security=True;";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                _currentReminders = _reminderService.GetAllReminders();
+                con.Open();
 
-                dgvReminders.Rows.Clear();
+                string query = "SELECT ReminderDate, Title, Description, Status FROM Reminders";
 
-                foreach (var reminder in _currentReminders)
-                {
-                    dgvReminders.Rows.Add(
-                        reminder.Id,
-                        reminder.ReminderDate.ToShortDateString(),
-                        reminder.ReminderDate.ToShortTimeString(),
-                        reminder.Title,
-                        reminder.StatusText
-                        );
-                }
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-                UpdateStatusCounts();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dgvReminders.DataSource = dt;   // Replace dataGridView1 with your DataGridView's name
             }
         }
+        
 
         private void DisplayReminders(List<Reminder> reminders)
         {
@@ -102,7 +95,7 @@ namespace OMC_Group16
 
         private void FrmReminders_Load(object sender, EventArgs e)
         {
-
+            LoadReminders();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -189,9 +182,16 @@ namespace OMC_Group16
             UpdateStatusCounts();
         }
 
+
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVoiceAssistant_Click(object sender, EventArgs e)
+        {
+
+
         }
 
         private void btnVoiceAssistant_Click(object sender, EventArgs e)
