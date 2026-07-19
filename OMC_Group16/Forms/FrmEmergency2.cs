@@ -1,9 +1,14 @@
+using OMC_Group16;
 using System.Data.SqlClient;
 
 namespace FrmEmergency
 {
     public partial class FrmEmergency2 : Form
     {
+        string connectionString =
+        @"Data Source = (localdb)\MSSQLLocalDB;
+        Initial Catalog = OMC_SeniorConnectDB; 
+        Integrated Security = True;";
         public FrmEmergency2()
         {
             InitializeComponent();
@@ -128,15 +133,9 @@ namespace FrmEmergency
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to exit?",
-                "Confirm exit.",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            FrmCaregiverMenu caregiverMenu = new FrmCaregiverMenu();
+            caregiverMenu.Show();
+            this.Hide();   // Hide the current form
         }
 
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
@@ -169,11 +168,9 @@ namespace FrmEmergency
         private void button1_Click(object sender, EventArgs e)
         {
             
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-                          Initial Catalog=SeniorConnectDB;
-                          Integrated Security=True";
+            
 
-            using (SqlConnection con = new SqlConnection(connString))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string sql = @"INSERT INTO EmergencyContacts
                        (PatientID, ContactName, Relationship, PhoneNumber, Address)
@@ -193,7 +190,7 @@ namespace FrmEmergency
                 con.Open();
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Data saved successfully!");
+                MessageBox.Show("Appointment booked successfully!");
             }
         }
     
