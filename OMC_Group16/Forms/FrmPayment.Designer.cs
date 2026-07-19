@@ -42,6 +42,8 @@
             lblAmount = new Label();
             label4 = new Label();
             grpPaymentMethod = new GroupBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             rbCard = new RadioButton();
             rbBank = new RadioButton();
             panel1 = new Panel();
@@ -61,14 +63,12 @@
             label6 = new Label();
             cboBank = new ComboBox();
             label5 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             grpPaymentMethod.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             pnlCard.SuspendLayout();
             pnlBank.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -88,9 +88,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(14, 47);
             label2.Name = "label2";
-            label2.Size = new Size(181, 40);
+            label2.Size = new Size(306, 40);
             label2.TabIndex = 1;
-            label2.Text = "APPOINTMENT SUMMARY:";
+            label2.Text = "APPOINTMENT SUMMARY\r\n";
             // 
             // lblClinicTitle
             // 
@@ -200,6 +200,26 @@
             grpPaymentMethod.TabIndex = 12;
             grpPaymentMethod.TabStop = false;
             grpPaymentMethod.Text = "PAYMENT METHOD";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(258, 20);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(115, 52);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(60, 30);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(83, 42);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
             // 
             // rbCard
             // 
@@ -418,26 +438,6 @@
             label5.TabIndex = 0;
             label5.Text = "BANK:";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(60, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(83, 42);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 12;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(258, 20);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(115, 52);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 13;
-            pictureBox2.TabStop = false;
-            // 
             // FrmPayment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -454,14 +454,14 @@
             Load += FrmPayment_Load;
             grpPaymentMethod.ResumeLayout(false);
             grpPaymentMethod.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pnlCard.ResumeLayout(false);
             pnlCard.PerformLayout();
             pnlBank.ResumeLayout(false);
             pnlBank.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 

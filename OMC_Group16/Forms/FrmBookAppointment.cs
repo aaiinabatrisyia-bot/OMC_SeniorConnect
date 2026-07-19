@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace OMC_Group16.Forms
 {
@@ -141,12 +142,22 @@ namespace OMC_Group16.Forms
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = @"INSERT INTO Appointments
-                        (PatientID, AppointmentDate, AppointmentTime,
-                         Status, CaregiverID, ServiceName, Price)
-                        VALUES
-                        (@PatientID, @Date, @Time,
-                         @Status, @CaregiverID, @ServiceName, @Price)";
+                string query = @"
+                INSERT INTO Appointments
+                (
+                         PatientID, AppointmentDate, AppointmentTime,
+                         Status, CaregiverID, ServiceName, Price
+                )
+                VALUES
+                (        @PatientID, @Date, @Time,
+                         @Status, @CaregiverID, @ServiceName, @Price
+                 );
+                        SELECT CAST(SCOPE_IDENTITY() AS INT);
+                 ";
+
+
+                
+                
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -159,9 +170,13 @@ namespace OMC_Group16.Forms
                 cmd.Parameters.AddWithValue("@Price", decimal.Parse(txtPrice.Text));
 
                 con.Open();
-                cmd.ExecuteNonQuery();
-
+                int appointmentID = Convert.ToInt32(cmd.ExecuteScalar());
                 MessageBox.Show("Appointment booked successfully.");
+
+                FrmPayment payment = new FrmPayment(appointmentID);
+                payment.Show();
+
+                this.Hide();
             }
         }
 

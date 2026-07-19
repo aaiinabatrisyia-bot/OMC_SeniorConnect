@@ -10,14 +10,11 @@ namespace OMC_Group16.Forms
 {
     public partial class FrmPayment : Form
     {
-        public FrmPayment(string service, string date, string time, string price)
+        public FrmPayment(int appointmentID)
         {
             InitializeComponent();
 
-            lblService.Text = service;
-            lblDate.Text = date;
-            lblTime.Text = time;
-            lblAmount.Text = price;
+            LoadAppointment(appointmentID);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -69,6 +66,9 @@ namespace OMC_Group16.Forms
 
             this.Hide();
          }
-        
+        private void LoadAppointment(int appointmentID)
+        {
+            MessageBox.Show("Appointment ID = " + appointmentID);
+        }
     }
 }
