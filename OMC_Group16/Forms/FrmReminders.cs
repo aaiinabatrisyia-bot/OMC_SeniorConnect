@@ -33,15 +33,18 @@ namespace OMC_Group16
             {
                 _currentReminders = _reminderService.GetAllReminders();
 
-                dgvReminders.DataSource = null;
-                dgvReminders.DataSource = _currentReminders;
+                dgvReminders.Rows.Clear();
 
-                if (dgvReminders.Columns.Contains("CreatedAt"))
-                    dgvReminders.Columns["CreatedAt"].Visible = false;
-                if (dgvReminders.Columns.Contains("DisplayText"))
-                    dgvReminders.Columns["DisplayText"].Visible = false;
-                if (dgvReminders.Columns.Contains("Description"))
-                    dgvReminders.Columns["Description"].Visible = false;
+                foreach (var reminder in _currentReminders)
+                {
+                    dgvReminders.Rows.Add(
+                        reminder.Id,
+                        reminder.ReminderDate.ToShortDateString(),
+                        reminder.ReminderDate.ToShortTimeString(),
+                        reminder.Title,
+                        reminder.StatusText
+                        );
+                }
 
                 UpdateStatusCounts();
             }
@@ -49,6 +52,22 @@ namespace OMC_Group16
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DisplayReminders(List<Reminder> reminders)
+        {
+            dgvReminders.Rows.Clear();
+
+            foreach (var reminder in reminders)
+            {
+                dgvReminders.Rows.Add(
+                    reminder.Id,
+                    reminder.ReminderDate.ToShortDateString(),
+                    reminder.ReminderDate.ToShortTimeString(),
+                    reminder.Title,
+                    reminder.StatusText
+                    );
             }
         }
 
@@ -129,22 +148,40 @@ namespace OMC_Group16
         private void btnTodayReminders_Click(object sender, EventArgs e)
         {
             _currentReminders = _reminderService.GetTodayReminders();
-            dgvReminders.DataSource = null;
-            dgvReminders.DataSource = _currentReminders;
+            DisplayReminders(_currentReminders);
             UpdateStatusCounts();
         }
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
             _currentReminders = _reminderService.GetEmergencyReminders();
-            dgvReminders.DataSource = null;
-            dgvReminders.DataSource = _currentReminders;
+            DisplayReminders(_currentReminders);
             UpdateStatusCounts();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string keyword = txtSearch.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                LoadReminders();
+                return;
+            }
+            _currentReminders = _reminderService.SearchReminders(keyword);
+
+            DisplayReminders(_currentReminders);
+            UpdateStatusCounts();
         }
     }
 }

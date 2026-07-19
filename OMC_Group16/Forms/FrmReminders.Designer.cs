@@ -84,6 +84,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(316, 60);
             txtSearch.TabIndex = 2;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnSearch
             // 
@@ -97,6 +98,7 @@
             btnSearch.TabIndex = 3;
             btnSearch.Text = "SEARCH";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnRefresh
             // 
