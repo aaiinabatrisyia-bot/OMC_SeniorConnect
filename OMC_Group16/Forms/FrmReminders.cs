@@ -185,5 +185,10 @@ namespace OMC_Group16
             DisplayReminders(_currentReminders);
             UpdateStatusCounts();
         }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
