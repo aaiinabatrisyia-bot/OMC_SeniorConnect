@@ -60,9 +60,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.ForeColor = Color.Ivory;
-            label2.Location = new Point(19, 97);
+            label2.Location = new Point(22, 129);
             label2.Name = "label2";
-            label2.Size = new Size(122, 20);
+            label2.Size = new Size(155, 25);
             label2.TabIndex = 0;
             label2.Text = "MY REMINDERS";
             label2.Click += label2_Click;
@@ -74,7 +74,7 @@
             label3.ForeColor = Color.Ivory;
             label3.Location = new Point(19, 135);
             label3.Name = "label3";
-            label3.Size = new Size(63, 20);
+            label3.Size = new Size(81, 25);
             label3.TabIndex = 1;
             label3.Text = "Search: ";
             // 
@@ -83,7 +83,7 @@
             txtSearch.Location = new Point(19, 158);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(316, 60);
+            txtSearch.Size = new Size(361, 79);
             txtSearch.TabIndex = 2;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
@@ -95,7 +95,7 @@
             btnSearch.Location = new Point(346, 154);
             btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(90, 26);
+            btnSearch.Size = new Size(103, 35);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "SEARCH";
             btnSearch.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             btnRefresh.Location = new Point(346, 190);
             btnRefresh.Margin = new Padding(3, 2, 3, 2);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(90, 28);
+            btnRefresh.Size = new Size(103, 37);
             btnRefresh.TabIndex = 4;
             btnRefresh.Text = "REFRESH";
             btnRefresh.UseVisualStyleBackColor = false;
@@ -122,7 +122,7 @@
             lblTotalCount.ForeColor = Color.Ivory;
             lblTotalCount.Location = new Point(33, 417);
             lblTotalCount.Name = "lblTotalCount";
-            lblTotalCount.Size = new Size(72, 18);
+            lblTotalCount.Size = new Size(90, 22);
             lblTotalCount.TabIndex = 5;
             lblTotalCount.Text = "Total: 0";
             lblTotalCount.Click += label4_Click;
@@ -134,7 +134,7 @@
             btnTodayReminders.ForeColor = Color.White;
             btnTodayReminders.Location = new Point(44, 459);
             btnTodayReminders.Name = "btnTodayReminders";
-            btnTodayReminders.Size = new Size(376, 32);
+            btnTodayReminders.Size = new Size(430, 43);
             btnTodayReminders.TabIndex = 6;
             btnTodayReminders.Text = "TODAY";
             btnTodayReminders.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             btnEmergency.ForeColor = Color.White;
             btnEmergency.Location = new Point(44, 497);
             btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(376, 32);
+            btnEmergency.Size = new Size(430, 43);
             btnEmergency.TabIndex = 7;
             btnEmergency.Text = "EMERGENCY";
             btnEmergency.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@
             dgvReminders.RowHeadersVisible = false;
             dgvReminders.RowHeadersWidth = 51;
             dgvReminders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvReminders.Size = new Size(417, 162);
+            dgvReminders.Size = new Size(477, 216);
             dgvReminders.TabIndex = 4;
             dgvReminders.CellContentClick += dgvReminders_CellContentClick;
             // 
@@ -225,9 +225,10 @@
             panel2.BackColor = Color.DarkOliveGreen;
             panel2.Controls.Add(label1);
             panel2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            panel2.Location = new Point(0, 3);
+            panel2.Location = new Point(0, 4);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(457, 74);
+            panel2.Size = new Size(522, 99);
             panel2.TabIndex = 1;
             // 
             // label1
@@ -235,9 +236,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkKhaki;
-            label1.Location = new Point(131, 19);
+            label1.Location = new Point(150, 25);
             label1.Name = "label1";
-            label1.Size = new Size(204, 45);
+            label1.Size = new Size(252, 54);
             label1.TabIndex = 1;
             label1.Text = "REMINDERS";
             label1.Click += label1_Click;
@@ -261,8 +262,9 @@
             panel1.Controls.Add(btnRefresh);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(457, 591);
+            panel1.Size = new Size(522, 788);
             panel1.TabIndex = 9;
             // 
             // btnVoiceAssistant
@@ -270,13 +272,13 @@
             btnVoiceAssistant.BackColor = Color.DarkOliveGreen;
             btnVoiceAssistant.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVoiceAssistant.ForeColor = Color.DarkKhaki;
-            btnVoiceAssistant.Location = new Point(189, 97);
-            btnVoiceAssistant.Margin = new Padding(3, 2, 3, 2);
+            btnVoiceAssistant.Location = new Point(216, 129);
             btnVoiceAssistant.Name = "btnVoiceAssistant";
-            btnVoiceAssistant.Size = new Size(247, 24);
+            btnVoiceAssistant.Size = new Size(282, 32);
             btnVoiceAssistant.TabIndex = 11;
             btnVoiceAssistant.Text = "VOICE ASSISTANT";
             btnVoiceAssistant.UseVisualStyleBackColor = false;
+            btnVoiceAssistant.Click += btnVoiceAssistant_Click;
             // 
             // lblEmergencyCount
             // 
@@ -285,7 +287,7 @@
             lblEmergencyCount.ForeColor = Color.Ivory;
             lblEmergencyCount.Location = new Point(300, 417);
             lblEmergencyCount.Name = "lblEmergencyCount";
-            lblEmergencyCount.Size = new Size(120, 18);
+            lblEmergencyCount.Size = new Size(150, 22);
             lblEmergencyCount.TabIndex = 10;
             lblEmergencyCount.Text = "| Emergency: 0";
             // 
@@ -296,7 +298,7 @@
             lblPendingCount.ForeColor = Color.Ivory;
             lblPendingCount.Location = new Point(155, 417);
             lblPendingCount.Name = "lblPendingCount";
-            lblPendingCount.Size = new Size(104, 18);
+            lblPendingCount.Size = new Size(130, 22);
             lblPendingCount.TabIndex = 9;
             lblPendingCount.Text = "| Pending: 0";
             // 
@@ -315,12 +317,13 @@
             // 
             // FrmReminders
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(457, 591);
+            ClientSize = new Size(522, 788);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmReminders";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmReminders";
