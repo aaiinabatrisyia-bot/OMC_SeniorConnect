@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace FrmEmergency
 {
     public partial class FrmEmergency2 : Form
@@ -163,5 +165,39 @@ namespace FrmEmergency
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;
+                          Initial Catalog=SeniorConnectDB;
+                          Integrated Security=True";
+
+            using (SqlConnection con = new SqlConnection(connString))
+            {
+                string sql = @"INSERT INTO EmergencyContacts
+                       (PatientID, ContactName, Relationship, PhoneNumber, Address)
+                       VALUES
+                       (@PatientID, @ContactName, @Relationship, @PhoneNumber, @Address)";
+
+                SqlCommand cmd = new SqlCommand(sql, con);
+
+                // Replace with the current patient's ID
+                cmd.Parameters.AddWithValue("@PatientID", 1);
+
+                cmd.Parameters.AddWithValue("@ContactName", txtName.Text);
+                cmd.Parameters.AddWithValue("@Relationship", txtEmergencyContact.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text);
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data saved successfully!");
+            }
+        }
+    
     }
 }
+
+
