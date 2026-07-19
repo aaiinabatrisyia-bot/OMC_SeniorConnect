@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace OMC_Group16
 {
@@ -15,12 +16,14 @@ namespace OMC_Group16
         private List<Reminder> _currentReminders;
         private Reminder _selectedReminders;
         private ReminderService _reminderService;
+        private readonly SpeechSynthesizer voiceAssistant = new SpeechSynthesizer();
 
         public FrmReminders()
         {
             InitializeComponent();
             InitializeService();
             LoadReminders();
+            
         }
 
         private void InitializeService()
@@ -189,6 +192,36 @@ namespace OMC_Group16
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVoiceAssistant_Click(object sender, EventArgs e)
+        {
+            voiceAssistant.SpeakAsyncCancelAll();
+
+            if (dgvReminders.Rows.Count == 0 ||
+                (dgvReminders.Rows.Count == 1 && dgvReminders.Rows[0].IsNewRow))
+            {
+                voiceAssistant.SpeakAsync("You have no reminders for today.");
+                return;
+            }
+
+            string speech = $"You have {dgvReminders.Rows.Count - 1} reminder";
+
+            if (dgvReminders.Rows.Count - 1 > 1)
+                speech += "s.";
+
+            foreach (DataGridViewRow row in dgvReminders.Rows)
+            {
+                if (row.IsNewRow)
+                    continue;
+
+                speech +=
+                    $" Reminder: {row.Cells[2].Value}. " +
+                    $"Scheduled on {Convert.ToDateTime(row.Cells[0].Value):dddd}. " +
+                    $"Time: {row.Cells[1].Value}.";
+            }
+
+            voiceAssistant.SpeakAsync(speech);
         }
     }
 }

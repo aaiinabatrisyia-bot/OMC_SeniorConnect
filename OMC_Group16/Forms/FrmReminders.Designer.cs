@@ -46,10 +46,10 @@
             panel2 = new Panel();
             label1 = new Label();
             panel1 = new Panel();
+            btnBack = new Button();
             btnVoiceAssistant = new Button();
             lblEmergencyCount = new Label();
             lblPendingCount = new Label();
-            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReminders).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -265,6 +265,19 @@
             panel1.Size = new Size(457, 591);
             panel1.TabIndex = 9;
             // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.FromArgb(0, 192, 192);
+            btnBack.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(44, 535);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(376, 32);
+            btnBack.TabIndex = 12;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click_1;
+            // 
             // btnVoiceAssistant
             // 
             btnVoiceAssistant.BackColor = Color.DarkOliveGreen;
@@ -277,6 +290,7 @@
             btnVoiceAssistant.TabIndex = 11;
             btnVoiceAssistant.Text = "VOICE ASSISTANT";
             btnVoiceAssistant.UseVisualStyleBackColor = false;
+            btnVoiceAssistant.Click += btnVoiceAssistant_Click;
             // 
             // lblEmergencyCount
             // 
@@ -299,19 +313,6 @@
             lblPendingCount.Size = new Size(104, 18);
             lblPendingCount.TabIndex = 9;
             lblPendingCount.Text = "| Pending: 0";
-            // 
-            // btnBack
-            // 
-            btnBack.BackColor = Color.FromArgb(0, 192, 192);
-            btnBack.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(44, 535);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(376, 32);
-            btnBack.TabIndex = 12;
-            btnBack.Text = "BACK";
-            btnBack.UseVisualStyleBackColor = false;
-            btnBack.Click += btnBack_Click_1;
             // 
             // FrmReminders
             // 
