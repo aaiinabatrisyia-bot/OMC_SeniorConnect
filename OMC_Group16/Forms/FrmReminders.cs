@@ -12,6 +12,9 @@ namespace OMC_Group16
     {
         private string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=OMC_SeniorConnectDB;Integrated Security=True;";
         private int currentUserId;
+        private List<Reminder> _currentReminders;
+        private Reminder _selectedReminders;
+        private ReminderService _reminderService;
 
         public FrmReminders()
         {
