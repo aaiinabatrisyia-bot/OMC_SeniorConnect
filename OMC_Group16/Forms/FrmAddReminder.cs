@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,35 +20,25 @@ namespace OMC_Group16
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtTitle.Text))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Please enter a title.");
-                return;
+                con.Open();
+
+                string query = @"INSERT INTO Reminders
+                        (Title, ReminderDate, Description)
+                        VALUES
+                        (@Title,@Date,@Description)";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
+                cmd.Parameters.AddWithValue("@Date", dtpReminderDate.Value.Date);
+                cmd.Parameters.AddWithValue("@Description", txtReminderDescription.Text);
+
+                cmd.ExecuteNonQuery();
             }
 
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    string query = "INSERT INTO Reminders (Title, ReminderTime, Priority, Description) " +
-                                   "VALUES (@title, @time, @priority, @desc)";
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@title", txtTitle.Text.Trim());
-                    cmd.Parameters.AddWithValue("@time", dtpReminderDate.Value);
-                    cmd.Parameters.AddWithValue("@desc", txtReminderDescription.Text.Trim());
-
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Reminder Added Successfully!");
-                    this.Close(); // Close after saving
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error saving reminder: " + ex.Message);
-            }
+            MessageBox.Show("Reminder saved successfully.");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
