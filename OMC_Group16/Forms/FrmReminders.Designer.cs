@@ -33,18 +33,22 @@
             txtSearch = new TextBox();
             btnSearch = new Button();
             btnRefresh = new Button();
-            lblTotalCount = new Label();
             btnTodayReminders = new Button();
-            btnEmergency = new Button();
             dgvReminders = new DataGridView();
             panel2 = new Panel();
             label1 = new Label();
             panel1 = new Panel();
+            lblStatus = new Label();
+            lblTitle = new Label();
+            lblDate = new Label();
+            txtDescription = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             label4 = new Label();
             btnBack = new Button();
             btnVoiceAssistant = new Button();
-            lblEmergencyCount = new Label();
-            lblPendingCount = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvReminders).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -75,7 +79,7 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(22, 252);
+            txtSearch.Location = new Point(21, 212);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(361, 79);
@@ -87,7 +91,7 @@
             btnSearch.BackColor = Color.DarkOliveGreen;
             btnSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSearch.ForeColor = Color.DarkKhaki;
-            btnSearch.Location = new Point(395, 252);
+            btnSearch.Location = new Point(395, 212);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(103, 35);
             btnSearch.TabIndex = 3;
@@ -100,7 +104,7 @@
             btnRefresh.BackColor = Color.DarkOliveGreen;
             btnRefresh.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRefresh.ForeColor = Color.DarkKhaki;
-            btnRefresh.Location = new Point(395, 295);
+            btnRefresh.Location = new Point(395, 254);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(103, 37);
             btnRefresh.TabIndex = 4;
@@ -108,43 +112,18 @@
             btnRefresh.UseVisualStyleBackColor = false;
             btnRefresh.Click += btnRefresh_Click;
             // 
-            // lblTotalCount
-            // 
-            lblTotalCount.AutoSize = true;
-            lblTotalCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalCount.ForeColor = Color.Ivory;
-            lblTotalCount.Location = new Point(45, 627);
-            lblTotalCount.Name = "lblTotalCount";
-            lblTotalCount.Size = new Size(90, 22);
-            lblTotalCount.TabIndex = 5;
-            lblTotalCount.Text = "Total: 0";
-            lblTotalCount.Click += label4_Click;
-            // 
             // btnTodayReminders
             // 
             btnTodayReminders.BackColor = Color.FromArgb(255, 128, 0);
             btnTodayReminders.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTodayReminders.ForeColor = Color.White;
-            btnTodayReminders.Location = new Point(45, 693);
+            btnTodayReminders.Location = new Point(45, 766);
             btnTodayReminders.Name = "btnTodayReminders";
             btnTodayReminders.Size = new Size(430, 43);
             btnTodayReminders.TabIndex = 6;
             btnTodayReminders.Text = "TODAY";
             btnTodayReminders.UseVisualStyleBackColor = false;
             btnTodayReminders.Click += btnTodayReminders_Click;
-            // 
-            // btnEmergency
-            // 
-            btnEmergency.BackColor = Color.Red;
-            btnEmergency.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEmergency.ForeColor = Color.White;
-            btnEmergency.Location = new Point(45, 753);
-            btnEmergency.Name = "btnEmergency";
-            btnEmergency.Size = new Size(430, 43);
-            btnEmergency.TabIndex = 7;
-            btnEmergency.Text = "EMERGENCY";
-            btnEmergency.UseVisualStyleBackColor = false;
-            btnEmergency.Click += btnEmergency_Click;
             // 
             // dgvReminders
             // 
@@ -153,7 +132,7 @@
             dgvReminders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvReminders.BackgroundColor = Color.White;
             dgvReminders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReminders.Location = new Point(22, 387);
+            dgvReminders.Location = new Point(22, 313);
             dgvReminders.Name = "dgvReminders";
             dgvReminders.ReadOnly = true;
             dgvReminders.RowHeadersVisible = false;
@@ -188,18 +167,22 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblStatus);
+            panel1.Controls.Add(lblTitle);
+            panel1.Controls.Add(lblDate);
+            panel1.Controls.Add(txtDescription);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(btnVoiceAssistant);
-            panel1.Controls.Add(lblEmergencyCount);
-            panel1.Controls.Add(lblPendingCount);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(btnEmergency);
             panel1.Controls.Add(btnTodayReminders);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(lblTotalCount);
             panel1.Controls.Add(dgvReminders);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnRefresh);
@@ -210,12 +193,96 @@
             panel1.Size = new Size(522, 884);
             panel1.TabIndex = 9;
             // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatus.ForeColor = Color.White;
+            lblStatus.Location = new Point(132, 657);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(0, 25);
+            lblStatus.TabIndex = 21;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(118, 602);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(0, 25);
+            lblTitle.TabIndex = 20;
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = Color.White;
+            lblDate.Location = new Point(118, 550);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(0, 25);
+            lblDate.TabIndex = 19;
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(313, 578);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.ReadOnly = true;
+            txtDescription.ScrollBars = ScrollBars.Vertical;
+            txtDescription.Size = new Size(185, 115);
+            txtDescription.TabIndex = 18;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(47, 657);
+            label8.Name = "label8";
+            label8.Size = new Size(79, 25);
+            label8.TabIndex = 17;
+            label8.Text = "STATUS:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(313, 550);
+            label7.Name = "label7";
+            label7.Size = new Size(129, 25);
+            label7.TabIndex = 16;
+            label7.Text = "DESCRIPTION:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(45, 602);
+            label6.Name = "label6";
+            label6.Size = new Size(59, 25);
+            label6.TabIndex = 15;
+            label6.Text = "TITLE:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(45, 550);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 25);
+            label5.TabIndex = 14;
+            label5.Text = "DATE:";
+            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label4.ForeColor = Color.Ivory;
-            label4.Location = new Point(22, 207);
+            label4.Location = new Point(21, 184);
             label4.Name = "label4";
             label4.Size = new Size(85, 25);
             label4.TabIndex = 13;
@@ -247,28 +314,6 @@
             btnVoiceAssistant.UseVisualStyleBackColor = false;
             btnVoiceAssistant.Click += btnVoiceAssistant_Click;
             // 
-            // lblEmergencyCount
-            // 
-            lblEmergencyCount.AutoSize = true;
-            lblEmergencyCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEmergencyCount.ForeColor = Color.Ivory;
-            lblEmergencyCount.Location = new Point(337, 627);
-            lblEmergencyCount.Name = "lblEmergencyCount";
-            lblEmergencyCount.Size = new Size(150, 22);
-            lblEmergencyCount.TabIndex = 10;
-            lblEmergencyCount.Text = "| Emergency: 0";
-            // 
-            // lblPendingCount
-            // 
-            lblPendingCount.AutoSize = true;
-            lblPendingCount.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPendingCount.ForeColor = Color.Ivory;
-            lblPendingCount.Location = new Point(181, 627);
-            lblPendingCount.Name = "lblPendingCount";
-            lblPendingCount.Size = new Size(130, 22);
-            lblPendingCount.TabIndex = 9;
-            lblPendingCount.Text = "| Pending: 0";
-            // 
             // FrmReminders
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -296,17 +341,21 @@
         private Button btnSearch;
         private TextBox txtSearch;
         private Label label3;
-        private Button btnEmergency;
         private Button btnTodayReminders;
-        private Label lblTotalCount;
         private DataGridView dgvReminders;
         private Panel panel2;
         private Label label1;
         private Panel panel1;
-        private Label lblEmergencyCount;
-        private Label lblPendingCount;
         private Button btnVoiceAssistant;
         private Button btnBack;
         private Label label4;
+        private Label label6;
+        private Label label5;
+        private Label lblStatus;
+        private Label lblTitle;
+        private Label lblDate;
+        private TextBox txtDescription;
+        private Label label8;
+        private Label label7;
     }
 }

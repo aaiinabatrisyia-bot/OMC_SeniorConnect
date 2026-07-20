@@ -50,7 +50,7 @@ namespace OMC_Group16
                 UserSession.CaregiverID = Convert.ToInt32(reader["CaregiverID"]);
                 UserSession.CaregiverName = reader["CaregiverName"].ToString();
 
-                MessageBox.Show("Saved name :" + UserSession.CaregiverName);
+                
 
                 FrmCaregiverMenu dashboard = new FrmCaregiverMenu();
                 dashboard.Show();

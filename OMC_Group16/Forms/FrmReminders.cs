@@ -23,7 +23,7 @@ namespace OMC_Group16
         public FrmReminders()
         {
             InitializeComponent();
-            InitializeService();
+            
             LoadReminders();
         }
 
@@ -35,7 +35,7 @@ namespace OMC_Group16
 
         private void LoadReminders()
         {
-            //string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=OMC_SeniorConnectDB;Integrated Security=True;";
+            
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -50,12 +50,17 @@ namespace OMC_Group16
                 dgvReminders.Columns.Clear();
                 dgvReminders.AutoGenerateColumns = true;
                 dgvReminders.DataSource = dt;   // Replace dataGridView1 with your DataGridView's name
+
+                
+
+                
             }
         }
         
 
         private void DisplayReminders(List<Reminder> reminders)
         {
+            dgvReminders.DataSource = null;
             dgvReminders.Rows.Clear();
 
             foreach (var reminder in reminders)
@@ -77,16 +82,7 @@ namespace OMC_Group16
 
         private void UpdateStatusCounts()
         {
-            if (_reminderService != null)
-            {
-                int pending = _reminderService.GetPendingCount();
-                int total = _currentReminders?.Count ?? 0;
-                int emergency = _reminderService.GetEmergencyReminders().Count;
-
-                lblTotalCount.Text = $"Total: {total}";
-                lblPendingCount.Text = $"Pending: {pending}";
-                lblEmergencyCount.Text = $"Emergency: {emergency}";
-            }
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -117,9 +113,14 @@ namespace OMC_Group16
 
         private void dgvReminders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvReminders.SelectedRows.Count > 0)
+            if (e.RowIndex >= 0)
             {
-                _selectedReminders = dgvReminders.SelectedRows[0].DataBoundItem as Reminder;
+                DataGridViewRow row = dgvReminders.Rows[e.RowIndex];
+
+                lblDate.Text = row.Cells["ReminderDate"].Value?.ToString();
+                lblTitle.Text = row.Cells["Title"].Value?.ToString();
+                txtDescription.Text = row.Cells["Description"].Value?.ToString();
+                lblStatus.Text = row.Cells["Status"].Value?.ToString();
             }
         }
 
@@ -146,16 +147,27 @@ namespace OMC_Group16
 
         private void btnTodayReminders_Click(object sender, EventArgs e)
         {
-            _currentReminders = _reminderService.GetTodayReminders();
-            DisplayReminders(_currentReminders);
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                string query = @"SELECT ReminderDate, Title, Description, Status
+                         FROM Reminders
+                         WHERE CAST(ReminderDate AS DATE) = CAST(GETDATE() AS DATE)";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvReminders.DataSource = dt;
+            }
+
             UpdateStatusCounts();
         }
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
-            _currentReminders = _reminderService.GetEmergencyReminders();
-            DisplayReminders(_currentReminders);
-            UpdateStatusCounts();
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -170,17 +182,22 @@ namespace OMC_Group16
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string keyword = txtSearch.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(keyword))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                LoadReminders();
-                return;
-            }
-            _currentReminders = _reminderService.SearchReminders(keyword);
+                string query = @"SELECT ReminderDate, Title, Description, Status
+                         FROM Reminders
+                         WHERE Title LIKE @search
+                         OR Description LIKE @search
+                         OR Status LIKE @search";
 
-            DisplayReminders(_currentReminders);
-            UpdateStatusCounts();
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                da.SelectCommand.Parameters.AddWithValue("@search", "%" + txtSearch.Text.Trim() + "%");
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvReminders.DataSource = dt;
+            }
         }
 
 

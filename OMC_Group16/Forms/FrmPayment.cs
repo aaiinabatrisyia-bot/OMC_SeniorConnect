@@ -89,7 +89,7 @@ namespace OMC_Group16.Forms
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-         
+
             if (!rbBank.Checked && !rbCard.Checked)
             {
                 MessageBox.Show("Please select a payment method.");
@@ -101,7 +101,11 @@ namespace OMC_Group16.Forms
             frm.Show();
 
             this.Hide();
-         }
-        
+        }
+
+        private void pnlBank_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

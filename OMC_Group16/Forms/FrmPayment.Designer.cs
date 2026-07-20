@@ -63,6 +63,7 @@
             label6 = new Label();
             cboBank = new ComboBox();
             label5 = new Label();
+            label11 = new Label();
             grpPaymentMethod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -85,8 +86,9 @@
             // label2
             // 
             label2.BackColor = Color.MidnightBlue;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(14, 47);
+            label2.Location = new Point(27, 107);
             label2.Name = "label2";
             label2.Size = new Size(306, 40);
             label2.TabIndex = 1;
@@ -95,58 +97,62 @@
             // lblClinicTitle
             // 
             lblClinicTitle.AutoSize = true;
+            lblClinicTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClinicTitle.ForeColor = Color.White;
-            lblClinicTitle.Location = new Point(14, 96);
+            lblClinicTitle.Location = new Point(18, 150);
             lblClinicTitle.Name = "lblClinicTitle";
-            lblClinicTitle.Size = new Size(56, 20);
+            lblClinicTitle.Size = new Size(71, 25);
             lblClinicTitle.TabIndex = 2;
             lblClinicTitle.Text = "CLINIC:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.LimeGreen;
-            label3.Location = new Point(74, 96);
+            label3.Location = new Point(116, 147);
             label3.Name = "label3";
-            label3.Size = new Size(82, 20);
+            label3.Size = new Size(107, 28);
             label3.TabIndex = 3;
             label3.Text = "QUALITAS";
             // 
             // lblServiceTitle
             // 
             lblServiceTitle.AutoSize = true;
+            lblServiceTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblServiceTitle.ForeColor = Color.White;
-            lblServiceTitle.Location = new Point(14, 125);
+            lblServiceTitle.Location = new Point(19, 192);
             lblServiceTitle.Name = "lblServiceTitle";
-            lblServiceTitle.Size = new Size(67, 20);
+            lblServiceTitle.Size = new Size(83, 25);
             lblServiceTitle.TabIndex = 4;
             lblServiceTitle.Text = "SERVICE:";
             // 
             // lblDateTitle
             // 
             lblDateTitle.AutoSize = true;
+            lblDateTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDateTitle.ForeColor = Color.White;
-            lblDateTitle.Location = new Point(14, 165);
+            lblDateTitle.Location = new Point(19, 231);
             lblDateTitle.Name = "lblDateTitle";
-            lblDateTitle.Size = new Size(48, 20);
+            lblDateTitle.Size = new Size(59, 25);
             lblDateTitle.TabIndex = 5;
             lblDateTitle.Text = "DATE:";
             // 
             // lblTimeTitle
             // 
             lblTimeTitle.AutoSize = true;
+            lblTimeTitle.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTimeTitle.ForeColor = Color.White;
-            lblTimeTitle.Location = new Point(14, 209);
+            lblTimeTitle.Location = new Point(18, 268);
             lblTimeTitle.Name = "lblTimeTitle";
-            lblTimeTitle.Size = new Size(45, 20);
+            lblTimeTitle.Size = new Size(57, 25);
             lblTimeTitle.TabIndex = 6;
             lblTimeTitle.Text = "TIME:";
             // 
             // lblService
             // 
             lblService.BackColor = Color.White;
-            lblService.Location = new Point(102, 125);
+            lblService.Location = new Point(120, 192);
             lblService.Name = "lblService";
             lblService.Size = new Size(143, 20);
             lblService.TabIndex = 7;
@@ -154,7 +160,7 @@
             // lblDate
             // 
             lblDate.BackColor = Color.White;
-            lblDate.Location = new Point(102, 165);
+            lblDate.Location = new Point(120, 231);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(143, 20);
             lblDate.TabIndex = 8;
@@ -162,7 +168,7 @@
             // lblTime
             // 
             lblTime.BackColor = Color.White;
-            lblTime.Location = new Point(102, 209);
+            lblTime.Location = new Point(120, 268);
             lblTime.Name = "lblTime";
             lblTime.Size = new Size(143, 20);
             lblTime.TabIndex = 9;
@@ -170,7 +176,7 @@
             // lblAmount
             // 
             lblAmount.BackColor = Color.White;
-            lblAmount.Location = new Point(102, 250);
+            lblAmount.Location = new Point(120, 309);
             lblAmount.Name = "lblAmount";
             lblAmount.Size = new Size(143, 20);
             lblAmount.TabIndex = 10;
@@ -178,10 +184,11 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(14, 250);
+            label4.Location = new Point(18, 304);
             label4.Name = "label4";
-            label4.Size = new Size(75, 20);
+            label4.Size = new Size(96, 25);
             label4.TabIndex = 11;
             label4.Text = "AMOUNT:";
             // 
@@ -192,7 +199,8 @@
             grpPaymentMethod.Controls.Add(rbCard);
             grpPaymentMethod.Controls.Add(rbBank);
             grpPaymentMethod.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            grpPaymentMethod.Location = new Point(14, 299);
+            grpPaymentMethod.ForeColor = Color.White;
+            grpPaymentMethod.Location = new Point(16, 342);
             grpPaymentMethod.Margin = new Padding(3, 4, 3, 4);
             grpPaymentMethod.Name = "grpPaymentMethod";
             grpPaymentMethod.Padding = new Padding(3, 4, 3, 4);
@@ -214,7 +222,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(60, 30);
+            pictureBox1.Location = new Point(57, 30);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(83, 42);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -250,7 +258,11 @@
             // panel1
             // 
             panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(lblDate);
+            panel1.Controls.Add(grpPaymentMethod);
+            panel1.Controls.Add(label11);
             panel1.Controls.Add(btnPay);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(lblTime);
             panel1.Controls.Add(lblService);
             panel1.Controls.Add(label4);
@@ -275,10 +287,10 @@
             // btnPay
             // 
             btnPay.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPay.Location = new Point(262, 693);
+            btnPay.Location = new Point(272, 713);
             btnPay.Margin = new Padding(3, 4, 3, 4);
             btnPay.Name = "btnPay";
-            btnPay.Size = new Size(86, 31);
+            btnPay.Size = new Size(115, 55);
             btnPay.TabIndex = 3;
             btnPay.Text = "PAY";
             btnPay.UseVisualStyleBackColor = true;
@@ -287,10 +299,10 @@
             // btnCancel
             // 
             btnCancel.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.Location = new Point(159, 693);
+            btnCancel.Location = new Point(109, 713);
             btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(86, 31);
+            btnCancel.Size = new Size(106, 55);
             btnCancel.TabIndex = 2;
             btnCancel.Text = "CANCEL";
             btnCancel.UseVisualStyleBackColor = true;
@@ -304,7 +316,7 @@
             pnlCard.Controls.Add(txtCardNumber);
             pnlCard.Controls.Add(label9);
             pnlCard.Controls.Add(label8);
-            pnlCard.Location = new Point(258, 409);
+            pnlCard.Location = new Point(251, 453);
             pnlCard.Margin = new Padding(3, 4, 3, 4);
             pnlCard.Name = "pnlCard";
             pnlCard.Size = new Size(229, 252);
@@ -374,12 +386,13 @@
             pnlBank.Controls.Add(label6);
             pnlBank.Controls.Add(cboBank);
             pnlBank.Controls.Add(label5);
-            pnlBank.Location = new Point(16, 409);
+            pnlBank.Location = new Point(16, 453);
             pnlBank.Margin = new Padding(3, 4, 3, 4);
             pnlBank.Name = "pnlBank";
             pnlBank.Size = new Size(229, 252);
             pnlBank.TabIndex = 0;
             pnlBank.Visible = false;
+            pnlBank.Paint += pnlBank_Paint;
             // 
             // txtPassword
             // 
@@ -438,14 +451,24 @@
             label5.TabIndex = 0;
             label5.Text = "BANK:";
             // 
+            // label11
+            // 
+            label11.BackColor = Color.DarkOliveGreen;
+            label11.Dock = DockStyle.Top;
+            label11.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.DarkKhaki;
+            label11.Location = new Point(0, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(504, 91);
+            label11.TabIndex = 13;
+            label11.Text = "PAYMENT";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // FrmPayment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(504, 832);
-            Controls.Add(grpPaymentMethod);
-            Controls.Add(lblDate);
-            Controls.Add(label2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
@@ -501,5 +524,6 @@
         private TextBox txtExpiry;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label label11;
     }
 }
