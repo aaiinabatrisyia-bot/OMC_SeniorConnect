@@ -133,7 +133,7 @@ namespace FrmEmergency
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            FrmCaregiverMenu menu = new FrmCaregiverMenu();
+            FrmWelcome menu = new FrmWelcome();
             menu.Show();
             this.Hide();   // Hide the current form
         }

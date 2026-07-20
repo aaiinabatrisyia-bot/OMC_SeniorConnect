@@ -147,6 +147,7 @@
             lblEmergency.TabIndex = 3;
             lblEmergency.Text = "Emergency Contacts";
             lblEmergency.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmergency.Click += lblEmergency_Click;
             // 
             // picEmergency
             // 

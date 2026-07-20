@@ -124,5 +124,10 @@ namespace OMC_Group16
         {
 
         }
+
+        private void lblEmergency_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
