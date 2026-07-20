@@ -69,7 +69,7 @@ namespace OMC_Group16.Forms
         {
             LoadElderly();
             LoadTime();
-            LoadServices();
+            
             //MessageBox.Show("Form Loaded");
             //MessageBox.Show("Name received" + UserSession.CaregiverName);
             lblCaregiverName.Text = UserSession.CaregiverName;
@@ -83,19 +83,7 @@ namespace OMC_Group16.Forms
 
 
         }
-        private void LoadServices()
-        {
-            SqlConnection con = new SqlConnection(connectionString);
-            string query = "SELECT ServiceID, ServiceName, Price FROM Services";
-
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            cboService.DataSource = dt;
-            cboService.DisplayMember = "ServiceName";
-            cboService.ValueMember = "ServiceID";
-        }
+        
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cboService.Text)
