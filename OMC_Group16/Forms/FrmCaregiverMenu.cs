@@ -42,6 +42,7 @@ namespace OMC_Group16
         {
             FrmCaregiverLogin login = new FrmCaregiverLogin();
             login.Show();
+            this.Hide();
         }
 
         private void btnBookAppointment_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@
             label3 = new Label();
             txtReminderDescription = new TextBox();
             btnSave = new Button();
-            btnCancel = new Button();
+            btnBack = new Button();
             btnVoiceAssistant = new Button();
             label4 = new Label();
             SuspendLayout();
@@ -115,17 +115,18 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += button1_Click;
             // 
-            // btnCancel
+            // btnBack
             // 
-            btnCancel.BackColor = Color.Crimson;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(278, 425);
-            btnCancel.Margin = new Padding(4, 3, 4, 3);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(139, 33);
-            btnCancel.TabIndex = 7;
-            btnCancel.Text = "CANCEL";
-            btnCancel.UseVisualStyleBackColor = false;
+            btnBack.BackColor = Color.Crimson;
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(278, 425);
+            btnBack.Margin = new Padding(4, 3, 4, 3);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(139, 33);
+            btnBack.TabIndex = 7;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnCancel_Click_1;
             // 
             // btnVoiceAssistant
             // 
@@ -161,7 +162,7 @@
             ClientSize = new Size(439, 616);
             Controls.Add(label4);
             Controls.Add(btnVoiceAssistant);
-            Controls.Add(btnCancel);
+            Controls.Add(btnBack);
             Controls.Add(btnSave);
             Controls.Add(txtReminderDescription);
             Controls.Add(label3);
@@ -187,7 +188,7 @@
         private Label label3;
         private TextBox txtReminderDescription;
         private Button btnSave;
-        private Button btnCancel;
+        private Button btnBack;
         private Button btnVoiceAssistant;
         private Label label4;
     }

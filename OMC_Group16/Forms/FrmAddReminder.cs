@@ -50,6 +50,13 @@ namespace OMC_Group16
         {
 
         }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            FrmCaregiverMenu menu = new FrmCaregiverMenu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }
 
