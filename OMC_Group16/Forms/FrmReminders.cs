@@ -47,6 +47,8 @@ namespace OMC_Group16
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dgvReminders.Columns.Clear();
+                dgvReminders.AutoGenerateColumns = true;
                 dgvReminders.DataSource = dt;   // Replace dataGridView1 with your DataGridView's name
             }
         }
