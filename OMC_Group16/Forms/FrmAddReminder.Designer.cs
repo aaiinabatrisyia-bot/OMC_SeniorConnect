@@ -36,7 +36,6 @@
             txtReminderDescription = new TextBox();
             btnSave = new Button();
             btnBack = new Button();
-            btnVoiceAssistant = new Button();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -128,19 +127,6 @@
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnCancel_Click_1;
             // 
-            // btnVoiceAssistant
-            // 
-            btnVoiceAssistant.BackColor = Color.Yellow;
-            btnVoiceAssistant.ForeColor = Color.White;
-            btnVoiceAssistant.Location = new Point(105, 493);
-            btnVoiceAssistant.Margin = new Padding(4, 3, 4, 3);
-            btnVoiceAssistant.Name = "btnVoiceAssistant";
-            btnVoiceAssistant.Size = new Size(220, 33);
-            btnVoiceAssistant.TabIndex = 8;
-            btnVoiceAssistant.Text = "VOICE ASSISTANT";
-            btnVoiceAssistant.UseVisualStyleBackColor = false;
-            btnVoiceAssistant.Click += btnVoiceAssistant_Click;
-            // 
             // label4
             // 
             label4.BackColor = Color.DarkOliveGreen;
@@ -161,7 +147,6 @@
             BackColor = Color.MidnightBlue;
             ClientSize = new Size(439, 616);
             Controls.Add(label4);
-            Controls.Add(btnVoiceAssistant);
             Controls.Add(btnBack);
             Controls.Add(btnSave);
             Controls.Add(txtReminderDescription);
@@ -189,7 +174,6 @@
         private TextBox txtReminderDescription;
         private Button btnSave;
         private Button btnBack;
-        private Button btnVoiceAssistant;
         private Label label4;
     }
 }

@@ -184,15 +184,11 @@ namespace OMC_Group16
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is FrmHome)
-                {
-                    form.Show();
-                    break;
-                }
-            }
-            this.Close();
+            FrmHome frm = new FrmHome();
+
+            frm.Show();
+
+            this.Hide();
         }
 
         private void btnVoiceAssistant_Click(object sender, EventArgs e)
