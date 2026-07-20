@@ -63,12 +63,14 @@ namespace OMC_Group16.Forms
 
 
         }
+        
 
         private void FrmBookAppointment_Load(object sender, EventArgs e)
         {
             LoadElderly();
             LoadTime();
-            MessageBox.Show("Form Loaded");
+            LoadServices();
+            //MessageBox.Show("Form Loaded");
             //MessageBox.Show("Name received" + UserSession.CaregiverName);
             lblCaregiverName.Text = UserSession.CaregiverName;
             txtPrice.ReadOnly = true;
@@ -80,6 +82,19 @@ namespace OMC_Group16.Forms
 
 
 
+        }
+        private void LoadServices()
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = "SELECT ServiceID, ServiceName, Price FROM Services";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cboService.DataSource = dt;
+            cboService.DisplayMember = "ServiceName";
+            cboService.ValueMember = "ServiceID";
         }
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -167,7 +182,7 @@ namespace OMC_Group16.Forms
                 cmd.Parameters.AddWithValue("@Status", "Pending");
                 cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
                 cmd.Parameters.AddWithValue("@ServiceName", cboService.Text);
-                cmd.Parameters.AddWithValue("@Price", decimal.Parse(txtPrice.Text));
+                cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
 
                 con.Open();
                 int appointmentID = Convert.ToInt32(cmd.ExecuteScalar());
