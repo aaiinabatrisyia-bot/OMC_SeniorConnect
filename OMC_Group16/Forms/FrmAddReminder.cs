@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using OMC_Group16.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,12 +26,15 @@ namespace OMC_Group16
                 con.Open();
 
                 string query = @"INSERT INTO Reminders
-                        (Title, ReminderDate, Description)
+                        (PatientID,  CaregiverID, Title, ReminderDate, Description)
                         VALUES
-                        (@Title,@Date,@Description)";
+                        (@PatientID, @CaregiverID, @Title, @Date, @Description)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
+                int patientID = Convert.ToInt32(cboPatient.SelectedValue);
+                cmd.Parameters.AddWithValue("@PatientID", patientID);
+                cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
                 cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
                 cmd.Parameters.AddWithValue("@Date", dtpReminderDate.Value.Date);
                 cmd.Parameters.AddWithValue("@Description", txtReminderDescription.Text);
@@ -56,6 +60,29 @@ namespace OMC_Group16
             FrmCaregiverMenu menu = new FrmCaregiverMenu();
             menu.Show();
             this.Hide();
+        }
+
+        private void txtReminderDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAddReminder_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT PatientID, FullName FROM Seniors", con);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                cboPatient.DataSource = dt;
+                cboPatient.DisplayMember = "FullName";
+                cboPatient.ValueMember = "PatientID";
+            }
         }
     }
 }
