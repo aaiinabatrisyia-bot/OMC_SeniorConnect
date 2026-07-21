@@ -35,7 +35,6 @@
             btnMessage = new Button();
             btnGov = new Button();
             btnTransport = new Button();
-            btnNextGuide = new Button();
             btnBack = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnEWallet1 = new Button();
@@ -152,7 +151,7 @@
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(131, 48);
             btnBack.TabIndex = 8;
-            btnBack.Text = "<-- Back";
+            btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click_1;
             // 
@@ -240,7 +239,6 @@
             Controls.Add(btnVoiceAssist);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBack);
-            Controls.Add(btnNextGuide);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(11, 13, 11, 13);
