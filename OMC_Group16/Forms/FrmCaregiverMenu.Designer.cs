@@ -156,6 +156,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCaregiverMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCaregiverMenu";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
