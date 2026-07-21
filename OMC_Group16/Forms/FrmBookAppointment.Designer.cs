@@ -281,6 +281,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmBookAppointment";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmBookAppointment";
             Load += FrmBookAppointment_Load;
             panel1.ResumeLayout(false);
