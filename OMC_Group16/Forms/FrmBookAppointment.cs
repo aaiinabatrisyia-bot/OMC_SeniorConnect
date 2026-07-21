@@ -149,11 +149,11 @@ namespace OMC_Group16.Forms
                 INSERT INTO Appointments
                 (
                          PatientID, AppointmentDate, AppointmentTime,
-                         Status, CaregiverID, ServiceID
+                         Status, CaregiverID,ServiceName,Price
                 )
                 VALUES
                 (        @PatientID, @Date, @Time,
-                         @Status, @CaregiverID,@ServiceID
+                         @Status, @CaregiverID,@ServiceName,@Price
                  );
                         SELECT CAST(SCOPE_IDENTITY() AS INT);
                  ";
@@ -169,7 +169,7 @@ namespace OMC_Group16.Forms
                 cmd.Parameters.AddWithValue("@Time", cboTime.Text);
                 cmd.Parameters.AddWithValue("@Status", "Pending");
                 cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
-                cmd.Parameters.AddWithValue("@ServiceID", cboService.Text);
+                cmd.Parameters.AddWithValue("@ServiceName", cboService.Text);
                 cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
 
                 con.Open();

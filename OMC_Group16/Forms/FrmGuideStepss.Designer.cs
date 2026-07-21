@@ -33,34 +33,32 @@
             // lblCategoryTitle
             // 
             lblCategoryTitle.BackColor = Color.DarkOliveGreen;
-            lblCategoryTitle.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCategoryTitle.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCategoryTitle.ForeColor = Color.DarkKhaki;
             lblCategoryTitle.Location = new Point(2, 0);
             lblCategoryTitle.Name = "lblCategoryTitle";
-            lblCategoryTitle.Size = new Size(453, 225);
+            lblCategoryTitle.Size = new Size(742, 335);
             lblCategoryTitle.TabIndex = 0;
             lblCategoryTitle.Text = "Online Banking Guide";
             lblCategoryTitle.TextAlign = ContentAlignment.MiddleCenter;
-            //lblCategoryTitle.Click += lblCategoryTitle_Click;
             // 
             // lblStepDescription
             // 
             lblStepDescription.Font = new Font("Calibri", 10.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStepDescription.Location = new Point(2, 204);
+            lblStepDescription.Location = new Point(2, 338);
             lblStepDescription.Name = "lblStepDescription";
-            lblStepDescription.Size = new Size(453, 212);
+            lblStepDescription.Size = new Size(742, 328);
             lblStepDescription.TabIndex = 1;
             lblStepDescription.Text = "";
-            //lblStepDescription.TextChanged += lblStepDescription_TextChanged;
             // 
             // btnPrevious
             // 
             btnPrevious.BackColor = Color.OliveDrab;
             btnPrevious.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPrevious.ForeColor = Color.Khaki;
-            btnPrevious.Location = new Point(12, 559);
+            btnPrevious.Location = new Point(12, 901);
             btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(180, 51);
+            btnPrevious.Size = new Size(242, 69);
             btnPrevious.TabIndex = 2;
             btnPrevious.Text = "<-- Previous Step";
             btnPrevious.UseVisualStyleBackColor = false;
@@ -70,9 +68,9 @@
             // 
             btnBackToCategories.BackColor = SystemColors.ActiveCaption;
             btnBackToCategories.Font = new Font("Calibri", 10.125F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBackToCategories.Location = new Point(110, 484);
+            btnBackToCategories.Location = new Point(241, 823);
             btnBackToCategories.Name = "btnBackToCategories";
-            btnBackToCategories.Size = new Size(234, 46);
+            btnBackToCategories.Size = new Size(259, 72);
             btnBackToCategories.TabIndex = 3;
             btnBackToCategories.Text = "Back To Categories";
             btnBackToCategories.UseVisualStyleBackColor = false;
@@ -83,9 +81,9 @@
             btnNext.BackColor = Color.OliveDrab;
             btnNext.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnNext.ForeColor = Color.Khaki;
-            btnNext.Location = new Point(256, 559);
+            btnNext.Location = new Point(492, 901);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(189, 51);
+            btnNext.Size = new Size(239, 69);
             btnNext.TabIndex = 4;
             btnNext.Text = "Next Step -->";
             btnNext.UseVisualStyleBackColor = false;
@@ -98,7 +96,7 @@
             btnVoiceToggleSteps.ForeColor = SystemColors.ButtonHighlight;
             btnVoiceToggleSteps.Location = new Point(12, 12);
             btnVoiceToggleSteps.Name = "btnVoiceToggleSteps";
-            btnVoiceToggleSteps.Size = new Size(254, 45);
+            btnVoiceToggleSteps.Size = new Size(260, 90);
             btnVoiceToggleSteps.TabIndex = 5;
             btnVoiceToggleSteps.Text = "🔊 Turn Voice ON";
             btnVoiceToggleSteps.UseVisualStyleBackColor = false;
@@ -107,11 +105,11 @@
             // btnZoomIn
             // 
             btnZoomIn.BackColor = Color.FromArgb(127, 166, 122);
-            btnZoomIn.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnZoomIn.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnZoomIn.ForeColor = SystemColors.ButtonHighlight;
-            btnZoomIn.Location = new Point(325, 358);
+            btnZoomIn.Location = new Point(578, 683);
             btnZoomIn.Name = "btnZoomIn";
-            btnZoomIn.Size = new Size(60, 47);
+            btnZoomIn.Size = new Size(66, 55);
             btnZoomIn.TabIndex = 6;
             btnZoomIn.Text = "A+";
             btnZoomIn.UseVisualStyleBackColor = false;
@@ -120,11 +118,11 @@
             // btnZoomOut
             // 
             btnZoomOut.BackColor = Color.FromArgb(127, 166, 122);
-            btnZoomOut.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnZoomOut.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnZoomOut.ForeColor = SystemColors.ButtonHighlight;
-            btnZoomOut.Location = new Point(391, 358);
+            btnZoomOut.Location = new Point(670, 683);
             btnZoomOut.Name = "btnZoomOut";
-            btnZoomOut.Size = new Size(54, 47);
+            btnZoomOut.Size = new Size(61, 55);
             btnZoomOut.TabIndex = 7;
             btnZoomOut.Text = "A-";
             btnZoomOut.UseVisualStyleBackColor = false;
@@ -135,7 +133,7 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(457, 663);
+            ClientSize = new Size(743, 1061);
             Controls.Add(btnZoomOut);
             Controls.Add(btnZoomIn);
             Controls.Add(btnVoiceToggleSteps);
