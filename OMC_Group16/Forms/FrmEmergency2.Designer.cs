@@ -186,9 +186,9 @@
             // 
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label4.ForeColor = Color.Ivory;
-            label4.Location = new Point(33, 251);
+            label4.Location = new Point(27, 251);
             label4.Name = "label4";
-            label4.Size = new Size(144, 48);
+            label4.Size = new Size(151, 48);
             label4.TabIndex = 12;
             label4.Text = "RELATIONSHIP";
             label4.Click += label4_Click;
