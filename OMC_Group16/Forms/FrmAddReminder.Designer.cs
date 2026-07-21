@@ -182,8 +182,10 @@
             Controls.Add(label1);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = Color.MidnightBlue;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "FrmAddReminder";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmAddReminder";
             Load += FrmAddReminder_Load;
             ResumeLayout(false);

@@ -105,6 +105,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
+            panel1.RightToLeft = RightToLeft.No;
             panel1.Size = new Size(504, 832);
             panel1.TabIndex = 4;
             // 
