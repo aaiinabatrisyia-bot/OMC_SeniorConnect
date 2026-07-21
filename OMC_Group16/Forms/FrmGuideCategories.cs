@@ -54,7 +54,7 @@ namespace OMC_Group16.Forms
             btnMessage.MouseEnter += (s, e) => SpeakText("Messages");
             btnTransport1.MouseEnter += (s, e) => SpeakText("Transport");
             btnBack.MouseEnter += (s, e) => SpeakText("Back button");
-            btnNextGuide.MouseEnter += (s, e) => SpeakText("Select a category to move to the next steps");
+            //btnNextGuide.MouseEnter += (s, e) => SpeakText("Select a category to move to the next steps");
         }
 
         private void btnGov_Click(object sender, EventArgs e)
