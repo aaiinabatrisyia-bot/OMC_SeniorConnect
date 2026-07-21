@@ -7,20 +7,28 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace OMC_Group16.Forms
 {
     public partial class FrmBookAppointment : Form
     {
-        public FrmBookAppointment(string caregiverName)
-        {
-            InitializeComponent();
-            lblCaregiverName.Text = caregiverName;
-        }
         string connectionString =
         @"Data Source = (localdb)\MSSQLLocalDB;
         Initial Catalog = OMC_SeniorConnectDB; 
         Integrated Security = True;";
+
+        SqlConnection con;
+        public FrmBookAppointment(string caregiverName)
+        {
+            InitializeComponent();
+
+            con = new SqlConnection(caregiverName);
+            lblCaregiverName.Text = caregiverName;
+           
+            
+        }
+
 
         private int caregiverID;
 
@@ -34,31 +42,66 @@ namespace OMC_Group16.Forms
         {
             InitializeComponent();
             //this.Load += FrmBookAppointment_Load;
+            lblCaregiverName.Text = UserSession.CaregiverName;
+
         }
+        private void LoadElderly()
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = "SELECT PatientID, FullName FROM seniors";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cmbElderly.DataSource = dt;
+            cmbElderly.DisplayMember = "FullName";
+            cmbElderly.ValueMember = "PatientID";
+
+
+
+
+
+        }
+        
+
         private void FrmBookAppointment_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Form Loaded");
+            LoadElderly();
+            LoadTime();
+            
+            //MessageBox.Show("Form Loaded");
             //MessageBox.Show("Name received" + UserSession.CaregiverName);
             lblCaregiverName.Text = UserSession.CaregiverName;
             txtPrice.ReadOnly = true;
             dtpDate.MinDate = DateTime.Today;
+            
+
+            
+            
+
 
 
         }
+        
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cboService.Text)
             {
                 case "General Check-up":
-                    txtPrice.Text = "RM50";
+                    txtPrice.Text = "50";
                     break;
 
                 case "Blood Pressure Check":
-                    txtPrice.Text = "RM20";
+                    txtPrice.Text = "20";
                     break;
 
                 case "Diabetes Consultation":
-                    txtPrice.Text = "RM80";
+                    txtPrice.Text = "80";
+                    break;
+
+                case "Immediate Consultation":
+                    txtPrice.Text = "100";
                     break;
 
                 default:
@@ -100,28 +143,44 @@ namespace OMC_Group16.Forms
 
             // Save appointment here
 
-            SqlConnection con = new SqlConnection(connectionString);
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = @"
+                INSERT INTO Appointments
+                (
+                         PatientID, AppointmentDate, AppointmentTime,
+                         Status, CaregiverID, ServiceID
+                )
+                VALUES
+                (        @PatientID, @Date, @Time,
+                         @Status, @CaregiverID,@ServiceID
+                 );
+                        SELECT CAST(SCOPE_IDENTITY() AS INT);
+                 ";
 
-            string query = @"INSERT INTO Appointments
-           (CaregiverID, CaregiverName, ElderlyName, Service, AppointmentDate, AppointmentTime, Price)
-          VALUES
-           (@CaregiverID, @CaregiverName, @ElderlyName, @Service, @Date, @Time, @Price)";
 
-            SqlCommand cmd = new SqlCommand(query, con);
+                
+                
 
-            cmd.Parameters.AddWithValue("@CaregiverID", FrmCaregiverLogin.CaregiverID);
-            cmd.Parameters.AddWithValue("@CaregiverName", FrmCaregiverLogin.CaregiverName);
-            cmd.Parameters.AddWithValue("@ElderlyName", cmbElderly.Text);
-            cmd.Parameters.AddWithValue("@Service", cboService.Text);
-            cmd.Parameters.AddWithValue("@Date", dtpDate.Value.Date);
-            cmd.Parameters.AddWithValue("@Time", cboTime.Text);
-            cmd.Parameters.AddWithValue("@Price", txtPrice.Text);
+                SqlCommand cmd = new SqlCommand(query, con);
 
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+                cmd.Parameters.AddWithValue("@PatientID", Convert.ToInt32(cmbElderly.SelectedValue));
+                cmd.Parameters.AddWithValue("@Date", dtpDate.Value.Date);
+                cmd.Parameters.AddWithValue("@Time", cboTime.Text);
+                cmd.Parameters.AddWithValue("@Status", "Pending");
+                cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
+                cmd.Parameters.AddWithValue("@ServiceID", cboService.Text);
+                cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
 
-            MessageBox.Show("Appointment booked successfully!");
+                con.Open();
+                int appointmentID = Convert.ToInt32(cmd.ExecuteScalar());
+                MessageBox.Show("Appointment booked successfully.");
+
+                FrmPayment payment = new FrmPayment(appointmentID);
+                payment.Show();
+
+                this.Hide();
+            }
         }
 
         private void lblPrice_Click(object sender, EventArgs e)
@@ -138,30 +197,7 @@ namespace OMC_Group16.Forms
         {
 
         }
-        private void LoadElderly()
-        {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                string query = @"
-             SELECT DISTINCT p.PatientID, p.Name AS FullName
-             FROM Patients p
-             INNER JOIN Appointments a
-             ON p.PatientID = a.PatientID
-             WHERE a.CaregiverID = @CaregiverID";
-
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@CaregiverID", FrmCaregiverLogin.CaregiverID);
-
-                con.Open();
-
-                DataTable dt = new DataTable();
-                dt.Load(cmd.ExecuteReader());
-
-                cmbElderly.DataSource = dt;
-                cmbElderly.DisplayMember = "FullName";
-                cmbElderly.ValueMember = "PatientID";
-            }
-        }
+        
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
@@ -172,5 +208,24 @@ namespace OMC_Group16.Forms
         {
 
         }
+
+        private void cboTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadTime()
+        {
+            cboTime.Items.Clear();
+
+            cboTime.Items.Add("09:00 AM");
+            cboTime.Items.Add("10:00 AM");
+            cboTime.Items.Add("11:00 AM");
+            cboTime.Items.Add("12:00 PM");
+            cboTime.Items.Add("01:00 PM");
+            cboTime.Items.Add("02:00 PM");
+            cboTime.Items.Add("03:00 PM");
+        }
+
+
     }
 }

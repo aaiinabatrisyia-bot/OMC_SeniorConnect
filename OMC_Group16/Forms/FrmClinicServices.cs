@@ -19,6 +19,7 @@ namespace OMC_Group16.Forms
         {
             FrmBookAppointment appointment = new FrmBookAppointment();
             appointment.Show();
+            this.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -1,7 +1,12 @@
+using System.Speech.Synthesis;
+
 namespace FrmEmergency
 {
     public partial class FrmEmergency : Form
     {
+        private readonly SpeechSynthesizer voiceAssistant =
+            new SpeechSynthesizer();
+
         public FrmEmergency()
         {
             InitializeComponent();
@@ -162,6 +167,54 @@ namespace FrmEmergency
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnVoiceAssistant_Click(object sender, EventArgs e)
+        {
+            voiceAssistant.SpeakAsyncCancelAll();
+
+            string name = txtName.Text.Trim();
+            string phoneNumber = txtPhoneNumber.Text.Trim();
+            string emergencyContact = txtEmergencyContact.Text.Trim();
+            string address = txtAddress.Text.Trim();
+            string nearbyClinic = txtClinic.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(name) &&
+                string.IsNullOrWhiteSpace(phoneNumber) &&
+                string.IsNullOrWhiteSpace(emergencyContact) &&
+                string.IsNullOrWhiteSpace(address) &&
+                string.IsNullOrWhiteSpace(nearbyClinic))
+            {
+                voiceAssistant.SpeakAsync(
+                    "No emergency information is currently available."
+                );
+
+                return;
+            }
+
+            string speech = "Here is the emergency information. ";
+
+            if (!string.IsNullOrWhiteSpace(name))
+                speech += $"Senior name, {name}. ";
+
+            if (!string.IsNullOrWhiteSpace(phoneNumber))
+                speech += $"Phone number, {phoneNumber}. ";
+
+            if (!string.IsNullOrWhiteSpace(emergencyContact))
+                speech += $"Emergency contact, {emergencyContact}. ";
+
+            if (!string.IsNullOrWhiteSpace(address))
+                speech += $"Home address, {address}. ";
+
+            if (!string.IsNullOrWhiteSpace(nearbyClinic))
+                speech += $"Nearby clinic, {nearbyClinic}. ";
+
+            speech +=
+                "Select Ambulance to call emergency services. " +
+                "Select Emergency Contact to contact the registered caregiver. " +
+                "Select Nearby Clinic to view the clinic information.";
+
+            voiceAssistant.SpeakAsync(speech);
         }
     }
 }

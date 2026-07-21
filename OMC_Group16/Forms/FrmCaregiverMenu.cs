@@ -22,6 +22,7 @@ namespace OMC_Group16
         {
             FrmAddReminder reminder = new FrmAddReminder();
             reminder.Show();
+            this.Hide();
         }
 
         private void btnEmergency_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace OMC_Group16
         {
             FrmWelcome welcome = new FrmWelcome();
             welcome.Show();
+            this.Hide();
 
         }
 
@@ -42,6 +44,7 @@ namespace OMC_Group16
         {
             FrmCaregiverLogin login = new FrmCaregiverLogin();
             login.Show();
+            this.Hide();
         }
 
         private void btnBookAppointment_Click(object sender, EventArgs e)

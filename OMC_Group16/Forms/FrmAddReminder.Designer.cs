@@ -35,9 +35,10 @@
             label3 = new Label();
             txtReminderDescription = new TextBox();
             btnSave = new Button();
-            btnCancel = new Button();
-            btnVoiceAssistant = new Button();
+            btnBack = new Button();
             label4 = new Label();
+            label5 = new Label();
+            cboPatient = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -86,7 +87,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(26, 220);
+            label3.Location = new Point(28, 289);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(125, 23);
@@ -95,18 +96,19 @@
             // 
             // txtReminderDescription
             // 
-            txtReminderDescription.Location = new Point(66, 257);
+            txtReminderDescription.Location = new Point(61, 337);
             txtReminderDescription.Margin = new Padding(4, 3, 4, 3);
             txtReminderDescription.Multiline = true;
             txtReminderDescription.Name = "txtReminderDescription";
             txtReminderDescription.Size = new Size(314, 130);
             txtReminderDescription.TabIndex = 5;
+            txtReminderDescription.TextChanged += txtReminderDescription_TextChanged;
             // 
             // btnSave
             // 
             btnSave.BackColor = Color.Green;
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(26, 425);
+            btnSave.Location = new Point(27, 492);
             btnSave.Margin = new Padding(4, 3, 4, 3);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(126, 33);
@@ -115,30 +117,18 @@
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += button1_Click;
             // 
-            // btnCancel
+            // btnBack
             // 
-            btnCancel.BackColor = Color.Crimson;
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(278, 425);
-            btnCancel.Margin = new Padding(4, 3, 4, 3);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(139, 33);
-            btnCancel.TabIndex = 7;
-            btnCancel.Text = "CANCEL";
-            btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnVoiceAssistant
-            // 
-            btnVoiceAssistant.BackColor = Color.Yellow;
-            btnVoiceAssistant.ForeColor = Color.White;
-            btnVoiceAssistant.Location = new Point(105, 493);
-            btnVoiceAssistant.Margin = new Padding(4, 3, 4, 3);
-            btnVoiceAssistant.Name = "btnVoiceAssistant";
-            btnVoiceAssistant.Size = new Size(220, 33);
-            btnVoiceAssistant.TabIndex = 8;
-            btnVoiceAssistant.Text = "VOICE ASSISTANT";
-            btnVoiceAssistant.UseVisualStyleBackColor = false;
-            btnVoiceAssistant.Click += btnVoiceAssistant_Click;
+            btnBack.BackColor = Color.Crimson;
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(262, 492);
+            btnBack.Margin = new Padding(4, 3, 4, 3);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(139, 33);
+            btnBack.TabIndex = 7;
+            btnBack.Text = "BACK";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnCancel_Click_1;
             // 
             // label4
             // 
@@ -153,15 +143,36 @@
             label4.Text = "ADD REMINDER";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(28, 237);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(86, 23);
+            label5.TabIndex = 10;
+            label5.Text = "SENIORS:";
+            // 
+            // cboPatient
+            // 
+            cboPatient.FormattingEnabled = true;
+            cboPatient.Location = new Point(121, 237);
+            cboPatient.Name = "cboPatient";
+            cboPatient.Size = new Size(151, 31);
+            cboPatient.TabIndex = 11;
+            // 
             // FrmAddReminder
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
             ClientSize = new Size(439, 616);
+            Controls.Add(cboPatient);
+            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(btnVoiceAssistant);
-            Controls.Add(btnCancel);
+            Controls.Add(btnBack);
             Controls.Add(btnSave);
             Controls.Add(txtReminderDescription);
             Controls.Add(label3);
@@ -174,6 +185,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "FrmAddReminder";
             Text = "FrmAddReminder";
+            Load += FrmAddReminder_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,8 +199,9 @@
         private Label label3;
         private TextBox txtReminderDescription;
         private Button btnSave;
-        private Button btnCancel;
-        private Button btnVoiceAssistant;
+        private Button btnBack;
         private Label label4;
+        private Label label5;
+        private ComboBox cboPatient;
     }
 }

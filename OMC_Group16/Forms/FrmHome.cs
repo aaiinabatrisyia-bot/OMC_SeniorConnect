@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using OMC_Group16.Forms;
 using System.Speech.Synthesis;
+using FrmEmergency;
 
 namespace OMC_Group16
 {
@@ -55,7 +56,7 @@ namespace OMC_Group16
 
         private void pnlEmergency_Click(object sender, EventArgs e)
         {
-            FrmEmergency emergency = new FrmEmergency();
+            FrmEmergency2 emergency = new FrmEmergency2();
 
             emergency.Show();
 
@@ -117,6 +118,16 @@ namespace OMC_Group16
                 lblVoice.Text = "Voice Assistant";
                 isVoicePlaying = false;
             }
+        }
+
+        private void pnlEmergency_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblEmergency_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

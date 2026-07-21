@@ -1,7 +1,14 @@
+using OMC_Group16;
+using System.Data.SqlClient;
+
 namespace FrmEmergency
 {
     public partial class FrmEmergency2 : Form
     {
+        string connectionString =
+        @"Data Source = (localdb)\MSSQLLocalDB;
+        Initial Catalog = OMC_SeniorConnectDB; 
+        Integrated Security = True;";
         public FrmEmergency2()
         {
             InitializeComponent();
@@ -126,15 +133,9 @@ namespace FrmEmergency
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to exit?",
-                "Confirm exit.",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            FrmWelcome menu = new FrmWelcome();
+            menu.Show();
+            this.Hide();   // Hide the current form
         }
 
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
@@ -163,5 +164,37 @@ namespace FrmEmergency
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string sql = @"INSERT INTO EmergencyContacts
+                       (PatientID, ContactName, Relationship, PhoneNumber, Address)
+                       VALUES
+                       (@PatientID, @ContactName, @Relationship, @PhoneNumber, @Address)";
+
+                SqlCommand cmd = new SqlCommand(sql, con);
+
+                // Replace with the current patient's ID
+                cmd.Parameters.AddWithValue("@PatientID", 1);
+
+                cmd.Parameters.AddWithValue("@ContactName", txtName.Text);
+                cmd.Parameters.AddWithValue("@Relationship", txtEmergencyContact.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text);
+                cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Appointment booked successfully!");
+            }
+        }
+    
     }
 }
+
+

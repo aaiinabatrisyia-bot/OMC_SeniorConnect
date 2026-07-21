@@ -131,5 +131,15 @@ namespace OMC_Group16.Forms
             SpeakText("Opening Transport Guide.");
             OpenGuideSteps("Transport");
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

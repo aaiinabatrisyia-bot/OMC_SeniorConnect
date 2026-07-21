@@ -18,7 +18,7 @@ namespace OMC_Group16.Forms
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            FrmHome frm = new FrmHome();
+            FrmWelcome frm = new FrmWelcome();
 
             frm.Show();
 

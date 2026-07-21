@@ -286,6 +286,7 @@
             btnVoiceAssistant.TabIndex = 25;
             btnVoiceAssistant.Text = "VOICE ASSISTANT";
             btnVoiceAssistant.UseVisualStyleBackColor = false;
+            btnVoiceAssistant.Click += btnVoiceAssistant_Click;
             // 
             // FrmEmergency
             // 

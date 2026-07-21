@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -10,14 +11,46 @@ namespace OMC_Group16.Forms
 {
     public partial class FrmPayment : Form
     {
-        public FrmPayment(string service, string date, string time, string price)
+        string connectionString =
+        @"Data Source = (localdb)\MSSQLLocalDB;
+        Initial Catalog = OMC_SeniorConnectDB; 
+        Integrated Security = True;";
+        private int appointmentID;
+        public FrmPayment(int appointmentID)
         {
             InitializeComponent();
 
-            lblService.Text = service;
-            lblDate.Text = date;
-            lblTime.Text = time;
-            lblAmount.Text = price;
+            this.appointmentID = appointmentID;
+
+
+            LoadAppointment();
+        }
+        private void LoadAppointment()
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+
+            string query = @"SELECT ServiceName, AppointmentDate,
+                            AppointmentTime, Price
+                     FROM Appointments
+                     WHERE AppointmentID = @AppointmentID";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
+
+            con.Open();
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                lblService.Text = reader["ServiceName"].ToString();
+                lblDate.Text = Convert.ToDateTime(reader["AppointmentDate"]).ToShortDateString();
+                lblTime.Text = reader["AppointmentTime"].ToString();
+                lblAmount.Text = reader["Price"].ToString();
+            }
+
+            reader.Close();
+            con.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -56,7 +89,7 @@ namespace OMC_Group16.Forms
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-         
+
             if (!rbBank.Checked && !rbCard.Checked)
             {
                 MessageBox.Show("Please select a payment method.");
@@ -68,7 +101,11 @@ namespace OMC_Group16.Forms
             frm.Show();
 
             this.Hide();
-         }
-        
+        }
+
+        private void pnlBank_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
