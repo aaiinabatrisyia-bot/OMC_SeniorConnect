@@ -243,15 +243,5 @@ namespace OMC_Group16.Forms
                 SpeakText("Text size decreased");
             }
         }
-
-        private void lblCategoryTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblStepDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

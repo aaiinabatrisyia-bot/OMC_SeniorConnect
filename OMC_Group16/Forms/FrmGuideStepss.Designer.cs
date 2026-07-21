@@ -41,7 +41,7 @@
             lblCategoryTitle.TabIndex = 0;
             lblCategoryTitle.Text = "Online Banking Guide";
             lblCategoryTitle.TextAlign = ContentAlignment.MiddleCenter;
-            lblCategoryTitle.Click += lblCategoryTitle_Click;
+            //lblCategoryTitle.Click += lblCategoryTitle_Click;
             // 
             // lblStepDescription
             // 
@@ -51,7 +51,7 @@
             lblStepDescription.Size = new Size(453, 212);
             lblStepDescription.TabIndex = 1;
             lblStepDescription.Text = "";
-            lblStepDescription.TextChanged += lblStepDescription_TextChanged;
+            //lblStepDescription.TextChanged += lblStepDescription_TextChanged;
             // 
             // btnPrevious
             // 
