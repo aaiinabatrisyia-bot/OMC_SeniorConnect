@@ -36,7 +36,7 @@ namespace OMC_Group16
         {
             FrmWelcome welcome = new FrmWelcome();
             welcome.Show();
-            this.Hide(;
+            this.Hide();
 
         }
 
