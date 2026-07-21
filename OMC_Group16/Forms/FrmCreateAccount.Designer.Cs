@@ -53,9 +53,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(25, 385);
+            label1.Location = new Point(22, 289);
             label1.Name = "label1";
-            label1.Size = new Size(107, 23);
+            label1.Size = new Size(88, 19);
             label1.TabIndex = 0;
             label1.Text = "USERNAME:";
             // 
@@ -64,31 +64,34 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(22, 427);
+            label2.Location = new Point(19, 320);
             label2.Name = "label2";
-            label2.Size = new Size(110, 23);
+            label2.Size = new Size(91, 19);
             label2.TabIndex = 1;
             label2.Text = "PASSWORD:";
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(230, 381);
+            txtUsername.Location = new Point(201, 286);
+            txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(259, 27);
+            txtUsername.Size = new Size(227, 23);
             txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(230, 427);
+            txtPassword.Location = new Point(201, 320);
+            txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(259, 27);
+            txtPassword.Size = new Size(227, 23);
             txtPassword.TabIndex = 3;
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.Location = new Point(230, 475);
+            txtConfirmPassword.Location = new Point(201, 356);
+            txtConfirmPassword.Margin = new Padding(3, 2, 3, 2);
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(259, 27);
+            txtConfirmPassword.Size = new Size(227, 23);
             txtConfirmPassword.TabIndex = 4;
             // 
             // label3
@@ -96,9 +99,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(19, 479);
+            label3.Location = new Point(17, 359);
             label3.Name = "label3";
-            label3.Size = new Size(193, 23);
+            label3.Size = new Size(159, 19);
             label3.TabIndex = 5;
             label3.Text = "CONFIRM PASSWORD:";
             // 
@@ -107,9 +110,10 @@
             btnRegister.BackColor = Color.Green;
             btnRegister.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = SystemColors.ButtonFace;
-            btnRegister.Location = new Point(156, 549);
+            btnRegister.Location = new Point(136, 412);
+            btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(204, 56);
+            btnRegister.Size = new Size(178, 42);
             btnRegister.TabIndex = 6;
             btnRegister.Text = "REGISTER";
             btnRegister.UseVisualStyleBackColor = false;
@@ -134,16 +138,16 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(504, 832);
+            panel1.Size = new Size(441, 624);
             panel1.TabIndex = 7;
             // 
             // txtCaregiverName
             // 
-            txtCaregiverName.Location = new Point(230, 259);
+            txtCaregiverName.Location = new Point(201, 194);
+            txtCaregiverName.Margin = new Padding(3, 2, 3, 2);
             txtCaregiverName.Name = "txtCaregiverName";
-            txtCaregiverName.Size = new Size(259, 27);
+            txtCaregiverName.Size = new Size(227, 23);
             txtCaregiverName.TabIndex = 17;
             // 
             // label7
@@ -151,9 +155,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(22, 259);
+            label7.Location = new Point(19, 194);
             label7.Name = "label7";
-            label7.Size = new Size(65, 23);
+            label7.Size = new Size(54, 19);
             label7.TabIndex = 16;
             label7.Text = "NAME:";
             // 
@@ -161,9 +165,10 @@
             // 
             cmbRelationship.FormattingEnabled = true;
             cmbRelationship.Items.AddRange(new object[] { "Son", "Daughter", "Spouse", "Brother", "Sister", "Grandchild", "Relative", "Friend", "Neighbour", "Guardian", "Other" });
-            cmbRelationship.Location = new Point(230, 339);
+            cmbRelationship.Location = new Point(201, 254);
+            cmbRelationship.Margin = new Padding(3, 2, 3, 2);
             cmbRelationship.Name = "cmbRelationship";
-            cmbRelationship.Size = new Size(259, 28);
+            cmbRelationship.Size = new Size(227, 23);
             cmbRelationship.TabIndex = 15;
             // 
             // label6
@@ -171,17 +176,18 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(25, 344);
+            label6.Location = new Point(22, 258);
             label6.Name = "label6";
-            label6.Size = new Size(134, 23);
+            label6.Size = new Size(111, 19);
             label6.TabIndex = 14;
             label6.Text = "RELATIONSHIP:";
             // 
             // txtPhoneNumber
             // 
-            txtPhoneNumber.Location = new Point(230, 301);
+            txtPhoneNumber.Location = new Point(201, 226);
+            txtPhoneNumber.Margin = new Padding(3, 2, 3, 2);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(259, 27);
+            txtPhoneNumber.Size = new Size(227, 23);
             txtPhoneNumber.TabIndex = 13;
             // 
             // label5
@@ -189,19 +195,18 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(22, 305);
+            label5.Location = new Point(19, 229);
             label5.Name = "label5";
-            label5.Size = new Size(150, 23);
+            label5.Size = new Size(125, 19);
             label5.TabIndex = 12;
             label5.Text = "PHONE NUMBER:";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(205, 111);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(179, 83);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(73, 85);
+            pictureBox1.Size = new Size(64, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
@@ -214,20 +219,22 @@
             label4.ForeColor = Color.DarkKhaki;
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(504, 95);
+            label4.Size = new Size(441, 71);
             label4.TabIndex = 7;
             label4.Text = "CREATE ACCOUNT";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmCreateAccount
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(504, 832);
+            ClientSize = new Size(441, 624);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCreateAccount";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCreateAccount";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

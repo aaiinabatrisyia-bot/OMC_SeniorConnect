@@ -43,10 +43,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(150, 127);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(131, 95);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(184, 155);
+            pictureBox1.Size = new Size(161, 116);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -58,9 +57,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold | FontStyle.Italic);
             label1.ForeColor = Color.Lime;
-            label1.Location = new Point(88, 309);
+            label1.Location = new Point(77, 232);
             label1.Name = "label1";
-            label1.Size = new Size(302, 37);
+            label1.Size = new Size(245, 30);
             label1.TabIndex = 2;
             label1.Text = "PAYMENT SUCCESSFUL";
             label1.Click += label1_Click;
@@ -71,9 +70,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.GreenYellow;
-            label2.Location = new Point(146, 390);
+            label2.Location = new Point(128, 292);
             label2.Name = "label2";
-            label2.Size = new Size(188, 38);
+            label2.Size = new Size(147, 30);
             label2.TabIndex = 3;
             label2.Text = "THANK YOU!";
             label2.Click += label2_Click;
@@ -84,19 +83,18 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.GreenYellow;
-            label3.Location = new Point(51, 438);
+            label3.Location = new Point(45, 328);
             label3.Name = "label3";
-            label3.Size = new Size(383, 28);
+            label3.Size = new Size(310, 21);
             label3.TabIndex = 4;
             label3.Text = "Your Appointment has been confirmed.";
             // 
             // btnReturn
             // 
             btnReturn.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReturn.Location = new Point(146, 506);
-            btnReturn.Margin = new Padding(3, 4, 3, 4);
+            btnReturn.Location = new Point(128, 380);
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(186, 38);
+            btnReturn.Size = new Size(163, 28);
             btnReturn.TabIndex = 5;
             btnReturn.Text = "RETURN HOME";
             btnReturn.UseVisualStyleBackColor = true;
@@ -114,20 +112,19 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(504, 832);
+            panel1.Size = new Size(441, 624);
             panel1.TabIndex = 6;
             // 
             // FrmPaymentSuccess
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(504, 832);
+            ClientSize = new Size(441, 624);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmPaymentSuccess";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPaymentSuccess";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
