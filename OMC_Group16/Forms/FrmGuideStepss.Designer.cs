@@ -105,7 +105,7 @@
             // btnZoomIn
             // 
             btnZoomIn.BackColor = Color.FromArgb(127, 166, 122);
-            btnZoomIn.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnZoomIn.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnZoomIn.ForeColor = SystemColors.ButtonHighlight;
             btnZoomIn.Location = new Point(578, 683);
             btnZoomIn.Name = "btnZoomIn";
@@ -118,7 +118,7 @@
             // btnZoomOut
             // 
             btnZoomOut.BackColor = Color.FromArgb(127, 166, 122);
-            btnZoomOut.Font = new Font("Segoe UI", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnZoomOut.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnZoomOut.ForeColor = SystemColors.ButtonHighlight;
             btnZoomOut.Location = new Point(670, 683);
             btnZoomOut.Name = "btnZoomOut";
