@@ -227,6 +227,7 @@
             lblCaregiverName.Name = "lblCaregiverName";
             lblCaregiverName.Size = new Size(145, 33);
             lblCaregiverName.TabIndex = 17;
+            lblCaregiverName.Click += lblCaregiverName_Click_1;
             // 
             // cmbElderly
             // 
@@ -281,6 +282,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmBookAppointment";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmBookAppointment";
             Load += FrmBookAppointment_Load;
             panel1.ResumeLayout(false);

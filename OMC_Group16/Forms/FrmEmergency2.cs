@@ -1,4 +1,5 @@
 using OMC_Group16;
+using OMC_Group16.Classes;
 using System.Data.SqlClient;
 
 namespace FrmEmergency
@@ -133,7 +134,7 @@ namespace FrmEmergency
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            FrmWelcome menu = new FrmWelcome();
+            FrmCaregiverMenu menu = new FrmCaregiverMenu();
             menu.Show();
             this.Hide();   // Hide the current form
         }
@@ -167,8 +168,6 @@ namespace FrmEmergency
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -180,7 +179,7 @@ namespace FrmEmergency
                 SqlCommand cmd = new SqlCommand(sql, con);
 
                 // Replace with the current patient's ID
-                cmd.Parameters.AddWithValue("@PatientID", 1);
+                cmd.Parameters.AddWithValue("@PatientID", UserSession.PatientID);
 
                 cmd.Parameters.AddWithValue("@ContactName", txtName.Text);
                 cmd.Parameters.AddWithValue("@Relationship", txtEmergencyContact.Text);
@@ -188,6 +187,7 @@ namespace FrmEmergency
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
 
                 con.Open();
+                //MessageBox.Show(UserSession.PatientID.ToString());
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Appointment booked successfully!");

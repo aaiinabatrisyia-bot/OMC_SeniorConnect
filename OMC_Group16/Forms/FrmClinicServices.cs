@@ -35,5 +35,10 @@ namespace OMC_Group16.Forms
         {
 
         }
+
+        private void FrmClinicServices_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

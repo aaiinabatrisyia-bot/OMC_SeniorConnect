@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using OMC_Group16.Classes;
 
 namespace OMC_Group16.Forms
 {
@@ -37,9 +38,9 @@ namespace OMC_Group16.Forms
             SqlConnection con = new SqlConnection(connectionString);
 
             string query = @"INSERT INTO Seniors
-                    (FullName,Age, PhoneNumber, Address, Gender)
+                    (FullName,Age, PhoneNumber, Address, Gender,CaregiverID)
                     VALUES
-                    (@name,@age, @phone, @address, @gender)";
+                    (@name,@age, @phone, @address, @gender,@CaregiverID)";
 
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -48,6 +49,7 @@ namespace OMC_Group16.Forms
             cmd.Parameters.AddWithValue("@phone", txtPhoneNumber2.Text);
             cmd.Parameters.AddWithValue("@address", txtAddress.Text);
             cmd.Parameters.AddWithValue("@gender", gender);
+            cmd.Parameters.AddWithValue("@CaregiverID",UserSession.CaregiverID);
 
             con.Open();
             cmd.ExecuteNonQuery();

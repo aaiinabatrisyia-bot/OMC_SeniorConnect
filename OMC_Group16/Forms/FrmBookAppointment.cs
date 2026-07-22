@@ -25,8 +25,8 @@ namespace OMC_Group16.Forms
 
             con = new SqlConnection(caregiverName);
             lblCaregiverName.Text = caregiverName;
-           
-            
+
+
         }
 
 
@@ -48,8 +48,12 @@ namespace OMC_Group16.Forms
         private void LoadElderly()
         {
             SqlConnection con = new SqlConnection(connectionString);
-            string query = "SELECT PatientID, FullName FROM seniors";
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            string query = "SELECT PatientID, FullName FROM Seniors WHERE CaregiverID = @CaregiverID";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -63,27 +67,27 @@ namespace OMC_Group16.Forms
 
 
         }
-        
+
 
         private void FrmBookAppointment_Load(object sender, EventArgs e)
         {
             LoadElderly();
             LoadTime();
-            
+
             //MessageBox.Show("Form Loaded");
             //MessageBox.Show("Name received" + UserSession.CaregiverName);
             lblCaregiverName.Text = UserSession.CaregiverName;
             txtPrice.ReadOnly = true;
             dtpDate.MinDate = DateTime.Today;
-            
 
-            
-            
+
+
+
 
 
 
         }
-        
+
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cboService.Text)
@@ -149,18 +153,18 @@ namespace OMC_Group16.Forms
                 INSERT INTO Appointments
                 (
                          PatientID, AppointmentDate, AppointmentTime,
-                         Status, CaregiverID, ServiceID
+                         Status, CaregiverID,ServiceName,Price
                 )
                 VALUES
                 (        @PatientID, @Date, @Time,
-                         @Status, @CaregiverID,@ServiceID
+                         @Status, @CaregiverID,@ServiceName,@Price
                  );
                         SELECT CAST(SCOPE_IDENTITY() AS INT);
                  ";
 
 
-                
-                
+
+
 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -169,7 +173,7 @@ namespace OMC_Group16.Forms
                 cmd.Parameters.AddWithValue("@Time", cboTime.Text);
                 cmd.Parameters.AddWithValue("@Status", "Pending");
                 cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
-                cmd.Parameters.AddWithValue("@ServiceID", cboService.Text);
+                cmd.Parameters.AddWithValue("@ServiceName", cboService.Text);
                 cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text));
 
                 con.Open();
@@ -197,7 +201,7 @@ namespace OMC_Group16.Forms
         {
 
         }
-        
+
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
@@ -226,6 +230,9 @@ namespace OMC_Group16.Forms
             cboTime.Items.Add("03:00 PM");
         }
 
+        private void lblCaregiverName_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

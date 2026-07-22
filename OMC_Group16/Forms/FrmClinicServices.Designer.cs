@@ -185,7 +185,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmClinicServices";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmClinicServices";
+            Load += FrmClinicServices_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

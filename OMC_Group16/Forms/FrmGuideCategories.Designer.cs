@@ -37,9 +37,9 @@
             btnTransport = new Button();
             btnBack = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btnTransport1 = new Button();
             btnHealth1 = new Button();
             btnEWallet1 = new Button();
+            btnTransport1 = new Button();
             btnVoiceAssist = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -47,12 +47,12 @@
             // label1
             // 
             label1.BackColor = Color.DarkOliveGreen;
-            label1.Font = new Font("Calibri", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Calibri", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkKhaki;
             label1.Location = new Point(-1, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(461, 126);
+            label1.Size = new Size(461, 198);
             label1.TabIndex = 0;
             label1.Text = "Guide Categories";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -64,7 +64,7 @@
             btnBank.Location = new Point(4, 4);
             btnBank.Margin = new Padding(4, 4, 4, 4);
             btnBank.Name = "btnBank";
-            btnBank.Size = new Size(65, 52);
+            btnBank.Size = new Size(139, 128);
             btnBank.TabIndex = 1;
             btnBank.Text = "ONLINE BANKING";
             btnBank.UseVisualStyleBackColor = false;
@@ -94,10 +94,10 @@
             // 
             btnMessage.BackColor = Color.FromArgb(232, 156, 51);
             btnMessage.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMessage.Location = new Point(150, 314);
+            btnMessage.Location = new Point(151, 140);
             btnMessage.Margin = new Padding(4, 4, 4, 4);
             btnMessage.Name = "btnMessage";
-            btnMessage.Size = new Size(138, 152);
+            btnMessage.Size = new Size(142, 128);
             btnMessage.TabIndex = 4;
             btnMessage.Text = "MESSAGES";
             btnMessage.UseVisualStyleBackColor = false;
@@ -107,10 +107,10 @@
             // 
             btnGov.BackColor = Color.FromArgb(226, 74, 50);
             btnGov.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGov.Location = new Point(6, 314);
+            btnGov.Location = new Point(4, 140);
             btnGov.Margin = new Padding(4, 4, 4, 4);
             btnGov.Name = "btnGov";
-            btnGov.Size = new Size(136, 152);
+            btnGov.Size = new Size(139, 128);
             btnGov.TabIndex = 5;
             btnGov.Text = "SCAM ALERT";
             btnGov.UseVisualStyleBackColor = false;
@@ -131,7 +131,7 @@
             btnBack.BackColor = Color.OliveDrab;
             btnBack.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.Khaki;
-            btnBack.Location = new Point(150, 554);
+            btnBack.Location = new Point(142, 542);
             btnBack.Margin = new Padding(7, 8, 7, 8);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(151, 46);
@@ -143,42 +143,32 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.94382F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.05618F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 673F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.3801651F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.6198349F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 539F));
+            tableLayoutPanel1.Controls.Add(btnGov, 0, 1);
             tableLayoutPanel1.Controls.Add(btnHealth1, 2, 0);
+            tableLayoutPanel1.Controls.Add(btnMessage, 1, 1);
             tableLayoutPanel1.Controls.Add(btnBank, 0, 0);
             tableLayoutPanel1.Controls.Add(btnEWallet1, 1, 0);
-            tableLayoutPanel1.Location = new Point(-1, 126);
+            tableLayoutPanel1.Controls.Add(btnTransport1, 2, 1);
+            tableLayoutPanel1.Location = new Point(-1, 204);
             tableLayoutPanel1.Margin = new Padding(42, 58, 42, 58);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(837, 126);
+            tableLayoutPanel1.Size = new Size(837, 272);
             tableLayoutPanel1.TabIndex = 9;
-            // 
-            // btnTransport1
-            // 
-            btnTransport1.BackColor = Color.FromArgb(232, 156, 51);
-            btnTransport1.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTransport1.Location = new Point(283, 314);
-            btnTransport1.Margin = new Padding(4, 4, 4, 4);
-            btnTransport1.Name = "btnTransport1";
-            btnTransport1.Size = new Size(177, 150);
-            btnTransport1.TabIndex = 12;
-            btnTransport1.Text = "TRANSPORT";
-            btnTransport1.UseVisualStyleBackColor = false;
-            btnTransport1.Click += btnTransport1_Click;
             // 
             // btnHealth1
             // 
             btnHealth1.BackColor = Color.FromArgb(226, 74, 50);
             btnHealth1.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnHealth1.Location = new Point(167, 4);
+            btnHealth1.Location = new Point(301, 4);
             btnHealth1.Margin = new Padding(4, 4, 4, 4);
             btnHealth1.Name = "btnHealth1";
-            btnHealth1.Size = new Size(113, 55);
+            btnHealth1.Size = new Size(154, 128);
             btnHealth1.TabIndex = 13;
             btnHealth1.Text = "HEALTHCARE";
             btnHealth1.UseVisualStyleBackColor = false;
@@ -189,14 +179,27 @@
             btnEWallet1.AutoSize = true;
             btnEWallet1.BackColor = Color.FromArgb(57, 166, 163);
             btnEWallet1.Font = new Font("Calibri", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEWallet1.Location = new Point(77, 4);
+            btnEWallet1.Location = new Point(151, 4);
             btnEWallet1.Margin = new Padding(4, 4, 4, 4);
             btnEWallet1.Name = "btnEWallet1";
-            btnEWallet1.Size = new Size(82, 55);
+            btnEWallet1.Size = new Size(142, 128);
             btnEWallet1.TabIndex = 11;
             btnEWallet1.Text = "E-WALLET";
             btnEWallet1.UseVisualStyleBackColor = false;
             btnEWallet1.Click += btnEWallet1_Click;
+            // 
+            // btnTransport1
+            // 
+            btnTransport1.BackColor = Color.FromArgb(232, 156, 51);
+            btnTransport1.Font = new Font("Segoe UI", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTransport1.Location = new Point(301, 140);
+            btnTransport1.Margin = new Padding(4, 4, 4, 4);
+            btnTransport1.Name = "btnTransport1";
+            btnTransport1.Size = new Size(154, 128);
+            btnTransport1.TabIndex = 12;
+            btnTransport1.Text = "TRANSPORT";
+            btnTransport1.UseVisualStyleBackColor = false;
+            btnTransport1.Click += btnTransport1_Click;
             // 
             // btnVoiceAssist
             // 
@@ -206,7 +209,7 @@
             btnVoiceAssist.Location = new Point(6, 6);
             btnVoiceAssist.Margin = new Padding(7, 8, 7, 8);
             btnVoiceAssist.Name = "btnVoiceAssist";
-            btnVoiceAssist.Size = new Size(158, 30);
+            btnVoiceAssist.Size = new Size(160, 56);
             btnVoiceAssist.TabIndex = 10;
             btnVoiceAssist.Text = "🔊 Turn Voice ON";
             btnVoiceAssist.UseVisualStyleBackColor = false;
@@ -217,11 +220,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(457, 663);
-            Controls.Add(btnTransport1);
-            Controls.Add(btnGov);
+            ClientSize = new Size(457, 779);
             Controls.Add(btnVoiceAssist);
-            Controls.Add(btnMessage);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBack);
             Controls.Add(label1);

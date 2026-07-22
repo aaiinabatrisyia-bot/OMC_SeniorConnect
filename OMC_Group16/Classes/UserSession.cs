@@ -8,6 +8,8 @@ namespace OMC_Group16.Classes
     {
         public static int CaregiverID { get; set; }
         public static string CaregiverName { get; set; }
-        
+
+        public static int PatientID { get; set; }
+
     }
 }
