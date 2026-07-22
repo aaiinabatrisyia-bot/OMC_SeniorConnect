@@ -1,4 +1,5 @@
 using OMC_Group16;
+using OMC_Group16.Classes;
 using System.Data.SqlClient;
 
 namespace FrmEmergency
@@ -180,7 +181,7 @@ namespace FrmEmergency
                 SqlCommand cmd = new SqlCommand(sql, con);
 
                 // Replace with the current patient's ID
-                cmd.Parameters.AddWithValue("@PatientID", 1);
+                cmd.Parameters.AddWithValue("@PatientID", UserSession.PatientID);
 
                 cmd.Parameters.AddWithValue("@ContactName", txtName.Text);
                 cmd.Parameters.AddWithValue("@Relationship", txtEmergencyContact.Text);

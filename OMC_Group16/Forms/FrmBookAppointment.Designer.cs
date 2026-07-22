@@ -227,6 +227,7 @@
             lblCaregiverName.Name = "lblCaregiverName";
             lblCaregiverName.Size = new Size(145, 33);
             lblCaregiverName.TabIndex = 17;
+            lblCaregiverName.Click += lblCaregiverName_Click_1;
             // 
             // cmbElderly
             // 

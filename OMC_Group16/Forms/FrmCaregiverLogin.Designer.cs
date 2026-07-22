@@ -56,6 +56,7 @@
             txtPassword.Font = new Font("Constantia", 16.2F);
             txtPassword.Location = new Point(117, 325);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(350, 40);
             txtPassword.TabIndex = 1;
             // 

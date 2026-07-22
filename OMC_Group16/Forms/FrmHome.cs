@@ -56,7 +56,7 @@ namespace OMC_Group16
 
         private void pnlEmergency_Click(object sender, EventArgs e)
         {
-            FrmEmergency2 emergency = new FrmEmergency2();
+            FrmEmergencyContact emergency = new FrmEmergencyContact();
 
             emergency.Show();
 
