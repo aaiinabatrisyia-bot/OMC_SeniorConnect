@@ -96,11 +96,11 @@
             // 
             // txtReminderDescription
             // 
-            txtReminderDescription.Location = new Point(61, 337);
+            txtReminderDescription.Location = new Point(63, 341);
             txtReminderDescription.Margin = new Padding(4, 3, 4, 3);
             txtReminderDescription.Multiline = true;
             txtReminderDescription.Name = "txtReminderDescription";
-            txtReminderDescription.Size = new Size(314, 130);
+            txtReminderDescription.Size = new Size(314, 181);
             txtReminderDescription.TabIndex = 5;
             txtReminderDescription.TextChanged += txtReminderDescription_TextChanged;
             // 
@@ -108,7 +108,7 @@
             // 
             btnSave.BackColor = Color.Green;
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(27, 492);
+            btnSave.Location = new Point(48, 565);
             btnSave.Margin = new Padding(4, 3, 4, 3);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(126, 33);
@@ -121,7 +121,7 @@
             // 
             btnBack.BackColor = Color.Crimson;
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(262, 492);
+            btnBack.Location = new Point(259, 565);
             btnBack.Margin = new Padding(4, 3, 4, 3);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(139, 33);
@@ -168,7 +168,7 @@
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MidnightBlue;
-            ClientSize = new Size(439, 616);
+            ClientSize = new Size(439, 837);
             Controls.Add(cboPatient);
             Controls.Add(label5);
             Controls.Add(label4);
