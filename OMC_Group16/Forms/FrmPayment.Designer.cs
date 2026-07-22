@@ -299,6 +299,7 @@
             // 
             // btnPay
             // 
+            btnPay.BackColor = Color.FromArgb(128, 255, 128);
             btnPay.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPay.Location = new Point(272, 713);
             btnPay.Margin = new Padding(3, 4, 3, 4);
@@ -306,11 +307,12 @@
             btnPay.Size = new Size(115, 55);
             btnPay.TabIndex = 3;
             btnPay.Text = "PAY";
-            btnPay.UseVisualStyleBackColor = true;
+            btnPay.UseVisualStyleBackColor = false;
             btnPay.Click += btnPay_Click;
             // 
             // btnCancel
             // 
+            btnCancel.BackColor = Color.FromArgb(255, 128, 128);
             btnCancel.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.Location = new Point(109, 713);
             btnCancel.Margin = new Padding(3, 4, 3, 4);
@@ -318,7 +320,7 @@
             btnCancel.Size = new Size(106, 55);
             btnCancel.TabIndex = 2;
             btnCancel.Text = "CANCEL";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // pnlCard
