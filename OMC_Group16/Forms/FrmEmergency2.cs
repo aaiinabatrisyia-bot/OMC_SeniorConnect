@@ -168,8 +168,6 @@ namespace FrmEmergency
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -189,6 +187,7 @@ namespace FrmEmergency
                 cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
 
                 con.Open();
+                //MessageBox.Show(UserSession.PatientID.ToString());
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Appointment booked successfully!");

@@ -449,7 +449,7 @@
             // cboBank
             // 
             cboBank.FormattingEnabled = true;
-            cboBank.Items.AddRange(new object[] { "Maybank", "", "CIMB", "", "Public Bank", "", "RHB", "", "Bank Islam" });
+            cboBank.Items.AddRange(new object[] { "Maybank", "CIMB", "Public Bank", "RHB", "Bank Islam" });
             cboBank.Location = new Point(69, 24);
             cboBank.Margin = new Padding(3, 4, 3, 4);
             cboBank.Name = "cboBank";

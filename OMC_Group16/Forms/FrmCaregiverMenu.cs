@@ -1,4 +1,5 @@
 ﻿using FrmEmergency;
+using OMC_Group16.Classes;
 using OMC_Group16.Forms;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace OMC_Group16
 
         private void btnEmergency_Click(object sender, EventArgs e)
         {
+            UserSession.PatientID = 1;
+
            FrmEmergency2 emergency  = new FrmEmergency2();
             emergency.Show();
             this.Hide();

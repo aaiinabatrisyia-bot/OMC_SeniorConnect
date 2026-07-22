@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label2 = new Label();
-            label3 = new Label();
             txtSearch = new TextBox();
             btnSearch = new Button();
             btnRefresh = new Button();
@@ -59,23 +58,12 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.ForeColor = Color.Ivory;
-            label2.Location = new Point(22, 137);
+            label2.Location = new Point(22, 110);
             label2.Name = "label2";
             label2.Size = new Size(155, 25);
             label2.TabIndex = 0;
             label2.Text = "MY REMINDERS";
             label2.Click += label2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            label3.ForeColor = Color.Ivory;
-            label3.Location = new Point(19, 135);
-            label3.Name = "label3";
-            label3.Size = new Size(81, 25);
-            label3.TabIndex = 1;
-            label3.Text = "Search: ";
             // 
             // txtSearch
             // 
@@ -182,7 +170,6 @@
             panel1.Controls.Add(btnTodayReminders);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtSearch);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(dgvReminders);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnRefresh);
@@ -340,7 +327,6 @@
         private Button btnRefresh;
         private Button btnSearch;
         private TextBox txtSearch;
-        private Label label3;
         private Button btnTodayReminders;
         private DataGridView dgvReminders;
         private Panel panel2;
