@@ -59,6 +59,8 @@ namespace OMC_Group16.Forms
         private void FrmSeniorManagement_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
