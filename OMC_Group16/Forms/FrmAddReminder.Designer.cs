@@ -162,6 +162,7 @@
             cboPatient.Name = "cboPatient";
             cboPatient.Size = new Size(151, 31);
             cboPatient.TabIndex = 11;
+            cboPatient.SelectedIndexChanged += cboPatient_SelectedIndexChanged;
             // 
             // FrmAddReminder
             // 

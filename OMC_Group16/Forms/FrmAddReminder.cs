@@ -66,23 +66,37 @@ namespace OMC_Group16
         {
 
         }
+        private void LoadElderly()
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = "SELECT PatientID, FullName FROM Seniors WHERE CaregiverID = @CaregiverID";
 
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@CaregiverID", UserSession.CaregiverID);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cboPatient.DataSource = dt;
+            cboPatient.DisplayMember = "FullName";
+            cboPatient.ValueMember = "PatientID";
+
+
+
+
+
+        }
         private void FrmAddReminder_Load(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                con.Open();
+            LoadElderly();
+            
+        }
+       
+        private void cboPatient_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-                SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT PatientID, FullName FROM Seniors", con);
-
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                cboPatient.DataSource = dt;
-                cboPatient.DisplayMember = "FullName";
-                cboPatient.ValueMember = "PatientID";
-            }
         }
     }
 }
